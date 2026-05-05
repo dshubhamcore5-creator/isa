@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
+  <title>About — Infinite Soul Awakening</title>
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="css/global.css"/>
+
+  <!-- Page-specific styles -->
+  <style>
+/* ─── PAGE HERO (SMALL) ──────────────────────────────── */
+    .page-hero {
+      position: relative;
+      padding-top: 76px;
+      height: 480px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .page-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+      filter: brightness(.62) saturate(.85);
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(20,10,3,.1) 0%,
+        rgba(20,10,3,.55) 100%
+      );
+      pointer-events: none;
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 0 64px;
+      width: 100%;
+    }
+    .page-hero-content .breadcrumb {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: rgba(255,255,255,.55);
+      margin-bottom: 18px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,.55); text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,.9); }
+    .breadcrumb span { color: rgba(255,255,255,.3); }
+    .page-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 5.5vw, 4.8rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.08;
+      max-width: 680px;
+    }
+    .page-hero-content h1 em {
+      font-style: italic; font-weight: 300;
+      color: rgba(255,220,180,.9);
+    }
+    .page-hero-content p {
+      font-size: .95rem;
+      color: rgba(255,255,255,.7);
+      max-width: 460px;
+      margin-top: 16px;
+      line-height: 1.8;
+    }
+
+    /* ─── INTRO STRIP ────────────────────────────────────── */
+    .intro-strip {
+      background: var(--parchment);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0;
+    }
+    .intro-strip-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .intro-stat {
+      text-align: center;
+      padding: 12px 60px;
+      border-right: 1px solid var(--border);
+    }
+    .intro-stat:last-child { border-right: none; }
+    .intro-stat strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 2.4rem;
+      font-weight: 400;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .intro-stat span {
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    /* ─── STORY SECTION ──────────────────────────────────── */
+    .story { padding: 110px 0; }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 88px;
+      align-items: center;
+    }
+
+    /* Image stack with decorative frame */
+    .story-image-wrap {
+      position: relative;
+    }
+    .story-img-main {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      box-shadow: 0 24px 64px rgba(100,60,20,.2);
+      position: relative; z-index: 2;
+    }
+    .story-img-inset {
+      position: absolute;
+      bottom: -28px;
+      right: -32px;
+      width: 48%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      border: 6px solid var(--white);
+      box-shadow: 0 12px 36px rgba(100,60,20,.18);
+      z-index: 3;
+    }
+    /* decorative border frame */
+    .story-image-wrap::before {
+      content: '';
+      position: absolute;
+      top: -22px; left: -22px;
+      right: 22px; bottom: 22px;
+      border: 1px solid var(--accent-light);
+      z-index: 0;
+    }
+    /* gold dot accent */
+    .story-image-wrap::after {
+      content: '';
+      position: absolute;
+      top: -10px; left: -10px;
+      width: 64px; height: 64px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      opacity: .15;
+      z-index: 0;
+    }
+    /* floating quote card */
+    .story-quote-float {
+      position: absolute;
+      top: 40px;
+      right: -44px;
+      background: var(--white);
+      box-shadow: var(--shadow-warm);
+      padding: 22px 26px;
+      z-index: 4;
+      max-width: 220px;
+      border-left: 3px solid var(--accent);
+    }
+    .story-quote-float p {
+      font-family: var(--font-serif);
+      font-size: .95rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .story-quote-float span {
+      display: block;
+      font-size: .68rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-top: 10px;
+    }
+
+    .story-text { padding-bottom: 28px; }
+    .story-text .section-title { margin-bottom: 26px; }
+    .story-text p {
+      font-size: .96rem;
+      color: var(--text-soft);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    /* pull quote inside text */
+    .story-pull-quote {
+      border-left: 3px solid var(--accent-light);
+      margin: 32px 0;
+      padding: 16px 24px;
+    }
+    .story-pull-quote p {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* ─── SECOND STORY BLOCK (reversed) ─────────────────── */
+    .story-alt { padding: 0 0 110px; }
+    .story-grid-alt {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 88px;
+      align-items: center;
+    }
+    .story-img-wide {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+      box-shadow: var(--shadow-warm);
+    }
+    .story-img-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .story-img-pair img {
+      width: 100%; aspect-ratio: 1;
+      object-fit: cover; display: block;
+      box-shadow: var(--shadow-card);
+    }
+    .story-img-pair img:first-child { margin-top: 24px; }
+
+    /* ─── PHILOSOPHY SECTION ─────────────────────────────── */
+    .philosophy {
+      background: var(--parchment);
+      padding: 110px 0;
+    }
+    .philosophy-header {
+      text-align: center;
+      margin-bottom: 72px;
+    }
+    .philosophy-header .section-title { margin-bottom: 16px; }
+    .philosophy-header p {
+      font-size: .96rem;
+      color: var(--text-soft);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    .phil-card {
+      background: var(--white);
+      padding: 44px 36px 40px;
+      position: relative;
+      box-shadow: var(--shadow-card);
+      transition: transform .3s, box-shadow .3s;
+      overflow: hidden;
+    }
+    .phil-card:hover { transform: translateY(-6px); box-shadow: 0 14px 46px rgba(100,65,30,.14); }
+    /* top accent bar */
+    .phil-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--accent-light);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
+    }
+    .phil-card:hover::before { transform: scaleX(1); }
+    .phil-number {
+      font-family: var(--font-serif);
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: var(--linen);
+      line-height: 1;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .phil-icon {
+      width: 52px; height: 52px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 22px;
+    }
+    .phil-icon svg { width: 22px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
+    .phil-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+    .phil-card p {
+      font-size: .88rem;
+      color: var(--text-soft);
+      line-height: 1.82;
+    }
+
+    /* ─── EXPERIENCE SECTION ─────────────────────────────── */
+    .experience { padding: 110px 0; }
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: center;
+    }
+    .experience-image-wrap { position: relative; }
+    .exp-img-main {
+      width: 100%;
+      aspect-ratio: 5/4;
+      object-fit: cover;
+      display: block;
+      box-shadow: var(--shadow-warm);
+    }
+    /* small floating badge */
+    .exp-badge {
+      position: absolute;
+      bottom: -20px; left: -20px;
+      background: var(--accent);
+      color: var(--white);
+      padding: 24px 28px;
+      z-index: 2;
+      text-align: center;
+      min-width: 140px;
+    }
+    .exp-badge strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .exp-badge span {
+      font-size: .68rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .85;
+    }
+    .experience-image-wrap::after {
+      content: '';
+      position: absolute;
+      top: 20px; right: -20px;
+      bottom: -20px; left: 20px;
+      border: 1px solid var(--accent-light);
+      z-index: -1;
+    }
+
+    .experience-content { }
+    .experience-content .section-title { margin-bottom: 24px; }
+    .experience-content > p {
+      font-size: .96rem;
+      color: var(--text-soft);
+      line-height: 1.9;
+      margin-bottom: 44px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 40px;
+      border: 1px solid var(--border);
+    }
+    .stat-box {
+      padding: 30px 28px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      position: relative;
+      transition: background .2s;
+    }
+    .stat-box:hover { background: var(--parchment); }
+    .stat-box strong {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-box p {
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+
+    .credentials { display: flex; flex-direction: column; gap: 12px; }
+    .credential {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      transition: border-color .2s;
+    }
+    .credential:hover { border-color: var(--accent-light); }
+    .credential-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+    .credential span {
+      font-size: .86rem;
+      color: var(--text-soft);
+    }
+    .credential strong {
+      font-size: .86rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    /* ─── SIGNATURE STRIP ────────────────────────────────── */
+    .signature-strip {
+      background: var(--parchment);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .signature-inner { max-width: 680px; margin: 0 auto; }
+    .signature-strip p {
+      font-family: var(--font-serif);
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+    .signature-name {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .signature-title {
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-soft);
+    }
+    .signature-divider {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .signature-divider::before, .signature-divider::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: var(--accent-light);
+    }
+    .signature-divider svg {
+      width: 18px; stroke: var(--accent-light);
+      fill: none; stroke-width: 1.2; flex-shrink: 0;
+    }
+
+    /* ─── FINAL CTA ──────────────────────────────────────── */
+    .final-cta { position: relative; overflow: hidden; }
+    .final-cta-img {
+      width: 100%; height: 480px;
+      object-fit: cover; object-position: center 40%;
+      display: block;
+      filter: brightness(.52) saturate(.85);
+    }
+    .final-cta-overlay {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; text-align: center; padding: 40px;
+    }
+    .final-cta-overlay .section-label { color: rgba(255,255,255,.55); }
+    .final-cta-overlay h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 400; color: var(--white);
+      line-height: 1.12; margin-bottom: 18px; max-width: 580px;
+    }
+    .final-cta-overlay h2 em { font-style: italic; font-weight: 300; }
+    .final-cta-overlay p {
+      font-size: .95rem; color: rgba(255,255,255,.7);
+      max-width: 400px; margin-bottom: 34px; line-height: 1.85;
+    }
+    .cta-btn-group { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
+    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
+    .footer-brand .logo span { color: var(--accent-light); }
+    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
+    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
+    .footer-socials a {
+      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.5); text-decoration: none;
+      font-size: .75rem; transition: border-color .2s, color .2s;
+    }
+    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
+    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 11px; }
+    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--accent-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px; font-size: .79rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .footer-bottom a:hover { color: var(--accent-light); }
+    .footer-bottom-links { display: flex; gap: 24px; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .story-quote-float { right: -20px; }
+    }
+    @media (max-width: 900px) {
+      nav, header .btn { display: none; }
+      .hamburger { display: flex; }
+      .story-grid, .story-grid-alt, .experience-grid { grid-template-columns: 1fr; gap: 56px; }
+      .story-grid-alt .story-text-side { order: -1; }
+      .story-image-wrap::before { display: none; }
+      .story-quote-float { display: none; }
+      .story-img-inset { right: 10px; bottom: -18px; }
+      .philosophy-grid { grid-template-columns: 1fr 1fr; }
+      .experience-image-wrap::after { display: none; }
+      .exp-badge { left: 10px; bottom: -14px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .intro-stat { padding: 12px 36px; }
+    }
+    @media (max-width: 620px) {
+      .container { padding: 0 20px; }
+      .page-hero { height: 400px; }
+      .page-hero-content { padding-bottom: 44px; }
+      .philosophy-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .intro-strip-inner { flex-direction: column; }
+      .intro-stat { border-right: none; border-bottom: 1px solid var(--border); width: 100%; padding: 20px 0; }
+      .intro-stat:last-child { border-bottom: none; }
+      .final-cta-img { height: 400px; }
+      .story-img-pair { grid-template-columns: 1fr; }
+      .story-img-pair img:first-child { margin-top: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE HERO ══════════════ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <img
+    class="page-hero-img"
+    src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1800&q=85"
+    alt="Woman in soft golden light holding a crystal, eyes closed in peaceful meditation"
+    fetchpriority="high"
+  />
+  <div class="container">
+    <div class="page-hero-content fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,.75)">About</span>
+      </div>
+      <h1 id="page-title">
+        My Journey,<br><em>My Calling</em>
+      </h1>
+      <p>A story of awakening, purpose, and an unwavering commitment to guiding souls toward clarity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ INTRO STATS STRIP ══════════════ -->
+<div class="intro-strip" aria-label="Practice highlights">
+  <div class="intro-strip-inner">
+    <div class="intro-stat">
+      <strong>12+</strong>
+      <span>Years of Practice</span>
+    </div>
+    <div class="intro-stat">
+      <strong>500+</strong>
+      <span>Souls Guided</span>
+    </div>
+    <div class="intro-stat">
+      <strong>3</strong>
+      <span>Healing Modalities</span>
+    </div>
+    <div class="intro-stat">
+      <strong>98%</strong>
+      <span>Client Clarity Rate</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ STORY — BLOCK 1 ══════════════ -->
+<section class="story" aria-labelledby="story-heading">
+  <div class="container">
+    <div class="story-grid">
+
+      <!-- Image -->
+      <div class="story-image-wrap fade-up">
+        <img
+          class="story-img-main"
+          src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=85"
+          alt="Serene spiritual woman holding rose quartz crystal in warm candlelight"
+          loading="lazy"
+        />
+        <img
+          class="story-img-inset"
+          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80"
+          alt="Crystals and candles arranged on a white marble surface"
+          loading="lazy"
+        />
+        <!-- floating quote card -->
+        <div class="story-quote-float" aria-hidden="true">
+          <p>"Healing begins when we stop running from ourselves."</p>
+          <span>— My guiding truth</span>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="story-text fade-up" style="transition-delay:.16s">
+        <span class="section-label">The Beginning</span>
+        <h2 class="section-title" id="story-heading">
+          Born from darkness,<br><em>into the light</em>
+        </h2>
+        <p>
+          My path into spiritual guidance did not begin in a classroom or a course — it began
+          in my own unravelling. At 24, I found myself at a crossroads so overwhelming that
+          logic alone could not lead me out. It was in that sacred stillness — a friend's tarot
+          deck, a quiet room, a question I could barely speak — that the first thread of clarity
+          appeared.
+        </p>
+        <div class="story-pull-quote">
+          <p>"I did not choose this work. It chose me — and when it did, everything changed."</p>
+        </div>
+        <p>
+          What followed was a decade of deep study: tarot symbolism under a Jungian psychologist,
+          Vedic astrology with a lineage keeper in Jaipur, and Reiki energy healing through three
+          years of devoted practice. Each modality revealed a new language for the same ancient
+          truth — that every soul already holds its own answers.
+        </p>
+        <p>
+          In 2013, I welcomed my first client. By 2016, Infinite Soul Awakening was born — not
+          as a brand, but as a promise: that every person who came to me would leave with more
+          clarity than they arrived with, regardless of what the cards showed.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ STORY — BLOCK 2 (reversed) ══════════════ -->
+<section class="story-alt" aria-label="Continued story">
+  <div class="container">
+    <div class="story-grid-alt">
+
+      <!-- Text -->
+      <div class="story-text-side fade-up">
+        <span class="section-label">The Practice</span>
+        <h2 class="section-title">
+          Where tradition meets<br><em>intuition</em>
+        </h2>
+        <p>
+          Every session I offer draws from three distinct traditions — each one a gift
+          passed down through unbroken lineages of wisdom keepers. Tarot illuminates
+          the narrative arc of your life. Astrology reveals the cosmic architecture
+          you were born within. Energy healing clears the static so your own voice can
+          finally be heard.
+        </p>
+        <p>
+          My approach is never prescriptive. I am not here to tell you what to do — I am
+          here to help you hear what you already know. The clearer your inner signal,
+          the more decisively you can move through the world.
+        </p>
+        <p>
+          Sessions are held in strict confidence, and I work with a deeply diverse community
+          of clients — entrepreneurs and artists, mothers and seekers, sceptics and believers.
+          What unites them is simple: they want truth, not comfort. And I am here to provide it.
+        </p>
+        <a href="booking.html" class="btn btn-filled" style="margin-top:10px;">Book Your Session</a>
+      </div>
+
+      <!-- Image pair -->
+      <div class="story-img-pair fade-up" style="transition-delay:.16s">
+        <img
+          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80"
+          alt="Tarot cards being read in warm candlelight"
+          loading="lazy"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=600&q=80"
+          alt="Close-up of hands in a healing energy session"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PHILOSOPHY ══════════════ -->
+<section class="philosophy" aria-labelledby="philosophy-heading">
+  <div class="container">
+
+    <div class="philosophy-header fade-up">
+      <span class="section-label">How I Work</span>
+      <h2 class="section-title" id="philosophy-heading">
+        A practice built on<br><em>sacred commitments</em>
+      </h2>
+      <p>These are not marketing promises — they are the foundations every session is built upon, without exception.</p>
+    </div>
+
+    <div class="philosophy-grid">
+
+      <!-- Card 1 -->
+      <div class="phil-card fade-up" style="transition-delay:.08s">
+        <span class="phil-number">01</span>
+        <div class="phil-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>No False<br>Promises</h3>
+        <p>
+          I do not tell you what you wish to hear. I reflect what is present in your energy,
+          your chart, and your spread — with compassion and complete honesty. Real guidance
+          sometimes challenges us before it liberates us.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="phil-card fade-up" style="transition-delay:.18s">
+        <span class="phil-number">02</span>
+        <div class="phil-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Personalised<br>Guidance</h3>
+        <p>
+          There are no scripts here. Every session is tailored entirely to you — your question,
+          your current energy, your life's unique timing. The reading you receive will never
+          be the same as anyone else's.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="phil-card fade-up" style="transition-delay:.28s">
+        <span class="phil-number">03</span>
+        <div class="phil-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Confidential<br>Sessions</h3>
+        <p>
+          Everything shared within our session remains entirely private. Sacred space
+          requires absolute trust, and that trust is something I guard with the deepest
+          professional and personal commitment.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ EXPERIENCE & CREDENTIALS ══════════════ -->
+<section class="experience" aria-labelledby="exp-heading">
+  <div class="container">
+    <div class="experience-grid">
+
+      <!-- Image -->
+      <div class="experience-image-wrap fade-up">
+        <img
+          class="exp-img-main"
+          src="https://images.unsplash.com/photo-1519821172141-b5d8d7e0fa1b?auto=format&fit=crop&w=900&q=80"
+          alt="Spiritual reading session — tarot cards and crystals on a warm-lit table"
+          loading="lazy"
+        />
+        <div class="exp-badge">
+          <strong>12+</strong>
+          <span>Years<br>Practice</span>
+        </div>
+      </div>
+
+      <!-- Stats + Credentials -->
+      <div class="fade-up" style="transition-delay:.16s">
+        <span class="section-label">Experience &amp; Training</span>
+        <h2 class="section-title" id="exp-heading">
+          Depth you can<br><em>feel and trust</em>
+        </h2>
+        <p style="font-size:.96rem;color:var(--text-soft);line-height:1.9;margin-bottom:40px;">
+          My work is grounded in years of formal training, thousands of real client sessions,
+          and a commitment to continuous learning. The numbers below are not achievements —
+          they are evidence of trust placed in me, and honoured.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <strong>500+</strong>
+            <p>Clients Served</p>
+          </div>
+          <div class="stat-box">
+            <strong>3,200+</strong>
+            <p>Sessions Completed</p>
+          </div>
+          <div class="stat-box">
+            <strong>18+</strong>
+            <p>Countries Reached</p>
+          </div>
+          <div class="stat-box">
+            <strong>98%</strong>
+            <p>Clarity Satisfaction</p>
+          </div>
+        </div>
+
+        <div class="credentials" role="list" aria-label="Training credentials">
+          <div class="credential" role="listitem">
+            <div class="credential-dot"></div>
+            <div>
+              <strong>Tarot Symbolism</strong>
+              <span> — Studied under Jungian psychologist, 3-year intensive</span>
+            </div>
+          </div>
+          <div class="credential" role="listitem">
+            <div class="credential-dot"></div>
+            <div>
+              <strong>Vedic Astrology</strong>
+              <span> — Lineage training, Jaipur Institute of Astrology</span>
+            </div>
+          </div>
+          <div class="credential" role="listitem">
+            <div class="credential-dot"></div>
+            <div>
+              <strong>Reiki Master Teacher</strong>
+              <span> — Usui Shiki Ryoho tradition, Level III certified</span>
+            </div>
+          </div>
+          <div class="credential" role="listitem">
+            <div class="credential-dot"></div>
+            <div>
+              <strong>Energy Psychology</strong>
+              <span> — Continuing education, Association of Energy Healers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SIGNATURE STRIP ══════════════ -->
+<div class="signature-strip fade-up">
+  <div class="container">
+    <div class="signature-inner">
+      <p>"I do not have all the answers. But I hold a light steady enough for you to find yours."</p>
+      <div class="signature-divider">
+        <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      </div>
+      <span class="signature-name">Aria Soleil</span>
+      <span class="signature-title">Founder, Infinite Soul Awakening</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FINAL CTA ══════════════ -->
+<section class="final-cta" aria-labelledby="cta-heading">
+  <img
+    class="final-cta-img"
+    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1800&q=80"
+    alt="Candles and crystals in warm golden light — an invitation to begin"
+    loading="lazy"
+  />
+  <div class="final-cta-overlay">
+    <span class="section-label fade-up">Your Next Step</span>
+    <h2 id="cta-heading" class="fade-up" style="transition-delay:.1s">
+      Ready to begin<br><em>your journey?</em>
+    </h2>
+    <p class="fade-up" style="transition-delay:.2s">
+      Book a session and take the first step toward the clarity, alignment,
+      and transformation you deserve.
+    </p>
+    <div class="cta-btn-group fade-up" style="transition-delay:.3s">
+      <a href="booking.html" class="btn btn-white">Book a Reading</a>
+      <a href="services.html" class="btn btn-outline-white" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);">View Services</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Shared header, footer, nav, observers -->
+  <script src="js/components.js"></script>
+
+  <!-- Page-specific JS -->
+  <script>
+/* Header scroll shadow */
+
+  /* Mobile nav */
+
+  /* Fade-up on scroll */
+    });
+  </script>
+
+</body>
+</html>

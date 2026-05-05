@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
+  <title>Services — Infinite Soul Awakening</title>
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="css/global.css"/>
+
+  <!-- Page-specific styles -->
+  <style>
+/* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      position: relative;
+      padding-top: 76px;
+      height: 520px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .page-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 45%;
+      display: block;
+      filter: brightness(.58) saturate(.82);
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(20,10,3,.05) 0%, rgba(20,10,3,.6) 100%);
+      pointer-events: none;
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 0 70px; width: 100%;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: rgba(255,255,255,.5);
+      margin-bottom: 20px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,.85); }
+    .breadcrumb span { color: rgba(255,255,255,.28); }
+    .page-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 4.5rem);
+      font-weight: 400; color: var(--white);
+      line-height: 1.08; max-width: 740px;
+    }
+    .page-hero-content h1 em { font-style: italic; font-weight: 300; color: rgba(255,220,180,.9); }
+    .page-hero-content p {
+      font-size: .95rem; color: rgba(255,255,255,.68);
+      max-width: 500px; margin-top: 18px; line-height: 1.82;
+    }
+
+    /* ─── INTRO BAR ──────────────────────────────────────── */
+    .intro-bar {
+      background: var(--parchment);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 0;
+    }
+    .intro-bar-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; flex-wrap: wrap; gap: 16px;
+    }
+    .intro-bar p {
+      font-size: .9rem; color: var(--text-soft);
+      max-width: 560px; line-height: 1.75;
+    }
+    .intro-bar p em { font-family: var(--font-serif); font-style: italic; color: var(--text); }
+
+    /* ─── SERVICE FILTER TABS ────────────────────────────── */
+    .filter-tabs {
+      padding: 48px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      font-family: var(--font-sans);
+      font-size: .72rem; font-weight: 400;
+      letter-spacing: .14em; text-transform: uppercase;
+      padding: 9px 22px;
+      border: 1px solid var(--border);
+      background: none; color: var(--text-soft);
+      cursor: pointer;
+      transition: all .22s;
+    }
+    .filter-tab:hover { border-color: var(--accent-light); color: var(--text); }
+    .filter-tab.active {
+      background: var(--accent); color: var(--white); border-color: var(--accent);
+    }
+
+    /* ─── SERVICES GRID ──────────────────────────────────── */
+    .services-section { padding: 60px 0 110px; }
+
+    /* ── Large feature card (first item, spans full width) ── */
+    .service-feature-card {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      background: var(--white);
+      box-shadow: var(--shadow-warm);
+      overflow: hidden;
+      margin-bottom: 28px;
+      transition: box-shadow .35s;
+    }
+    .service-feature-card:hover { box-shadow: 0 18px 60px rgba(100,65,30,.16); }
+    .sfc-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .sfc-img-wrap img {
+      width: 100%; height: 100%;
+      min-height: 460px;
+      object-fit: cover; display: block;
+      transition: transform .6s ease;
+    }
+    .service-feature-card:hover .sfc-img-wrap img { transform: scale(1.04); }
+    .sfc-badge {
+      position: absolute; top: 24px; left: 24px;
+      background: var(--accent); color: var(--white);
+      font-size: .62rem; letter-spacing: .16em;
+      text-transform: uppercase; padding: 6px 16px;
+      z-index: 2;
+    }
+    .sfc-body {
+      padding: 56px 52px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .sfc-number {
+      font-family: var(--font-serif);
+      font-size: 5rem; font-weight: 300;
+      color: var(--linen); line-height: 1;
+      margin-bottom: 12px;
+    }
+    .sfc-icon {
+      width: 52px; height: 52px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 22px;
+    }
+    .sfc-icon svg { width: 22px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
+    .sfc-body h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 400; color: var(--text);
+      line-height: 1.15; margin-bottom: 18px;
+    }
+    .sfc-body h2 em { font-style: italic; font-weight: 300; }
+    .sfc-body p {
+      font-size: .92rem; color: var(--text-soft);
+      line-height: 1.85; margin-bottom: 14px;
+    }
+    .sfc-meta {
+      display: flex; gap: 28px; flex-wrap: wrap;
+      margin: 22px 0 30px;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .sfc-meta-item { }
+    .sfc-meta-item span {
+      display: block; font-size: .68rem;
+      letter-spacing: .16em; text-transform: uppercase;
+      color: var(--text-soft); margin-bottom: 4px;
+    }
+    .sfc-meta-item strong {
+      font-family: var(--font-serif);
+      font-size: 1.1rem; font-weight: 400; color: var(--text);
+    }
+
+    /* ── Regular 3-col grid ── */
+    .services-three-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    /* ── Standard service card ── */
+    .service-card {
+      background: var(--white);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      position: relative;
+      transition: transform .35s, box-shadow .35s;
+      display: flex; flex-direction: column;
+    }
+    .service-card:hover { transform: translateY(-7px); box-shadow: 0 18px 52px rgba(100,65,30,.16); }
+
+    .sc-img-wrap {
+      width: 100%; aspect-ratio: 16/10;
+      overflow: hidden; position: relative;
+    }
+    .sc-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .service-card:hover .sc-img-wrap img { transform: scale(1.07); }
+    .sc-tag {
+      position: absolute; bottom: 16px; left: 16px;
+      background: rgba(253,248,242,.92);
+      backdrop-filter: blur(6px);
+      font-size: .62rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent);
+      padding: 5px 12px;
+    }
+
+    .sc-body {
+      padding: 30px 28px 34px;
+      flex: 1; display: flex; flex-direction: column;
+    }
+    .sc-num {
+      font-family: var(--font-serif);
+      font-size: 2.5rem; font-weight: 300;
+      color: var(--linen); line-height: 1;
+      margin-bottom: 10px;
+    }
+    .sc-icon {
+      width: 44px; height: 44px;
+      border: 1px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+    }
+    .sc-icon svg { width: 18px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
+    .service-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem; font-weight: 400;
+      color: var(--text); margin-bottom: 10px; line-height: 1.2;
+    }
+    .service-card p {
+      font-size: .88rem; color: var(--text-soft);
+      line-height: 1.82; margin-bottom: 24px; flex: 1;
+    }
+    .sc-footer {
+      display: flex; align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap; gap: 12px;
+    }
+    .sc-price {
+      font-family: var(--font-serif);
+      font-size: 1.25rem; font-weight: 400; color: var(--accent);
+    }
+    .sc-price span {
+      font-family: var(--font-sans);
+      font-size: .72rem; font-weight: 300; color: var(--text-soft);
+      margin-left: 4px;
+    }
+
+    /* ── Bottom wide card (Ritual Work) ── */
+    .service-wide-card {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      background: var(--white);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: box-shadow .35s;
+    }
+    .service-wide-card:hover { box-shadow: 0 18px 52px rgba(100,65,30,.14); }
+    .swc-img-wrap {
+      overflow: hidden; position: relative;
+    }
+    .swc-img-wrap img {
+      width: 100%; height: 100%;
+      min-height: 340px;
+      object-fit: cover; display: block;
+      transition: transform .6s ease;
+    }
+    .service-wide-card:hover .swc-img-wrap img { transform: scale(1.04); }
+    .swc-body {
+      padding: 50px 52px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .swc-body .section-label { margin-bottom: 10px; }
+    .swc-body h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+      font-weight: 400; color: var(--text);
+      line-height: 1.18; margin-bottom: 18px;
+    }
+    .swc-body h2 em { font-style: italic; font-weight: 300; }
+    .swc-body p {
+      font-size: .9rem; color: var(--text-soft);
+      line-height: 1.85; margin-bottom: 14px;
+    }
+    .swc-body p:last-of-type { margin-bottom: 30px; }
+    .swc-pills {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px;
+    }
+    .swc-pill {
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      font-size: .72rem; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-soft);
+    }
+
+    /* ─── TESTIMONIAL BAND ───────────────────────────────── */
+    .testimonial-band {
+      background: var(--parchment);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 0;
+    }
+    .testimonial-band-inner {
+      display: grid;
+      grid-template-columns: 1fr 2px 1fr 2px 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .tb-divider { background: var(--border); height: 100%; min-height: 80px; }
+    .tb-quote {
+      text-align: center; padding: 0 12px;
+    }
+    .tb-stars { display: flex; justify-content: center; gap: 3px; margin-bottom: 14px; }
+    .tb-stars svg { width: 12px; fill: var(--accent-light); }
+    .tb-quote blockquote {
+      font-family: var(--font-serif);
+      font-size: 1.05rem; font-style: italic;
+      font-weight: 300; color: var(--text);
+      line-height: 1.7; margin-bottom: 16px;
+    }
+    .tb-author {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+    }
+    .tb-avatar {
+      width: 38px; height: 38px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--white);
+      box-shadow: 0 2px 8px rgba(100,60,20,.12);
+    }
+    .tb-author-info strong { display: block; font-size: .82rem; font-weight: 500; color: var(--text); }
+    .tb-author-info span  { font-size: .74rem; color: var(--text-soft); }
+
+    /* ─── HOW IT WORKS ───────────────────────────────────── */
+    .process { padding: 110px 0; }
+    .process-header { text-align: center; margin-bottom: 72px; }
+    .process-header .section-title { margin-bottom: 16px; }
+    .process-header p {
+      font-size: .95rem; color: var(--text-soft);
+      max-width: 480px; margin: 0 auto; line-height: 1.82;
+    }
+
+    .process-timeline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+      gap: 0;
+    }
+    /* connecting line */
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 44px; left: calc(100% / 6);
+      right: calc(100% / 6);
+      height: 1px;
+      background: linear-gradient(to right, var(--border), var(--accent-light), var(--border));
+      z-index: 0;
+    }
+
+    .process-step {
+      text-align: center;
+      padding: 0 36px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-circle {
+      width: 88px; height: 88px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      border-radius: 50%;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      margin: 0 auto 32px;
+      box-shadow: var(--shadow-card);
+      transition: background .3s, border-color .3s;
+      position: relative;
+    }
+    .process-step:hover .step-circle {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+    .step-circle svg {
+      width: 26px; stroke: var(--accent);
+      fill: none; stroke-width: 1.3;
+      transition: stroke .3s;
+    }
+    .process-step:hover .step-circle svg { stroke: var(--white); }
+    .step-num {
+      position: absolute;
+      top: -10px; right: -10px;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      font-size: .68rem; font-weight: 500;
+      display: flex; align-items: center; justify-content: center;
+      letter-spacing: .04em;
+    }
+    .process-step h3 {
+      font-family: var(--font-serif);
+      font-size: 1.45rem; font-weight: 400;
+      color: var(--text); margin-bottom: 12px;
+    }
+    .process-step p {
+      font-size: .88rem; color: var(--text-soft);
+      line-height: 1.82;
+    }
+
+    /* step images below text */
+    .process-img-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 64px;
+    }
+    .process-img-cell {
+      position: relative; overflow: hidden;
+    }
+    .process-img-cell img {
+      width: 100%; aspect-ratio: 4/3;
+      object-fit: cover; display: block;
+      transition: transform .5s ease;
+    }
+    .process-img-cell:hover img { transform: scale(1.05); }
+    .process-img-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      padding: 20px 20px 18px;
+      background: linear-gradient(to top, rgba(20,10,3,.65) 0%, transparent 100%);
+    }
+    .process-img-label span {
+      font-family: var(--font-serif);
+      font-size: 1.05rem; font-style: italic;
+      font-weight: 300; color: var(--white);
+    }
+
+    /* ─── FAQ STRIP ──────────────────────────────────────── */
+    .faq-strip {
+      background: var(--parchment);
+      padding: 90px 0;
+    }
+    .faq-header { text-align: center; margin-bottom: 56px; }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      background: var(--white);
+      padding: 28px 30px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .faq-item:hover { border-color: var(--accent-light); }
+    .faq-item summary {
+      list-style: none;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 16px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-q {
+      font-family: var(--font-serif);
+      font-size: 1.1rem; font-weight: 400; color: var(--text);
+      line-height: 1.3;
+    }
+    .faq-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s;
+    }
+    .faq-icon svg { width: 12px; stroke: var(--accent); fill: none; stroke-width: 2; transition: transform .25s; }
+    details[open] .faq-icon { background: var(--accent); border-color: var(--accent); }
+    details[open] .faq-icon svg { stroke: var(--white); transform: rotate(45deg); }
+    .faq-a {
+      font-size: .88rem; color: var(--text-soft);
+      line-height: 1.82; margin-top: 16px;
+      padding-top: 16px; border-top: 1px solid var(--border);
+    }
+
+    /* ─── FINAL CTA ──────────────────────────────────────── */
+    .final-cta { position: relative; overflow: hidden; }
+    .final-cta-img {
+      width: 100%; height: 500px;
+      object-fit: cover; object-position: center 35%;
+      display: block; filter: brightness(.52) saturate(.85);
+    }
+    .final-cta-overlay {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; text-align: center; padding: 40px;
+    }
+    .final-cta-overlay .section-label { color: rgba(255,255,255,.55); }
+    .final-cta-overlay h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 400; color: var(--white);
+      line-height: 1.12; margin-bottom: 18px; max-width: 600px;
+    }
+    .final-cta-overlay h2 em { font-style: italic; font-weight: 300; }
+    .final-cta-overlay p {
+      font-size: .95rem; color: rgba(255,255,255,.7);
+      max-width: 420px; margin-bottom: 34px; line-height: 1.85;
+    }
+    .cta-btn-group { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
+    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
+    .footer-brand .logo span { color: var(--accent-light); }
+    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
+    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
+    .footer-socials a {
+      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.5); text-decoration: none;
+      font-size: .75rem; transition: border-color .2s, color .2s;
+    }
+    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
+    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 11px; }
+    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--accent-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px; font-size: .79rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .footer-bottom a:hover { color: var(--accent-light); }
+    .footer-bottom-links { display: flex; gap: 24px; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .sfc-body { padding: 40px 38px; }
+      .swc-body { padding: 40px 38px; }
+    }
+    @media (max-width: 900px) {
+      nav, header .btn { display: none; }
+      .hamburger { display: flex; }
+      .service-feature-card { grid-template-columns: 1fr; }
+      .sfc-img-wrap img { min-height: 320px; }
+      .services-three-grid { grid-template-columns: 1fr 1fr; }
+      .service-wide-card { grid-template-columns: 1fr; }
+      .swc-img-wrap img { min-height: 280px; }
+      .process-timeline::before { display: none; }
+      .process-timeline { grid-template-columns: 1fr; gap: 48px; }
+      .process-img-row { grid-template-columns: 1fr 1fr; }
+      .testimonial-band-inner { grid-template-columns: 1fr; gap: 40px; }
+      .tb-divider { display: none; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 620px) {
+      .container { padding: 0 20px; }
+      .page-hero { height: 420px; }
+      .services-three-grid { grid-template-columns: 1fr; }
+      .process-img-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .final-cta-img { height: 420px; }
+      .intro-bar-inner { flex-direction: column; }
+      .sfc-meta { gap: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE HERO ══════════════ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <img
+    class="page-hero-img"
+    src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1800&q=85"
+    alt="Tarot cards and crystals laid on a warm-lit marble surface"
+    fetchpriority="high"
+  />
+  <div class="container">
+    <div class="page-hero-content fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,.75)">Services</span>
+      </div>
+      <h1 id="page-title">
+        Services Designed for<br><em>Clarity &amp; Alignment</em>
+      </h1>
+      <p>Four sacred pathways. One destination — a life lived in full alignment with who you truly are.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ INTRO BAR ══════════════ -->
+<div class="intro-bar">
+  <div class="container">
+    <div class="intro-bar-inner">
+      <p>Each service is a deeply <em>personalised, one-on-one experience</em>. Sessions are available online and in person, and are conducted with complete confidentiality.</p>
+      <a href="booking.html" class="btn btn-filled" style="font-size:.72rem;padding:11px 26px;flex-shrink:0;">View All Bookings</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ SERVICES ══════════════ -->
+<section class="services-section" aria-labelledby="services-heading">
+  <div class="container">
+
+    <div style="text-align:center;padding-top:16px;margin-bottom:52px;" class="fade-up">
+      <span class="section-label" style="margin-bottom:10px;">What We Offer</span>
+      <h2 class="section-title" id="services-heading">
+        Four pathways to<br><em>your awakening</em>
+      </h2>
+    </div>
+
+    <!-- ── SERVICE 1: TAROT (Feature Card) ── -->
+    <article class="service-feature-card fade-up" id="tarot" aria-labelledby="tarot-title">
+      <div class="sfc-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1000&q=85"
+          alt="Tarot cards spread on a soft linen cloth in warm candlelight"
+          loading="lazy"
+        />
+        <span class="sfc-badge">Most Requested</span>
+      </div>
+      <div class="sfc-body">
+        <div class="sfc-number" aria-hidden="true">01</div>
+        <div class="sfc-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="11" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="18" width="7" height="3" rx="1"/></svg>
+        </div>
+        <h2 id="tarot-title">Intuitive Tarot<br><em>Readings</em></h2>
+        <p>
+          The tarot is not a fortune-telling tool — it is a mirror. In each card lies a symbol,
+          an archetype, a truth that your subconscious already knows. My role is to translate
+          that language into clarity you can act on today.
+        </p>
+        <p>
+          Whether you are at a crossroads in love, career, or identity, a tarot reading offers
+          a perspective untangled from the noise of everyday thinking. Each spread is designed
+          around your specific question and current life energy.
+        </p>
+        <div class="sfc-meta">
+          <div class="sfc-meta-item">
+            <span>Duration</span>
+            <strong>60 minutes</strong>
+          </div>
+          <div class="sfc-meta-item">
+            <span>Format</span>
+            <strong>Online / In-Person</strong>
+          </div>
+          <div class="sfc-meta-item">
+            <span>Starting from</span>
+            <strong>$95</strong>
+          </div>
+        </div>
+        <a href="booking.html" class="btn btn-filled">Book a Tarot Reading</a>
+      </div>
+    </article>
+
+    <!-- ── SERVICES 2 & 3: ASTROLOGY + ENERGY (Side-by-side cards) ── -->
+    <div class="services-three-grid" style="grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px;">
+
+      <!-- Astrology -->
+      <article class="service-card fade-up" id="astrology" style="transition-delay:.1s" aria-labelledby="astro-title">
+        <div class="sc-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+            alt="Star map and astrology chart in warm golden light"
+            loading="lazy"
+          />
+          <span class="sc-tag">Soul Blueprint</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-num" aria-hidden="true">02</div>
+          <div class="sc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          </div>
+          <h3 id="astro-title">Soul Path<br>Astrology</h3>
+          <p>
+            Your natal chart is a cosmic blueprint — a map of the sky at the exact moment you
+            arrived in this world. It reveals your soul's purpose, karmic patterns, relationship
+            archetypes, and life timing with extraordinary precision.
+          </p>
+          <div class="sc-footer">
+            <div class="sc-price">$130 <span>/ session</span></div>
+            <a href="booking.html" class="btn btn-filled" style="font-size:.68rem;padding:10px 20px;">Book Session</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Energy Healing -->
+      <article class="service-card fade-up" id="energy" style="transition-delay:.2s" aria-labelledby="energy-title">
+        <div class="sc-img-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=800&q=80"
+            alt="Gentle healing hands with soft warm light between them"
+            loading="lazy"
+          />
+          <span class="sc-tag">Chakra Aligned</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-num" aria-hidden="true">03</div>
+          <div class="sc-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <h3 id="energy-title">Energy<br>Healing</h3>
+          <p>
+            Energetic blockages accumulate through grief, stress, trauma, and transition.
+            This Reiki-based session works directly on the body's energy centres — clearing,
+            restoring, and rebalancing so you can move and feel freely again.
+          </p>
+          <div class="sc-footer">
+            <div class="sc-price">$110 <span>/ session</span></div>
+            <a href="booking.html" class="btn btn-ghost" style="font-size:.68rem;padding:10px 20px;">Book Session</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- ── SERVICE 4: RITUAL WORK (Wide bottom card) ── -->
+    <article class="service-wide-card fade-up" id="ritual" aria-labelledby="ritual-title">
+      <div class="swc-img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"
+          alt="Sacred ritual space with candles, flowers and spiritual objects on linen"
+          loading="lazy"
+        />
+      </div>
+      <div class="swc-body">
+        <span class="section-label">New Moon &amp; Seasonal</span>
+        <h2 id="ritual-title">Sacred<br><em>Ritual Work</em></h2>
+        <p>
+          Ritual is the bridge between intention and manifestation. Working with the cycles
+          of the moon, the seasons, and your personal chart, we design bespoke ceremonies
+          that mark transitions, release what no longer serves, and call in what is truly yours.
+        </p>
+        <p>
+          Ritual sessions are highly personal and may include candle ceremonies, cord-cutting
+          practices, crystal grid activations, and guided meditation journeys. Each is created
+          uniquely for you.
+        </p>
+        <div class="swc-pills">
+          <span class="swc-pill">New Moon Ritual</span>
+          <span class="swc-pill">Full Moon Release</span>
+          <span class="swc-pill">Cord Cutting</span>
+          <span class="swc-pill">Crystal Grids</span>
+          <span class="swc-pill">Seasonal Ceremony</span>
+        </div>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+          <a href="booking.html" class="btn btn-filled">Book Ritual Session</a>
+          <span style="font-family:var(--font-serif);font-size:1.1rem;color:var(--accent);">From $150</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══════════════ TESTIMONIAL BAND ══════════════ -->
+<div class="testimonial-band" aria-label="Client testimonials">
+  <div class="container">
+    <div class="testimonial-band-inner">
+
+      <div class="tb-quote fade-up">
+        <div class="tb-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"The tarot reading gave me more clarity in 60 minutes than years of overthinking ever did."</blockquote>
+        <div class="tb-author">
+          <img class="tb-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Gianna B." loading="lazy"/>
+          <div class="tb-author-info">
+            <strong>Gianna B.</strong>
+            <span>Tarot Reading</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tb-divider" aria-hidden="true"></div>
+
+      <div class="tb-quote fade-up" style="transition-delay:.12s">
+        <div class="tb-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"My natal chart reading was one of the most profound experiences of my life. Seen and understood at last."</blockquote>
+        <div class="tb-author">
+          <img class="tb-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mawa D." loading="lazy"/>
+          <div class="tb-author-info">
+            <strong>Mawa D.</strong>
+            <span>Soul Path Astrology</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tb-divider" aria-hidden="true"></div>
+
+      <div class="tb-quote fade-up" style="transition-delay:.24s">
+        <div class="tb-stars">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote>"The ritual session for the new moon was breathtaking. I felt the shift immediately — real, tangible change."</blockquote>
+        <div class="tb-author">
+          <img class="tb-avatar" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Siris B." loading="lazy"/>
+          <div class="tb-author-info">
+            <strong>Siris B.</strong>
+            <span>Sacred Ritual Work</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ HOW IT WORKS ══════════════ -->
+<section class="process" aria-labelledby="process-heading">
+  <div class="container">
+
+    <div class="process-header fade-up">
+      <span class="section-label">The Process</span>
+      <h2 class="section-title" id="process-heading">
+        How it<br><em>works</em>
+      </h2>
+      <p>A simple, sacred three-step journey from first contact to lasting clarity.</p>
+    </div>
+
+    <div class="process-timeline" role="list">
+
+      <div class="process-step fade-up" style="transition-delay:.08s" role="listitem">
+        <div class="step-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="step-num">01</div>
+        </div>
+        <h3>Choose &amp; Book</h3>
+        <p>Select the service that calls to you. Use our booking page to choose your preferred date, time, and format — online or in person. You will receive a confirmation and a short pre-session questionnaire.</p>
+      </div>
+
+      <div class="process-step fade-up" style="transition-delay:.18s" role="listitem">
+        <div class="step-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <div class="step-num">02</div>
+        </div>
+        <h3>Your Session</h3>
+        <p>We meet in a sacred, unhurried space. Your session unfolds organically — guided by the tools of your chosen service and the specific energy you bring. Every detail is tailored entirely to you.</p>
+      </div>
+
+      <div class="process-step fade-up" style="transition-delay:.28s" role="listitem">
+        <div class="step-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <div class="step-num">03</div>
+        </div>
+        <h3>Clarity &amp; Integration</h3>
+        <p>You leave with a clear set of insights, recorded notes, and — if needed — a follow-up pathway. The clarity you gain is yours to keep and build upon, long after the session ends.</p>
+      </div>
+
+    </div>
+
+    <!-- Process imagery row -->
+    <div class="process-img-row fade-up" style="transition-delay:.1s">
+      <div class="process-img-cell">
+        <img
+          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=700&q=80"
+          alt="Tarot cards on a marble surface — your reading begins"
+          loading="lazy"
+        />
+        <div class="process-img-label"><span>Step into the reading</span></div>
+      </div>
+      <div class="process-img-cell">
+        <img
+          src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80"
+          alt="Session in warm candlelit space"
+          loading="lazy"
+        />
+        <div class="process-img-label"><span>Be held in sacred space</span></div>
+      </div>
+      <div class="process-img-cell">
+        <img
+          src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=700&q=80"
+          alt="Woman in peaceful clarity after her session"
+          loading="lazy"
+        />
+        <div class="process-img-label"><span>Leave with clarity</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<div class="faq-strip" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-header fade-up">
+      <span class="section-label">Common Questions</span>
+      <h2 class="section-title" id="faq-heading">
+        Things you may<br><em>want to know</em>
+      </h2>
+    </div>
+    <div class="faq-grid">
+
+      <details class="faq-item fade-up" style="transition-delay:.06s">
+        <summary>
+          <span class="faq-q">Do I need to believe in tarot for it to work?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">Not at all. Sceptics often receive the most powerful readings precisely because they are open — not filtering the insights through expectation. Curiosity is the only requirement.</p>
+      </details>
+
+      <details class="faq-item fade-up" style="transition-delay:.12s">
+        <summary>
+          <span class="faq-q">Are sessions available outside of India?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">Yes. All services are available online via video call, which means we can work together regardless of your location. Clients currently span 18+ countries across six continents.</p>
+      </details>
+
+      <details class="faq-item fade-up" style="transition-delay:.18s">
+        <summary>
+          <span class="faq-q">How should I prepare for my session?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">Come with one or two specific questions or areas of focus. Find a quiet, private space. Hydrate well beforehand. If you have a crystal or meaningful object, feel free to hold it during the session.</p>
+      </details>
+
+      <details class="faq-item fade-up" style="transition-delay:.24s">
+        <summary>
+          <span class="faq-q">Is everything I share kept confidential?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">Absolutely. Your session content, personal details, and anything shared in the questionnaire are held in complete confidence and are never shared with any third party under any circumstance.</p>
+      </details>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ FINAL CTA ══════════════ -->
+<section class="final-cta" aria-labelledby="cta-heading">
+  <img
+    class="final-cta-img"
+    src="https://images.unsplash.com/photo-1519821172141-b5d8d7e0fa1b?auto=format&fit=crop&w=1800&q=80"
+    alt="Warm candlelit spiritual space inviting you to begin your reading"
+    loading="lazy"
+  />
+  <div class="final-cta-overlay">
+    <span class="section-label fade-up">Your Next Step</span>
+    <h2 id="cta-heading" class="fade-up" style="transition-delay:.1s">
+      Choose your path.<br><em>Begin your reading.</em>
+    </h2>
+    <p class="fade-up" style="transition-delay:.2s">
+      Every journey begins with a single, courageous step toward clarity.
+      Your session is waiting.
+    </p>
+    <div class="cta-btn-group fade-up" style="transition-delay:.3s">
+      <a href="booking.html" class="btn btn-white">Book a Session</a>
+      <a href="about.html" class="btn" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);">Meet Your Guide</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Shared header, footer, nav, observers -->
+  <script src="js/components.js"></script>
+
+  <!-- Page-specific JS -->
+  <script>
+/* Header scroll */
+
+  /* Mobile nav */
+
+  /* Fade-up observer */
+    });
+  </script>
+
+</body>
+</html>

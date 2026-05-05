@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
+  <title>Terms & Conditions — Infinite Soul Awakening</title>
+
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="css/global.css"/>
+
+  <!-- Page-specific styles -->
+  <style>
+/* ─── PAGE HERO ──────────────────────────────────────── */
+    .page-hero {
+      position: relative;
+      padding-top: 76px;
+      height: 380px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .page-hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 40%;
+      display: block;
+      filter: brightness(.5) saturate(.75);
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(20,10,3,.05) 0%, rgba(20,10,3,.65) 100%);
+      pointer-events: none;
+    }
+    .page-hero-content {
+      position: relative; z-index: 2;
+      padding: 0 0 52px; width: 100%;
+    }
+    .breadcrumb {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: rgba(255,255,255,.5);
+      margin-bottom: 16px;
+    }
+    .breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+    .breadcrumb a:hover { color: rgba(255,255,255,.85); }
+    .breadcrumb span { color: rgba(255,255,255,.28); }
+    .page-hero-content h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4.5vw, 4rem);
+      font-weight: 400; color: var(--white);
+      line-height: 1.1; max-width: 680px;
+    }
+    .page-hero-content h1 em { font-style: italic; font-weight: 300; color: rgba(255,220,180,.9); }
+    .page-hero-meta {
+      margin-top: 14px;
+      display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+    }
+    .page-hero-meta span {
+      font-size: .75rem; color: rgba(255,255,255,.55);
+      letter-spacing: .1em; display: flex; align-items: center; gap: 6px;
+    }
+    .page-hero-meta span svg { width: 13px; stroke: rgba(255,255,255,.45); fill: none; stroke-width: 1.5; }
+
+    /* ─── POLICY LAYOUT ──────────────────────────────────── */
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 72px;
+      padding: 80px 0 110px;
+      align-items: start;
+    }
+
+    /* ─── STICKY TOC ─────────────────────────────────────── */
+    .policy-toc {
+      position: sticky;
+      top: 108px;
+    }
+    .toc-label {
+      font-size: .68rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--accent);
+      margin-bottom: 18px; display: block;
+    }
+    .toc-nav { display: flex; flex-direction: column; gap: 2px; }
+    .toc-link {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .8rem; color: var(--text-soft);
+      text-decoration: none; padding: 9px 14px;
+      border-left: 2px solid transparent;
+      transition: color .2s, border-color .2s, background .2s;
+      line-height: 1.4;
+    }
+    .toc-link:hover { color: var(--text); border-left-color: var(--accent-light); background: var(--parchment); }
+    .toc-link.active { color: var(--accent); border-left-color: var(--accent); font-weight: 400; }
+    .toc-num {
+      font-family: var(--font-serif);
+      font-size: .9rem; color: var(--accent-light);
+      min-width: 20px; flex-shrink: 0;
+    }
+
+    /* Contact card in TOC */
+    .toc-contact {
+      margin-top: 32px;
+      background: var(--parchment);
+      border: 1px solid var(--border);
+      padding: 20px 18px;
+    }
+    .toc-contact p {
+      font-size: .78rem; color: var(--text-soft);
+      line-height: 1.7; margin-bottom: 10px;
+    }
+    .toc-contact a {
+      font-size: .78rem; color: var(--accent);
+      text-decoration: none; display: block;
+      margin-bottom: 4px;
+      transition: color .2s;
+    }
+    .toc-contact a:hover { color: var(--accent-dark); }
+
+    /* ─── POLICY CONTENT ─────────────────────────────────── */
+    .policy-content { min-width: 0; }
+
+    /* Intro card */
+    .policy-intro-card {
+      background: var(--parchment);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 28px 30px;
+      margin-bottom: 56px;
+      display: flex; gap: 18px; align-items: flex-start;
+    }
+    .policy-intro-card svg { width: 22px; stroke: var(--accent); fill: none; stroke-width: 1.3; flex-shrink: 0; margin-top: 2px; }
+    .policy-intro-card-text strong { display: block; font-size: .9rem; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+    .policy-intro-card-text p { font-size: .86rem; color: var(--text-soft); line-height: 1.75; }
+
+    /* Section blocks */
+    .policy-section {
+      margin-bottom: 56px;
+      padding-bottom: 56px;
+      border-bottom: 1px solid var(--border);
+      scroll-margin-top: 108px;
+    }
+    .policy-section:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .section-header {
+      display: flex; align-items: flex-start; gap: 20px;
+      margin-bottom: 24px;
+    }
+    .section-num-badge {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--white);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1rem; font-weight: 400; color: var(--accent);
+      box-shadow: var(--shadow-card);
+    }
+    .section-heading-wrap {}
+    .section-heading-wrap .sec-label {
+      font-size: .67rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--accent-light);
+      margin-bottom: 4px; display: block;
+    }
+    .policy-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      font-weight: 400; color: var(--text);
+      line-height: 1.2;
+    }
+
+    .policy-section p {
+      font-size: .93rem; color: var(--text-soft);
+      line-height: 1.9; margin-bottom: 14px;
+    }
+    .policy-section p:last-child { margin-bottom: 0; }
+
+    /* highlighted callout inside section */
+    .policy-callout {
+      background: var(--parchment);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-size: .88rem; color: var(--text-soft);
+      line-height: 1.8;
+    }
+    .policy-callout strong { color: var(--text); font-weight: 500; }
+
+    /* warning callout (refund) */
+    .policy-warning {
+      background: #fdf5ed;
+      border: 1px solid var(--accent-light);
+      border-left: 3px solid var(--accent);
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-size: .88rem; color: var(--text-soft);
+      line-height: 1.8;
+    }
+    .policy-warning strong { color: var(--accent-dark); font-weight: 500; }
+
+    /* bullet list */
+    .policy-list {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 10px;
+      margin: 18px 0;
+    }
+    .policy-list li {
+      display: flex; align-items: flex-start; gap: 12px;
+      font-size: .9rem; color: var(--text-soft); line-height: 1.75;
+    }
+    .policy-list li::before {
+      content: '';
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--accent-light);
+      flex-shrink: 0; margin-top: 7px;
+    }
+
+    /* final declaration */
+    .final-declaration {
+      background: var(--white);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-card);
+      padding: 40px 36px;
+      margin-top: 56px;
+      text-align: center;
+    }
+    .final-declaration .dec-icon {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--parchment);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .final-declaration .dec-icon svg { width: 22px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
+    .final-declaration h3 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem; font-weight: 400; color: var(--text);
+      margin-bottom: 14px;
+    }
+    .final-declaration p {
+      font-size: .9rem; color: var(--text-soft); line-height: 1.85;
+      max-width: 520px; margin: 0 auto 18px;
+    }
+    .final-declaration .dec-meta {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
+      margin-top: 24px; padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+    .dec-meta-item {
+      font-size: .78rem; color: var(--text-soft);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .dec-meta-item svg { width: 13px; stroke: var(--accent-light); fill: none; stroke-width: 1.5; }
+    .dec-meta-item a { color: var(--accent); text-decoration: none; transition: color .2s; }
+    .dec-meta-item a:hover { color: var(--accent-dark); }
+
+    /* ─── FOOTER ─────────────────────────────────────────── */
+    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
+    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
+    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
+    .footer-brand .logo span { color: var(--accent-light); }
+    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
+    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
+    .footer-socials a {
+      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,.5); text-decoration: none;
+      font-size: .75rem; transition: border-color .2s, color .2s;
+    }
+    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
+    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 11px; }
+    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--accent-light); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 12px; font-size: .79rem;
+    }
+    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
+    .footer-bottom a:hover { color: var(--accent-light); }
+    .footer-bottom-links { display: flex; gap: 24px; }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    @media (max-width: 960px) {
+      .policy-layout { grid-template-columns: 1fr; gap: 48px; }
+      .policy-toc { position: static; }
+      .toc-nav { flex-direction: row; flex-wrap: wrap; gap: 6px; }
+      .toc-link { border-left: none; border-bottom: 2px solid transparent; padding: 6px 10px; }
+      .toc-link:hover { border-bottom-color: var(--accent-light); border-left-color: transparent; }
+      .toc-link.active { border-bottom-color: var(--accent); border-left-color: transparent; }
+      .toc-contact { display: none; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      nav, header .btn-filled { display: none; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      .page-hero { height: 340px; }
+      .policy-layout { padding: 52px 0 80px; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════ PAGE HERO ══════════════ -->
+<section class="page-hero" aria-labelledby="page-title">
+  <img
+    class="page-hero-img"
+    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1800&q=85"
+    alt="Candles and sacred objects on linen — representing trust and transparency"
+    fetchpriority="high"
+  />
+  <div class="container">
+    <div class="page-hero-content fade-up">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span style="color:rgba(255,255,255,.75)">Terms &amp; Conditions</span>
+      </div>
+      <h1 id="page-title">
+        Terms &amp;<br><em>Conditions</em>
+      </h1>
+      <div class="page-hero-meta">
+        <span>
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Effective Date: 02 November 2025
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          14 Sections
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          Mumbai, Maharashtra, India
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ POLICY LAYOUT ══════════════ -->
+<div class="container">
+  <div class="policy-layout">
+
+    <!-- ── LEFT: TABLE OF CONTENTS ── -->
+    <aside class="policy-toc fade-up" aria-label="Table of contents">
+      <span class="toc-label">Contents</span>
+      <nav class="toc-nav" aria-label="Section navigation">
+        <a href="#s1"  class="toc-link active"><span class="toc-num">1</span>Ownership &amp; Scope</a>
+        <a href="#s2"  class="toc-link"><span class="toc-num">2</span>Service Disclaimer</a>
+        <a href="#s3"  class="toc-link"><span class="toc-num">3</span>Client Responsibility</a>
+        <a href="#s4"  class="toc-link"><span class="toc-num">4</span>No Refund Policy</a>
+        <a href="#s5"  class="toc-link"><span class="toc-num">5</span>Conduct &amp; Ethics</a>
+        <a href="#s6"  class="toc-link"><span class="toc-num">6</span>Confidentiality</a>
+        <a href="#s7"  class="toc-link"><span class="toc-num">7</span>Social Media &amp; Images</a>
+        <a href="#s8"  class="toc-link"><span class="toc-num">8</span>Limitation of Liability</a>
+        <a href="#s9"  class="toc-link"><span class="toc-num">9</span>Jurisdiction</a>
+        <a href="#s10" class="toc-link"><span class="toc-num">10</span>Acceptance of Terms</a>
+        <a href="#s11" class="toc-link"><span class="toc-num">11</span>Electronic Consent</a>
+        <a href="#s12" class="toc-link"><span class="toc-num">12</span>Modification of Terms</a>
+        <a href="#s13" class="toc-link"><span class="toc-num">13</span>Service Delivery</a>
+        <a href="#s14" class="toc-link"><span class="toc-num">14</span>Digital Communication</a>
+      </nav>
+
+      <div class="toc-contact">
+        <p>Questions about these terms?</p>
+        <a href="mailto:infinitesoulawakening@gmail.com">infinitesoulawakening@gmail.com</a>
+        <a href="https://www.instagram.com/infinitesoulawakening" target="_blank" rel="noopener noreferrer">@infinitesoulawakening</a>
+      </div>
+    </aside>
+
+    <!-- ── RIGHT: POLICY CONTENT ── -->
+    <main class="policy-content" aria-label="Terms and conditions content">
+
+      <!-- Intro card -->
+      <div class="policy-intro-card fade-up">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="policy-intro-card-text">
+          <strong>Applicable To</strong>
+          <p>All clients engaging with Infinite Soul Awakening through consultations, tarot readings, rituals, astrology sessions, or other spiritual services conducted online or via digital communication. By booking or communicating with us, you confirm full acceptance of these Terms.</p>
+        </div>
+      </div>
+
+      <!-- ── SECTION 1 ── -->
+      <div class="policy-section fade-up" id="s1">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">1</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Brand &amp; Intellectual Property</span>
+            <h2>Ownership and Scope</h2>
+          </div>
+        </div>
+        <p>Infinite Soul Awakening is a spiritual wellness platform offering tarot, astrology, rituals, and healing sessions across India.</p>
+        <p>All content, materials, and brand elements are exclusively owned by Infinite Soul Awakening. Unauthorized use, duplication, or representation of the brand or its materials is prohibited and may invite legal action under applicable Indian laws.</p>
+      </div>
+
+      <!-- ── SECTION 2 ── -->
+      <div class="policy-section fade-up" id="s2">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">2</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Important Notice</span>
+            <h2>Service Nature and Disclaimer</h2>
+          </div>
+        </div>
+        <p>All services are spiritual and intuitive in nature, intended to offer guidance and clarity.</p>
+        <div class="policy-callout">
+          <strong>These services are not substitutes for medical, psychological, financial, or legal advice.</strong> Results vary depending on individual belief, karma, divine timing, and personal choices. No specific outcomes or guarantees are made or implied.
+        </div>
+      </div>
+
+      <!-- ── SECTION 3 ── -->
+      <div class="policy-section fade-up" id="s3">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">3</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Your Agreement</span>
+            <h2>Client Responsibility, Age, and Consent</h2>
+          </div>
+        </div>
+        <ul class="policy-list" aria-label="Client responsibilities">
+          <li>Clients must be <strong>18 years or older</strong> to book any service.</li>
+          <li>Bookings made through false information or misrepresentation will not be the brand's responsibility.</li>
+          <li>By booking, the client provides <strong>informed consent</strong> to participate in energy-based services.</li>
+          <li>Clients agree that Infinite Soul Awakening is not liable for emotional or material outcomes.</li>
+          <li>Clients must share accurate details and maintain respectful communication throughout.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 4 ── -->
+      <div class="policy-section fade-up" id="s4">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">4</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Payments &amp; Cancellations</span>
+            <h2>No Refund Policy</h2>
+          </div>
+        </div>
+        <div class="policy-warning">
+          <strong>All payments are final and non-refundable.</strong> Once a booking is confirmed or a session begins, no refunds, cancellations, or chargebacks are accepted.
+        </div>
+        <p>As services are personalised and time-based, dissatisfaction with perceived outcomes is not a valid reason for refund.</p>
+        <p>False or malicious refund claims or defamatory disputes will be handled legally under applicable Indian law.</p>
+      </div>
+
+      <!-- ── SECTION 5 ── -->
+      <div class="policy-section fade-up" id="s5">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">5</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Mutual Respect</span>
+            <h2>Conduct and Ethical Behavior</h2>
+          </div>
+        </div>
+        <p>Clients must communicate respectfully with Infinite Soul Awakening and its representatives at all times.</p>
+        <ul class="policy-list">
+          <li>The brand may refuse or discontinue services <strong>without refund</strong> if abusive, false, or disruptive behaviour occurs.</li>
+          <li>Any defamatory statements or attempts to harm the brand's reputation may result in legal action.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 6 ── -->
+      <div class="policy-section fade-up" id="s6">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">6</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Your Privacy</span>
+            <h2>Confidentiality</h2>
+          </div>
+        </div>
+        <div class="policy-callout">
+          <strong>All client information, sessions, and readings are strictly confidential.</strong>
+        </div>
+        <p>Recording, reproducing, or sharing any session or content without prior written consent is prohibited. This applies to all formats — audio, video, written notes, and screenshots.</p>
+      </div>
+
+      <!-- ── SECTION 7 ── -->
+      <div class="policy-section fade-up" id="s7">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">7</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Digital Content</span>
+            <h2>Social Media Content and Image Use</h2>
+          </div>
+        </div>
+        <p>Infinite Soul Awakening's social media content may include representative or symbolic images sourced from public platforms like Pinterest or royalty-free image libraries, used solely for illustrative and aesthetic purposes.</p>
+        <p>Images containing the Infinite Soul Awakening logo or watermark are authentic photographs taken by the brand before or during rituals or healing work, but <strong>never reveal client identities</strong>.</p>
+        <ul class="policy-list">
+          <li>All social media posts, visuals, and captions are the <strong>intellectual property of the brand</strong> and may not be copied or misused.</li>
+          <li>No social media content should be interpreted as a direct depiction of individual client sessions or outcomes.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 8 ── -->
+      <div class="policy-section fade-up" id="s8">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">8</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Legal Boundary</span>
+            <h2>Limitation of Liability</h2>
+          </div>
+        </div>
+        <p>Infinite Soul Awakening is not responsible for decisions or actions taken based on readings or rituals.</p>
+        <p>Clients agree to <strong>indemnify and hold harmless</strong> Infinite Soul Awakening from any claims or disputes arising from their engagement with our services.</p>
+      </div>
+
+      <!-- ── SECTION 9 ── -->
+      <div class="policy-section fade-up" id="s9">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">9</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Legal Governance</span>
+            <h2>Jurisdiction and Governing Law</h2>
+          </div>
+        </div>
+        <p>These Terms are governed by the <strong>laws of India</strong>. All disputes fall under the exclusive jurisdiction of the courts in <strong>Mumbai, Maharashtra</strong>.</p>
+        <div class="policy-callout">
+          All official communication or grievances must be made via email or Instagram to Infinite Soul Awakening's <strong>verified accounts only</strong>.
+        </div>
+      </div>
+
+      <!-- ── SECTION 10 ── -->
+      <div class="policy-section fade-up" id="s10">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">10</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Your Agreement</span>
+            <h2>Acceptance of Terms</h2>
+          </div>
+        </div>
+        <p>By booking or communicating via Instagram or email, clients confirm they have <strong>read, understood, and accepted</strong> these Terms fully and unconditionally.</p>
+      </div>
+
+      <!-- ── SECTION 11 ── -->
+      <div class="policy-section fade-up" id="s11">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">11</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Digital Law</span>
+            <h2>Electronic Consent and Communication</h2>
+          </div>
+        </div>
+        <p>Engaging with Infinite Soul Awakening via Instagram or email constitutes <strong>legal electronic consent</strong> under the Information Technology Act, 2000.</p>
+        <p>All messages, confirmations, and communications exchanged digitally are deemed valid and binding.</p>
+      </div>
+
+      <!-- ── SECTION 12 ── -->
+      <div class="policy-section fade-up" id="s12">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">12</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Updates</span>
+            <h2>Modification of Terms</h2>
+          </div>
+        </div>
+        <p>Infinite Soul Awakening may update or modify these Terms at any time. The <strong>latest version</strong>, published via official platforms, applies to all bookings and services.</p>
+        <p>Continued engagement with our services following any modification constitutes acceptance of the updated Terms.</p>
+      </div>
+
+      <!-- ── SECTION 13 ── -->
+      <div class="policy-section fade-up" id="s13">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">13</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Scheduling</span>
+            <h2>Service Delivery and Scheduling</h2>
+          </div>
+        </div>
+        <p>All services are conducted online and strictly booking-based. No session is confirmed without full payment and written acknowledgment via official email or Instagram.</p>
+        <ul class="policy-list">
+          <li><strong>Missed sessions</strong> without prior notice are non-refundable.</li>
+          <li>In rare cases of unavoidable circumstances (e.g., illness or technical issues), the brand may reschedule a session with reasonable notice.</li>
+          <li>Session timing is subject to availability and confirmed in writing only.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 14 ── -->
+      <div class="policy-section fade-up" id="s14">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">14</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Verified Channels Only</span>
+            <h2>Digital Communication and Authenticity</h2>
+          </div>
+        </div>
+        <p>All official interactions occur <strong>only via email or Instagram</strong> under verified handles of Infinite Soul Awakening. No other person, page, or platform is authorised to represent or collect payments on behalf of the brand.</p>
+        <div class="policy-callout">
+          Infinite Soul Awakening is not liable for any third-party impersonation or message delivery delays on these platforms. <strong>Clients must confirm they are engaging solely with verified official channels.</strong>
+        </div>
+      </div>
+
+      <!-- ── FINAL DECLARATION ── -->
+      <div class="final-declaration fade-up">
+        <div class="dec-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Final Declaration</h3>
+        <p>By booking or engaging with Infinite Soul Awakening, the client acknowledges full understanding and acceptance of these Terms &amp; Conditions. This agreement forms a legally binding understanding between the client and Infinite Soul Awakening.</p>
+        <p><em style="font-family:var(--font-serif);font-style:italic;font-size:1rem;">With Love &amp; Light, Team Infinite Soul Awakening Wellness</em></p>
+        <div class="dec-meta">
+          <div class="dec-meta-item">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Effective: 02 November 2025
+          </div>
+          <div class="dec-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+            Mumbai, Maharashtra, India
+          </div>
+          <div class="dec-meta-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:infinitesoulawakening@gmail.com">infinitesoulawakening@gmail.com</a>
+          </div>
+          <div class="dec-meta-item">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/infinitesoulawakening" target="_blank" rel="noopener noreferrer">@infinitesoulawakening</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div><!-- /policy-layout -->
+</div><!-- /container -->
+
+  <!-- Shared header, footer, nav, observers -->
+  <script src="js/components.js"></script>
+
+  <!-- Page-specific JS -->
+  <script>
+/* Header scroll */
+
+  /* Mobile nav */
+
+  /* Fade-up observer */
+    });
+
+  /* ── Active TOC highlighting on scroll ── */
+  const sections = document.querySelectorAll('.policy-section');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+        const id = entry.target.id;
+        tocLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+  sections.forEach(sec => tocObserver.observe(sec));
+
+  /* Smooth scroll for TOC links */
+  tocLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  </script>
+
+</body>
+</html>
