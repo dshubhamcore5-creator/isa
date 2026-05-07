@@ -737,7 +737,7 @@
   <!-- Page-specific JS -->
   <script>
 /* ── Replace with your actual Google Apps Script Web App URL ── */
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby9rBsFSQfN-KIAQqwA2oQ0YLe5Z8cfINFEvS8l7RCX7DS-5nTkuXuByeF9h6IauLx_RA/exec';
+  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby9rBsFSQfN-KIAQqwA2oQ0YLe5Z8cfINFEvS8l7RCX7DS-5nTkuXuByeF9h6IauLx_RA/exec;
 
   /* ════════ HEADER SCROLL ════════ */
 
@@ -902,37 +902,43 @@
 
     setLoading(true);
 
-    try {
-      const response = await fetch(SCRIPT_URL, {
-        method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(payload),
-        /* Google Apps Script requires no-cors for cross-origin POST from HTML */
-      });
+ try {
 
-      /*
-       * With mode: 'no-cors', fetch returns an opaque response (type === 'opaque').
-       * We cannot read the status, so we treat reaching this point as success.
-       * If SCRIPT_URL is set to YOUR_GOOGLE_SCRIPT_URL (placeholder), we still
-       * show success in dev mode so the UX can be tested.
-       */
-      setLoading(false);
-      showSuccess();
+  const response = await fetch(SCRIPT_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  });
 
-    } catch (err) {
-      setLoading(false);
+  const result = await response.json();
 
-      /* Network error — script URL unreachable */
-      if (SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL') {
-        /* Dev/demo mode: show success anyway so design can be reviewed */
-        console.warn('[ISA Booking] SCRIPT_URL not configured. Showing success in demo mode.');
-        showSuccess();
-      } else {
-        showBanner(
-          'We couldn\'t send your request right now. Please try again, or email us directly at hello@infinitesoulawakening.com'
-        );
-      }
-    }
+  setLoading(false);
+
+  if (result.result === "success") {
+
+    showSuccess();
+
+    bookingForm.reset();
+
+  } else {
+
+    showBanner(
+      'Something went wrong. Please try again.'
+    );
+  }
+
+} catch (err) {
+
+  console.error(err);
+
+  setLoading(false);
+
+  showBanner(
+    'We couldn\'t send your request right now. Please try again later.'
+  );
+}
   });
 
   /*
