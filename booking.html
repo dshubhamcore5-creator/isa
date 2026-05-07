@@ -900,42 +900,33 @@
 
     setLoading(true);
 
- try {
+try {
 
-  const response = await fetch(SCRIPT_URL, {
+  await fetch(SCRIPT_URL, {
     method: 'POST',
+    mode: 'no-cors',
     headers: {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(payload)
   });
 
-  const result = await response.json();
-
   setLoading(false);
 
-  if (result.result === "success") {
+  showSuccess();
 
-    showSuccess();
+  bookingForm.reset();
 
-    bookingForm.reset();
+} catch (error) {
 
-  } else {
-
-    showBanner(
-      'Something went wrong. Please try again.'
-    );
-  }
-
-} catch (err) {
-
-  console.error(err);
+  console.error(error);
 
   setLoading(false);
 
   showBanner(
-    'We couldn\'t send your request right now. Please try again later.'
+    "We couldn't send your request right now. Please try again later."
   );
+
 }
   });
 
