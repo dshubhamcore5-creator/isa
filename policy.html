@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
-  <title>Terms & Conditions — Infinite Soul Awakening</title>
-
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="css/global.css"/>
-
-  <!-- Page-specific styles -->
+  <meta name="description" content="Infinite Soul Awakening Wellness — Terms, Disclaimer, Refund, Privacy and DPDP Policy. Governed by the laws of India."/>
+  <title>Terms, Policies &amp; Legal Information — Infinite Soul Awakening Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="assets/css/global.css"/>
   <style>
 /* ─── PAGE HERO ──────────────────────────────────────── */
     .page-hero {
@@ -50,7 +48,7 @@
       font-family: var(--font-serif);
       font-size: clamp(2.2rem, 4.5vw, 4rem);
       font-weight: 400; color: var(--white);
-      line-height: 1.1; max-width: 680px;
+      line-height: 1.1; max-width: 720px;
     }
     .page-hero-content h1 em { font-style: italic; font-weight: 300; color: rgba(255,220,180,.9); }
     .page-hero-meta {
@@ -99,7 +97,6 @@
       min-width: 20px; flex-shrink: 0;
     }
 
-    /* Contact card in TOC */
     .toc-contact {
       margin-top: 32px;
       background: var(--parchment);
@@ -121,7 +118,6 @@
     /* ─── POLICY CONTENT ─────────────────────────────────── */
     .policy-content { min-width: 0; }
 
-    /* Intro card */
     .policy-intro-card {
       background: var(--parchment);
       border: 1px solid var(--border);
@@ -134,7 +130,6 @@
     .policy-intro-card-text strong { display: block; font-size: .9rem; font-weight: 500; color: var(--text); margin-bottom: 6px; }
     .policy-intro-card-text p { font-size: .86rem; color: var(--text-soft); line-height: 1.75; }
 
-    /* Section blocks */
     .policy-section {
       margin-bottom: 56px;
       padding-bottom: 56px;
@@ -156,7 +151,6 @@
       font-size: 1rem; font-weight: 400; color: var(--accent);
       box-shadow: var(--shadow-card);
     }
-    .section-heading-wrap {}
     .section-heading-wrap .sec-label {
       font-size: .67rem; letter-spacing: .2em;
       text-transform: uppercase; color: var(--accent-light);
@@ -168,6 +162,12 @@
       font-weight: 400; color: var(--text);
       line-height: 1.2;
     }
+    .policy-section h3 {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 400; color: var(--text);
+      margin: 26px 0 10px; line-height: 1.3;
+    }
 
     .policy-section p {
       font-size: .93rem; color: var(--text-soft);
@@ -175,7 +175,6 @@
     }
     .policy-section p:last-child { margin-bottom: 0; }
 
-    /* highlighted callout inside section */
     .policy-callout {
       background: var(--parchment);
       border: 1px solid var(--border);
@@ -187,7 +186,6 @@
     }
     .policy-callout strong { color: var(--text); font-weight: 500; }
 
-    /* warning callout (refund) */
     .policy-warning {
       background: #fdf5ed;
       border: 1px solid var(--accent-light);
@@ -199,7 +197,17 @@
     }
     .policy-warning strong { color: var(--accent-dark); font-weight: 500; }
 
-    /* bullet list */
+    .policy-emergency {
+      background: #fdf5f5;
+      border: 1px solid #e5a0a0;
+      border-left: 3px solid #b94a4a;
+      padding: 18px 22px;
+      margin: 22px 0;
+      font-size: .88rem; color: #7a3030;
+      line-height: 1.8;
+    }
+    .policy-emergency strong { color: #6b2020; font-weight: 500; }
+
     .policy-list {
       list-style: none;
       display: flex; flex-direction: column; gap: 10px;
@@ -216,7 +224,22 @@
       flex-shrink: 0; margin-top: 7px;
     }
 
-    /* final declaration */
+    /* sub-list with letter indent */
+    .policy-sublist {
+      list-style: none;
+      display: flex; flex-direction: column; gap: 8px;
+      margin: 12px 0 12px 20px;
+    }
+    .policy-sublist li {
+      font-size: .88rem; color: var(--text-soft); line-height: 1.75;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .policy-sublist li .sub-marker {
+      font-family: var(--font-serif);
+      font-size: .82rem; color: var(--accent-light);
+      min-width: 18px; flex-shrink: 0; margin-top: 2px;
+    }
+
     .final-declaration {
       background: var(--white);
       border: 1px solid var(--border);
@@ -241,7 +264,7 @@
     }
     .final-declaration p {
       font-size: .9rem; color: var(--text-soft); line-height: 1.85;
-      max-width: 520px; margin: 0 auto 18px;
+      max-width: 560px; margin: 0 auto 14px;
     }
     .final-declaration .dec-meta {
       display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;
@@ -256,33 +279,95 @@
     .dec-meta-item a { color: var(--accent); text-decoration: none; transition: color .2s; }
     .dec-meta-item a:hover { color: var(--accent-dark); }
 
-    /* ─── FOOTER ─────────────────────────────────────────── */
-    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
-    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
-    .footer-brand .logo span { color: var(--accent-light); }
-    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
-    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
-    .footer-socials a {
-      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
+    /* ─── BOOKING ACKNOWLEDGEMENT ────────────────────────── */
+    .booking-ack-section {
+      margin-top: 56px;
+      scroll-margin-top: 108px;
+    }
+    .booking-ack-header {
+      display: flex; align-items: flex-start; gap: 20px;
+      margin-bottom: 28px;
+    }
+    .booking-ack-badge {
+      width: 44px; height: 44px; flex-shrink: 0;
+      background: var(--accent); color: var(--white);
       display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.5); text-decoration: none;
-      font-size: .75rem; transition: border-color .2s, color .2s;
+      font-family: var(--font-serif); font-size: 1rem; font-weight: 400;
+      box-shadow: var(--shadow-card);
     }
-    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
-    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 11px; }
-    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--accent-light); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px; font-size: .79rem;
+    .booking-ack-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 2.8vw, 2.1rem);
+      font-weight: 400; color: var(--text); line-height: 1.2;
     }
-    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
-    .footer-bottom a:hover { color: var(--accent-light); }
-    .footer-bottom-links { display: flex; gap: 24px; }
+    .booking-ack-intro {
+      background: var(--parchment);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 20px 24px;
+      font-size: .9rem; color: var(--text-soft);
+      line-height: 1.8; margin-bottom: 28px;
+    }
+    .booking-ack-intro strong { color: var(--text); }
+    .ack-list {
+      list-style: none;
+      border: 1px solid var(--border);
+      background: var(--white);
+      box-shadow: var(--shadow-card);
+    }
+    .ack-item {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    .ack-item:last-child { border-bottom: none; }
+    .ack-num {
+      display: flex; align-items: flex-start;
+      justify-content: center; padding: 18px 0;
+      font-family: var(--font-serif); font-size: .88rem; font-weight: 400;
+      color: var(--accent-light); border-right: 1px solid var(--border);
+      background: rgba(245,237,224,.45); min-width: 42px;
+    }
+    .ack-text {
+      padding: 16px 20px;
+      font-size: .88rem; color: var(--text-soft); line-height: 1.78;
+    }
+    .ack-text strong { color: var(--text); font-weight: 500; }
+    .ack-item.ack-important .ack-num {
+      background: rgba(155,115,85,.1); color: var(--accent);
+    }
+    .ack-item.ack-important .ack-text { background: rgba(155,115,85,.03); }
+    .booking-ack-reply {
+      margin-top: 28px;
+      background: var(--text);
+      padding: 32px 32px 28px;
+      text-align: center;
+    }
+    .booking-ack-reply > p {
+      font-size: .88rem; color: rgba(255,255,255,.55);
+      margin-bottom: 14px; line-height: 1.72;
+    }
+    .ack-agree-phrase {
+      display: inline-block;
+      font-family: var(--font-serif); font-size: 2.2rem;
+      font-weight: 400; font-style: italic;
+      color: var(--accent-light); letter-spacing: .1em;
+      border: 1px solid rgba(196,168,130,.35);
+      padding: 12px 44px; margin: 6px 0 18px;
+    }
+    .ack-confirm-note {
+      font-size: .76rem; color: rgba(255,255,255,.35);
+      font-style: italic; margin-top: 0; line-height: 1.6;
+    }
+    .ack-cta {
+      display: inline-block; margin-top: 20px;
+      font-family: var(--font-sans); font-size: .72rem;
+      font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
+      padding: 13px 32px; text-decoration: none;
+      background: var(--accent); color: var(--white);
+      border: none; transition: background .25s, transform .2s;
+    }
+    .ack-cta:hover { background: var(--accent-dark); transform: translateY(-2px); }
 
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 960px) {
@@ -293,7 +378,6 @@
       .toc-link:hover { border-bottom-color: var(--accent-light); border-left-color: transparent; }
       .toc-link.active { border-bottom-color: var(--accent); border-left-color: transparent; }
       .toc-contact { display: none; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
       nav, header .btn-filled { display: none; }
       .hamburger { display: flex; }
     }
@@ -301,9 +385,6 @@
       .container { padding: 0 20px; }
       .page-hero { height: 340px; }
       .policy-layout { padding: 52px 0 80px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .footer-bottom-links { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
@@ -313,8 +394,8 @@
 <section class="page-hero" aria-labelledby="page-title">
   <img
     class="page-hero-img"
-    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1800&q=85"
-    alt="Candles and sacred objects on linen — representing trust and transparency"
+    src="assets/images/insta-crystal-candle.jpeg"
+    alt="Candles and wellness objects on linen representing trust and transparency"
     fetchpriority="high"
   />
   <div class="container">
@@ -322,19 +403,19 @@
       <div class="breadcrumb">
         <a href="index.html">Home</a>
         <span>/</span>
-        <span style="color:rgba(255,255,255,.75)">Terms &amp; Conditions</span>
+        <span style="color:rgba(255,255,255,.75)">Policies &amp; Legal</span>
       </div>
       <h1 id="page-title">
-        Terms &amp;<br><em>Conditions</em>
+        Terms, Policies<br><em>&amp; Legal Information</em>
       </h1>
       <div class="page-hero-meta">
         <span>
           <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-          Effective Date: 02 November 2025
+          Effective Date: 12 May 2025 — Version 3.0
         </span>
         <span>
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          14 Sections
+          Applicable Law: Laws of India
         </span>
         <span>
           <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
@@ -353,261 +434,738 @@
     <aside class="policy-toc fade-up" aria-label="Table of contents">
       <span class="toc-label">Contents</span>
       <nav class="toc-nav" aria-label="Section navigation">
-        <a href="#s1"  class="toc-link active"><span class="toc-num">1</span>Ownership &amp; Scope</a>
-        <a href="#s2"  class="toc-link"><span class="toc-num">2</span>Service Disclaimer</a>
-        <a href="#s3"  class="toc-link"><span class="toc-num">3</span>Client Responsibility</a>
-        <a href="#s4"  class="toc-link"><span class="toc-num">4</span>No Refund Policy</a>
-        <a href="#s5"  class="toc-link"><span class="toc-num">5</span>Conduct &amp; Ethics</a>
-        <a href="#s6"  class="toc-link"><span class="toc-num">6</span>Confidentiality</a>
-        <a href="#s7"  class="toc-link"><span class="toc-num">7</span>Social Media &amp; Images</a>
-        <a href="#s8"  class="toc-link"><span class="toc-num">8</span>Limitation of Liability</a>
-        <a href="#s9"  class="toc-link"><span class="toc-num">9</span>Jurisdiction</a>
-        <a href="#s10" class="toc-link"><span class="toc-num">10</span>Acceptance of Terms</a>
-        <a href="#s11" class="toc-link"><span class="toc-num">11</span>Electronic Consent</a>
-        <a href="#s12" class="toc-link"><span class="toc-num">12</span>Modification of Terms</a>
-        <a href="#s13" class="toc-link"><span class="toc-num">13</span>Service Delivery</a>
-        <a href="#s14" class="toc-link"><span class="toc-num">14</span>Digital Communication</a>
+        <a href="#acceptance"     class="toc-link active"><span class="toc-num">1</span>Acceptance of Terms</a>
+        <a href="#nature"         class="toc-link"><span class="toc-num">2</span>Nature of Services</a>
+        <a href="#no-guarantee"   class="toc-link"><span class="toc-num">3</span>No Guarantee of Results</a>
+        <a href="#client-resp"    class="toc-link"><span class="toc-num">4</span>Client Responsibility</a>
+        <a href="#age"            class="toc-link"><span class="toc-num">5</span>Age &amp; Legal Capacity</a>
+        <a href="#booking"        class="toc-link"><span class="toc-num">6</span>Booking Confirmation</a>
+        <a href="#payment"        class="toc-link"><span class="toc-num">7</span>Payment Terms</a>
+        <a href="#refunds"        class="toc-link"><span class="toc-num">8</span>Refund &amp; Cancellation</a>
+        <a href="#no-outcome"     class="toc-link"><span class="toc-num">9</span>No Outcome-Based Refunds</a>
+        <a href="#chargebacks"    class="toc-link"><span class="toc-num">10</span>Chargebacks &amp; Disputes</a>
+        <a href="#prohibited"     class="toc-link"><span class="toc-num">11</span>Prohibited Requests</a>
+        <a href="#emergency"      class="toc-link"><span class="toc-num">12</span>Emergency Disclaimer</a>
+        <a href="#confidentiality" class="toc-link"><span class="toc-num">13</span>Confidentiality</a>
+        <a href="#privacy"        class="toc-link"><span class="toc-num">14</span>Privacy &amp; DPDP</a>
+        <a href="#recording"      class="toc-link"><span class="toc-num">15</span>Recording &amp; Content</a>
+        <a href="#ip"             class="toc-link"><span class="toc-num">16</span>Intellectual Property</a>
+        <a href="#social"         class="toc-link"><span class="toc-num">17</span>Social Media</a>
+        <a href="#testimonials"   class="toc-link"><span class="toc-num">18</span>Testimonials</a>
+        <a href="#conduct"        class="toc-link"><span class="toc-num">19</span>Client Conduct</a>
+        <a href="#defamation"     class="toc-link"><span class="toc-num">20</span>Brand Protection</a>
+        <a href="#third-party"    class="toc-link"><span class="toc-num">21</span>Third-Party Platforms</a>
+        <a href="#liability"      class="toc-link"><span class="toc-num">22</span>Limitation of Liability</a>
+        <a href="#indemnity"      class="toc-link"><span class="toc-num">23</span>Client Indemnity</a>
+        <a href="#international"  class="toc-link"><span class="toc-num">24</span>International Clients</a>
+        <a href="#jurisdiction"   class="toc-link"><span class="toc-num">25</span>Governing Law</a>
+        <a href="#modifications"  class="toc-link"><span class="toc-num">26</span>Modifications</a>
+        <a href="#general"        class="toc-link"><span class="toc-num">27</span>General Provisions</a>
+        <a href="#declaration"    class="toc-link"><span class="toc-num">28</span>Final Declaration</a>
+        <a href="#s-ack"          class="toc-link"><span class="toc-num">29</span>Booking Acknowledgement</a>
       </nav>
 
       <div class="toc-contact">
-        <p>Questions about these terms?</p>
-        <a href="mailto:infinitesoulawakening@gmail.com">infinitesoulawakening@gmail.com</a>
+        <p>Questions about these policies?</p>
+        <a href="mailto:help@infinitesoulawakeningwellness.com">help@infinitesoulawakeningwellness.com</a>
+        <a href="mailto:enquiries@infinitesoulawakening.com">enquiries@infinitesoulawakening.com</a>
         <a href="https://www.instagram.com/infinitesoulawakening" target="_blank" rel="noopener noreferrer">@infinitesoulawakening</a>
+        <a href="https://www.instagram.com/infinite.soulawakening" target="_blank" rel="noopener noreferrer">@infinite.soulawakening</a>
       </div>
     </aside>
 
     <!-- ── RIGHT: POLICY CONTENT ── -->
-    <main class="policy-content" aria-label="Terms and conditions content">
+    <main class="policy-content" aria-label="Terms and policy content">
 
       <!-- Intro card -->
       <div class="policy-intro-card fade-up">
         <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         <div class="policy-intro-card-text">
-          <strong>Applicable To</strong>
-          <p>All clients engaging with Infinite Soul Awakening through consultations, tarot readings, rituals, astrology sessions, or other spiritual services conducted online or via digital communication. By booking or communicating with us, you confirm full acceptance of these Terms.</p>
+          <strong>Please Read Carefully</strong>
+          <p>By booking, paying, communicating, or engaging with Infinite Soul Awakening Wellness in any capacity — including through Instagram, WhatsApp, or email — you confirm that you have read, understood, and unconditionally agreed to these Terms. Engagement constitutes acceptance.</p>
+          <p style="margin-top:8px;">Business: Infinite Soul Awakening Wellness &nbsp;|&nbsp; Location: Mumbai, Maharashtra, India &nbsp;|&nbsp; Effective: 12 May 2025 — Version 3.0</p>
         </div>
       </div>
 
-      <!-- ── SECTION 1 ── -->
-      <div class="policy-section fade-up" id="s1">
+      <!-- ── SECTION 1: ACCEPTANCE ── -->
+      <div class="policy-section fade-up" id="acceptance">
         <div class="section-header">
           <div class="section-num-badge" aria-hidden="true">1</div>
           <div class="section-heading-wrap">
-            <span class="sec-label">Brand &amp; Intellectual Property</span>
-            <h2>Ownership and Scope</h2>
+            <span class="sec-label">Agreement to Terms</span>
+            <h2>Acceptance of Terms</h2>
           </div>
         </div>
-        <p>Infinite Soul Awakening is a spiritual wellness platform offering tarot, astrology, rituals, and healing sessions across India.</p>
-        <p>All content, materials, and brand elements are exclusively owned by Infinite Soul Awakening. Unauthorized use, duplication, or representation of the brand or its materials is prohibited and may invite legal action under applicable Indian laws.</p>
+        <ul class="policy-list">
+          <li>By messaging, booking, paying, attending, receiving, downloading, or otherwise engaging with Infinite Soul Awakening Wellness — whether through Instagram, WhatsApp, email, or any other official channel — the client confirms they have read, understood, and agreed to these Terms in their entirety.</li>
+          <li>Acceptance may occur through written confirmation, Instagram DM, WhatsApp message, email, Razorpay or PayPal payment confirmation, digital consent form, or continued participation in the service.</li>
+          <li>Electronic records and digital contracts arising from such engagement are legally recognised under the Information Technology Act, 2000.</li>
+          <li>For international clients, engagement with Infinite Soul Awakening Wellness regardless of the client's country of residence constitutes acceptance of these Terms, which are governed exclusively by Indian law and subject to the jurisdiction of courts in Mumbai, Maharashtra, India.</li>
+        </ul>
       </div>
 
-      <!-- ── SECTION 2 ── -->
-      <div class="policy-section fade-up" id="s2">
+      <!-- ── SECTION 2: NATURE OF SERVICES ── -->
+      <div class="policy-section fade-up" id="nature">
         <div class="section-header">
           <div class="section-num-badge" aria-hidden="true">2</div>
           <div class="section-heading-wrap">
-            <span class="sec-label">Important Notice</span>
-            <h2>Service Nature and Disclaimer</h2>
+            <span class="sec-label">What We Offer</span>
+            <h2>Nature of Services</h2>
           </div>
         </div>
-        <p>All services are spiritual and intuitive in nature, intended to offer guidance and clarity.</p>
+        <ul class="policy-list">
+          <li>Infinite Soul Awakening Wellness provides spiritual, intuitive, metaphysical, tarot, rune, ritual, energy, and related guidance services to clients in India and internationally.</li>
+          <li>All services are offered solely for spiritual reflection, personal insight, energetic support, self-awareness, and empowerment.</li>
+          <li>Services are <strong>not</strong> medical, psychiatric, psychological, legal, financial, investment, matrimonial, immigration, emergency, or professional advisory services in any form.</li>
+          <li>No service should be treated as a diagnosis, treatment, cure, legal opinion, financial plan, clinical therapy, or guaranteed prediction of any future event.</li>
+        </ul>
         <div class="policy-callout">
-          <strong>These services are not substitutes for medical, psychological, financial, or legal advice.</strong> Results vary depending on individual belief, karma, divine timing, and personal choices. No specific outcomes or guarantees are made or implied.
+          <strong>Terminology Notice:</strong> Terms such as 'healing', 'energy', 'ritual', 'remedy', 'cleansing', 'manifestation', and 'protection' are used in a spiritual and symbolic sense only. They carry no clinical, medical, scientific, or legal meaning.
         </div>
       </div>
 
-      <!-- ── SECTION 3 ── -->
-      <div class="policy-section fade-up" id="s3">
+      <!-- ── SECTION 3: NO GUARANTEE ── -->
+      <div class="policy-section fade-up" id="no-guarantee">
         <div class="section-header">
           <div class="section-num-badge" aria-hidden="true">3</div>
           <div class="section-heading-wrap">
-            <span class="sec-label">Your Agreement</span>
-            <h2>Client Responsibility, Age, and Consent</h2>
+            <span class="sec-label">Important Notice</span>
+            <h2>No Guarantee of Results</h2>
           </div>
         </div>
-        <ul class="policy-list" aria-label="Client responsibilities">
-          <li>Clients must be <strong>18 years or older</strong> to book any service.</li>
-          <li>Bookings made through false information or misrepresentation will not be the brand's responsibility.</li>
-          <li>By booking, the client provides <strong>informed consent</strong> to participate in energy-based services.</li>
-          <li>Clients agree that Infinite Soul Awakening is not liable for emotional or material outcomes.</li>
-          <li>Clients must share accurate details and maintain respectful communication throughout.</li>
-        </ul>
+        <p>The client understands that all spiritual services are interpretative and inherently subjective in nature.</p>
+        <div class="policy-warning">
+          <strong>Infinite Soul Awakening Wellness does not guarantee:</strong> marriage, reconciliation, separation, pregnancy, employment, promotion, court outcomes, visa results, financial gain, business success, health recovery, or any specific fixed outcome; specific timelines or exact future events; permanent energetic change; results identical to any other client; removal of all problems or life challenges; reversal of karma, destiny, or free will; or control over another person's thoughts, emotions, or actions.
+        </div>
       </div>
 
-      <!-- ── SECTION 4 ── -->
-      <div class="policy-section fade-up" id="s4">
+      <!-- ── SECTION 4: CLIENT RESPONSIBILITY ── -->
+      <div class="policy-section fade-up" id="client-resp">
         <div class="section-header">
           <div class="section-num-badge" aria-hidden="true">4</div>
           <div class="section-heading-wrap">
-            <span class="sec-label">Payments &amp; Cancellations</span>
-            <h2>No Refund Policy</h2>
+            <span class="sec-label">Your Agreement</span>
+            <h2>Client Responsibility</h2>
           </div>
         </div>
-        <div class="policy-warning">
-          <strong>All payments are final and non-refundable.</strong> Once a booking is confirmed or a session begins, no refunds, cancellations, or chargebacks are accepted.
-        </div>
-        <p>As services are personalised and time-based, dissatisfaction with perceived outcomes is not a valid reason for refund.</p>
-        <p>False or malicious refund claims or defamatory disputes will be handled legally under applicable Indian law.</p>
-      </div>
-
-      <!-- ── SECTION 5 ── -->
-      <div class="policy-section fade-up" id="s5">
-        <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">5</div>
-          <div class="section-heading-wrap">
-            <span class="sec-label">Mutual Respect</span>
-            <h2>Conduct and Ethical Behavior</h2>
-          </div>
-        </div>
-        <p>Clients must communicate respectfully with Infinite Soul Awakening and its representatives at all times.</p>
         <ul class="policy-list">
-          <li>The brand may refuse or discontinue services <strong>without refund</strong> if abusive, false, or disruptive behaviour occurs.</li>
-          <li>Any defamatory statements or attempts to harm the brand's reputation may result in legal action.</li>
+          <li>The client confirms they are voluntarily seeking spiritual guidance and accepts full personal responsibility for all decisions made before, during, or after any session or service.</li>
+          <li>The client remains solely responsible for: decisions taken after a reading or ritual; emotional interpretation of guidance; personal relationships; financial decisions; medical choices; legal actions; professional decisions; communication with third parties; and all consequences arising from their own actions or inactions.</li>
+          <li>The client agrees not to rely on spiritual guidance as the sole basis for any major life decision.</li>
         </ul>
       </div>
 
-      <!-- ── SECTION 6 ── -->
-      <div class="policy-section fade-up" id="s6">
+      <!-- ── SECTION 5: AGE ── -->
+      <div class="policy-section fade-up" id="age">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">5</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Eligibility</span>
+            <h2>Age and Legal Capacity</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li>Services are available only to individuals aged <strong>18 years or above</strong>. By booking, the client self-certifies that they are 18 or older and legally capable of entering into a binding agreement.</li>
+          <li>Infinite Soul Awakening Wellness does not knowingly provide services to minors. If a minor books using false details or another person's account, Infinite Soul Awakening Wellness is not liable for any consequences arising from such misrepresentation. The adult whose account or payment method was used assumes full responsibility.</li>
+          <li>For international clients, 'minor' means a person below the age of majority in their country of residence or 18 years — whichever is higher.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 6: BOOKING CONFIRMATION ── -->
+      <div class="policy-section fade-up" id="booking">
         <div class="section-header">
           <div class="section-num-badge" aria-hidden="true">6</div>
           <div class="section-heading-wrap">
-            <span class="sec-label">Your Privacy</span>
+            <span class="sec-label">Scheduling</span>
+            <h2>Booking Confirmation</h2>
+          </div>
+        </div>
+        <p>A booking is confirmed only when <em>all</em> of the following conditions are met:</p>
+        <ul class="policy-sublist">
+          <li><span class="sub-marker">(a)</span>Full payment is received</li>
+          <li><span class="sub-marker">(b)</span>Required client details are submitted</li>
+          <li><span class="sub-marker">(c)</span>The client accepts the consent statement</li>
+          <li><span class="sub-marker">(d)</span>Infinite Soul Awakening Wellness confirms the slot or service in writing via an official channel</li>
+        </ul>
+        <p style="margin-top:14px;">A mere inquiry, enquiry message, or unpaid conversation does not create a confirmed booking, contractual obligation, or slot reservation.</p>
+        <p>Infinite Soul Awakening Wellness reserves the right to decline or reschedule any booking it deems unsuitable, unethical, incomplete, outside service scope, abusive, or otherwise inconsistent with the brand's values, without obligation to justify the decision.</p>
+      </div>
+
+      <!-- ── SECTION 7: PAYMENT ── -->
+      <div class="policy-section fade-up" id="payment">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">7</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Transactions</span>
+            <h2>Payment Terms</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li>All payments must be made exclusively through the official payment methods communicated by Infinite Soul Awakening Wellness. Accepted payment processors include Google Pay, PhonePe, Razorpay (for domestic and select international transactions) and PayPal (for international clients).</li>
+          <li>The client is solely responsible for verifying they are paying the correct official account or payment link before completing any transaction. Payment links and account details must be confirmed only through official channels: Instagram (@infinitesoulawakening, @infinite.soulawakening) or email.</li>
+          <li>Infinite Soul Awakening Wellness is not responsible for payments made to fake accounts, impersonators, unauthorised pages, third parties, or payment links not issued directly by ISA.</li>
+          <li>All prices are in Indian Rupees (INR) unless expressly stated otherwise for international clients. Currency conversion costs, international transaction fees, and PayPal charges are the client's sole responsibility.</li>
+          <li>The client must retain payment proof including any transaction references as record of their booking.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 8: REFUND ── -->
+      <div class="policy-section fade-up" id="refunds">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">8</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Payments &amp; Cancellations</span>
+            <h2>Refund, Cancellation and Rescheduling Policy</h2>
+          </div>
+        </div>
+        <div class="policy-warning">
+          <strong>All services are personalised, time-based, intangible, and spiritual in nature. No refunds are applicable once service delivery has commenced. Please read this clause fully before booking.</strong>
+        </div>
+        <p>Refunds are not applicable once:</p>
+        <ul class="policy-sublist">
+          <li><span class="sub-marker">(a)</span>The session has started</li>
+          <li><span class="sub-marker">(b)</span>The reading has been prepared or commenced</li>
+          <li><span class="sub-marker">(c)</span>The ritual has begun</li>
+          <li><span class="sub-marker">(d)</span>Any report or content has been shared</li>
+          <li><span class="sub-marker">(e)</span>The client has received spiritual guidance</li>
+          <li><span class="sub-marker">(f)</span>The client misses the scheduled session</li>
+          <li><span class="sub-marker">(g)</span>The client delays response beyond the agreed communication window</li>
+          <li><span class="sub-marker">(h)</span>The client is dissatisfied with perceived results</li>
+          <li><span class="sub-marker">(i)</span>The client expected a specific outcome that was not promised by Infinite Soul Awakening Wellness</li>
+        </ul>
+        <h3>Client Rescheduling</h3>
+        <p>Rescheduling may be considered at Infinite Soul Awakening Wellness's sole discretion only if the client requests it at least 48 hours before the scheduled session, subject to availability and confirmation. This is a discretionary courtesy, not a guaranteed right.</p>
+        <h3>ISA Rescheduling</h3>
+        <p>If Infinite Soul Awakening Wellness must reschedule due to illness, family emergency, ritual timing, technical failure, or unavoidable circumstances, the client will be offered an alternative slot within a reasonable timeframe. This is the sole remedy in such circumstances.</p>
+        <h3>Force Majeure</h3>
+        <p>If Infinite Soul Awakening Wellness is unable to deliver a confirmed session due to events entirely beyond its control — including natural disasters, extended illness, government-imposed restrictions, or prolonged platform outages — a rescheduled slot or store credit of equivalent value will be offered. No cash refund is applicable under Force Majeure unless its extreme condition.</p>
+        <p>For international clients: no refund is applicable on the basis of currency fluctuation, time zone misunderstanding, or conversion fee deductions.</p>
+      </div>
+
+      <!-- ── SECTION 9: NO OUTCOME REFUNDS ── -->
+      <div class="policy-section fade-up" id="no-outcome">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">9</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Service Fee Basis</span>
+            <h2>No Outcome-Based Refunds</h2>
+          </div>
+        </div>
+        <p>Dissatisfaction with the outcome, prediction, timing, advice, ritual effect, emotional reaction, third-party behaviour, or life circumstances does not constitute grounds for a refund.</p>
+        <div class="policy-callout">
+          Spiritual services are not result-guaranteed products. The fee charged is for the practitioner's time, preparation, intuitive work, spiritual process, and service delivery — not for guaranteed results.
+        </div>
+      </div>
+
+      <!-- ── SECTION 10: CHARGEBACKS ── -->
+      <div class="policy-section fade-up" id="chargebacks">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">10</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Payment Disputes</span>
+            <h2>Chargebacks, Payment Disputes and Fraud</h2>
+          </div>
+        </div>
+        <p>Before initiating any payment dispute, reversal, or chargeback through Razorpay, PayPal, a bank, or any payment platform, the client must first contact Infinite Soul Awakening Wellness and allow a reasonable response period of 5 working days.</p>
+        <p>If a client raises a false, malicious, or bad-faith chargeback after service delivery, Infinite Soul Awakening Wellness will submit all available evidence to the relevant payment platform, including: consent proof; payment confirmation; chat records across all communication channels; booking confirmation; service delivery timestamps; session notes; report delivery proof; and screenshots of acceptance.</p>
+        <div class="policy-warning">
+          <strong>False or bad-faith disputes</strong> — including PayPal Buyer Protection abuse and Razorpay chargeback misuse — constitute breach of this Agreement and may be treated as fraud or misuse of payment systems under applicable Indian and international financial regulations. Infinite Soul Awakening Wellness reserves the right to pursue legal remedies against clients who initiate fraudulent disputes, including filing complaints under the Bharatiya Nyaya Sanhita, 2023 and the Information Technology Act, 2000.
+        </div>
+      </div>
+
+      <!-- ── SECTION 11: PROHIBITED ── -->
+      <div class="policy-section fade-up" id="prohibited">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">11</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Ethical Boundaries</span>
+            <h2>Prohibited Requests and Ethical Limits</h2>
+          </div>
+        </div>
+        <p>Infinite Soul Awakening Wellness may refuse, immediately terminate, or decline any request involving:</p>
+        <ul class="policy-list">
+          <li>Revenge or harm-directed rituals</li>
+          <li>Black magic or workings intended to harm another person</li>
+          <li>Coercive love spells or manipulation of another person's free will</li>
+          <li>Stalking or surveillance assistance</li>
+          <li>Illegal activity, threats, or intimidation</li>
+          <li>Guaranteed medical, legal, court, pregnancy, fertility, death, or accident predictions</li>
+          <li>Emergency mental health support</li>
+          <li>Services involving minors</li>
+          <li>Any matter conflicting with ethics, dignity, safety, or legality</li>
+        </ul>
+        <p>Refusing a request under this clause does not entitle the client to a refund if service has already commenced or been prepared. Infinite Soul Awakening Wellness reserves absolute discretion to define what falls within its ethical and spiritual scope.</p>
+      </div>
+
+      <!-- ── SECTION 12: EMERGENCY ── -->
+      <div class="policy-section fade-up" id="emergency">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">12</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Safety Notice</span>
+            <h2>Emergency and Mental Health Disclaimer</h2>
+          </div>
+        </div>
+        <div class="policy-emergency">
+          <strong>Infinite Soul Awakening Wellness is NOT an emergency, crisis, or mental health service.</strong> If you are in immediate danger or experiencing a mental health crisis, please contact emergency services immediately.
+        </div>
+        <p>If the client is experiencing suicidal thoughts, self-harm urges, severe depression, panic crisis, domestic violence, psychosis, medical emergency, or any form of immediate danger, they must immediately contact:</p>
+        <ul class="policy-list">
+          <li>Emergency services (Police: 100, Ambulance: 108)</li>
+          <li>iCall India: 9152987821</li>
+          <li>A licensed doctor or psychiatrist</li>
+          <li>A crisis helpline or trusted professional</li>
+        </ul>
+        <p>Spiritual guidance must not be used to delay, replace, or avoid urgent professional or emergency help. For international clients, the applicable emergency services are those of the client's country of residence.</p>
+      </div>
+
+      <!-- ── SECTION 13: CONFIDENTIALITY ── -->
+      <div class="policy-section fade-up" id="confidentiality">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">13</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Privacy of Sessions</span>
             <h2>Confidentiality</h2>
           </div>
         </div>
         <div class="policy-callout">
-          <strong>All client information, sessions, and readings are strictly confidential.</strong>
+          <strong>Infinite Soul Awakening Wellness treats all client details, readings, birth information, questions, session content, and personal disclosures as strictly confidential.</strong>
         </div>
-        <p>Recording, reproducing, or sharing any session or content without prior written consent is prohibited. This applies to all formats — audio, video, written notes, and screenshots.</p>
-      </div>
-
-      <!-- ── SECTION 7 ── -->
-      <div class="policy-section fade-up" id="s7">
-        <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">7</div>
-          <div class="section-heading-wrap">
-            <span class="sec-label">Digital Content</span>
-            <h2>Social Media Content and Image Use</h2>
-          </div>
-        </div>
-        <p>Infinite Soul Awakening's social media content may include representative or symbolic images sourced from public platforms like Pinterest or royalty-free image libraries, used solely for illustrative and aesthetic purposes.</p>
-        <p>Images containing the Infinite Soul Awakening logo or watermark are authentic photographs taken by the brand before or during rituals or healing work, but <strong>never reveal client identities</strong>.</p>
+        <p>Client information may be disclosed only:</p>
         <ul class="policy-list">
-          <li>All social media posts, visuals, and captions are the <strong>intellectual property of the brand</strong> and may not be copied or misused.</li>
-          <li>No social media content should be interpreted as a direct depiction of individual client sessions or outcomes.</li>
+          <li>With express client consent</li>
+          <li>Where required by applicable law or court order</li>
+          <li>To respond to valid legal notices</li>
+          <li>To defend against chargebacks, disputes, fraud, threats, harassment, or defamation</li>
+          <li>Where there is a serious and credible safety concern</li>
+          <li>Where disclosure is necessary to protect Infinite Soul Awakening Wellness's legal rights</li>
         </ul>
       </div>
 
-      <!-- ── SECTION 8 ── -->
-      <div class="policy-section fade-up" id="s8">
+      <!-- ── SECTION 14: PRIVACY & DPDP ── -->
+      <div class="policy-section fade-up" id="privacy">
         <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">8</div>
+          <div class="section-num-badge" aria-hidden="true">14</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Data Protection</span>
+            <h2>Privacy Policy and DPDP Act Compliance</h2>
+          </div>
+        </div>
+        <p>Infinite Soul Awakening Wellness respects client privacy and processes personal data in accordance with applicable Indian data protection principles, including the Digital Personal Data Protection Act, 2023 ('DPDP Act'). For international clients, data is processed in accordance with Indian law, which applies exclusively to all engagements.</p>
+
+        <h3>Role</h3>
+        <p>Infinite Soul Awakening Wellness acts as the Data Fiduciary for personal data collected directly from clients. The client is the Data Principal. Third-party platforms including Instagram, WhatsApp, Razorpay, PayPal, and email providers operate under their own privacy policies and are independent data processors.</p>
+
+        <h3>Personal Data Collected</h3>
+        <p>Infinite Soul Awakening Wellness may collect: name; date, time, and place of birth; gender (if voluntarily and relevantly disclosed); phone number; email address; Instagram handle; payment confirmation and transaction references; session questions and relationship or career context voluntarily shared; health-related information only if voluntarily shared (no medical advice is provided); chat history across all communication channels; voice notes; reports; service delivery timestamps; consent confirmations; and grievance records. Only information reasonably required to deliver the service is collected.</p>
+
+        <h3>Purpose of Processing</h3>
+        <p>Personal data is processed exclusively for: booking confirmation and client identification; preparation and delivery of services; ritual planning; communication across official channels; payment verification and processing; client support; fraud prevention and chargeback defence; legal compliance and grievance handling; and record maintenance. Client data is not sold, rented, or shared for advertising purposes.</p>
+
+        <h3>Consent</h3>
+        <p>By submitting personal data, booking, paying via Razorpay or PayPal, or communicating through any official channel, the client provides free, specific, informed, and unconditional consent for processing their personal data for the purposes stated above.</p>
+        <p>If the client refuses to provide required data, Infinite Soul Awakening Wellness may be unable to deliver the service, without refund obligation.</p>
+
+        <h3>Withdrawal of Consent</h3>
+        <p>The client may withdraw consent at any time by emailing <a href="mailto:help@infinitesoulawakeningwellness.com" style="color:var(--accent);text-decoration:none;">help@infinitesoulawakeningwellness.com</a>. Withdrawal does not affect processing already completed prior to withdrawal. Infinite Soul Awakening Wellness may retain limited records where necessary for legal, tax, dispute, or compliance purposes after withdrawal.</p>
+
+        <h3>Data Retention</h3>
+        <p>Personal data is retained for as long as reasonably necessary for service completion, dispute handling, legal compliance, accounting, tax records, and fraud prevention. Data no longer required may be deleted, anonymised, or securely archived.</p>
+
+        <h3>Data Security</h3>
+        <p>Reasonable security practices are applied to protect client data. However, no digital platform — including Instagram, WhatsApp, email, Razorpay, or PayPal — is entirely risk-free. Clients acknowledge the inherent risks of internet-based communication and payment platforms.</p>
+
+        <h3>Data Sharing</h3>
+        <p>Client data may be shared only with: payment processors (Razorpay, PayPal) for transaction processing; communication platforms used in service delivery; professional advisors (lawyers, accountants) where required; and law enforcement, courts, or regulatory authorities where legally mandated or for defence of legal claims. Data is not shared for advertising.</p>
+
+        <h3>Client Rights Under DPDP Act, 2023</h3>
+        <p>Subject to applicable law, the client has the right to: access their personal data held by Infinite Soul Awakening Wellness; request correction of inaccurate data; request erasure of personal data no longer required; withdraw consent; raise a grievance; and nominate another person to exercise these rights in the event of death or incapacity.</p>
+
+        <h3>Grievance Contact</h3>
+        <div class="policy-callout">
+          For privacy or data-related concerns: Infinite Soul Awakening Wellness, Email: <a href="mailto:help@infinitesoulawakeningwellness.com" style="color:var(--accent);text-decoration:none;">help@infinitesoulawakeningwellness.com</a>, Location: Mumbai, Maharashtra, India. Requests must clearly state the client's name, contact details, booking reference, and the nature of the request.
+        </div>
+
+        <h3>Children's Data</h3>
+        <p>Services are not intended for persons below the age of 18. Infinite Soul Awakening Wellness does not knowingly collect personal data from minors. If such data is discovered, it will be deleted promptly unless retention is legally required.</p>
+
+        <h3>Cross-Border Data Processing</h3>
+        <p>International clients' data may be processed or stored across jurisdictions as a result of the use of third-party platforms including Instagram, WhatsApp, Razorpay, PayPal, cloud tools, and email providers. Such processing is subject to the terms of those platforms and applicable Indian law. By engaging with Infinite Soul Awakening Wellness, international clients consent to their data being processed under Indian data protection principles.</p>
+
+        <h3>Data Breach</h3>
+        <p>In the event of a personal data breach requiring notification under applicable law, Infinite Soul Awakening Wellness will take reasonable and timely steps as required by the DPDP Act, 2023.</p>
+      </div>
+
+      <!-- ── SECTION 15: RECORDING ── -->
+      <div class="policy-section fade-up" id="recording">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">15</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Session Content</span>
+            <h2>Recording, Screenshots and Reproduction</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li>The client may not record, screenshot, copy, reproduce, forward, publish, upload, edit, misrepresent, sell, distribute, or publicly share any private reading, ritual, report, remedy, chat, voice note, PDF, image, video, or guidance received via Instagram, WhatsApp, email, or any channel without the prior written permission of Infinite Soul Awakening Wellness.</li>
+          <li>Unauthorised publication, misuse, or distribution of such materials may constitute a breach of this Agreement and may result in legal action under the Information Technology Act, 2000 and applicable Indian laws.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 16: IP ── -->
+      <div class="policy-section fade-up" id="ip">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">16</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Brand Ownership</span>
+            <h2>Intellectual Property</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li>All brand names, logos, rituals, remedies, reports, written materials, captions, images, designs, videos, audios, consultation methods, spiritual frameworks, product descriptions, and service materials associated with Infinite Soul Awakening Wellness are the exclusive property of the brand.</li>
+          <li>No client may copy, imitate, commercially exploit, resell, publish, train AI systems on, or represent such materials as their own without express written permission.</li>
+          <li>The client is granted a limited, personal, non-transferable licence to use materials received solely for their own private use.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 17: SOCIAL MEDIA ── -->
+      <div class="policy-section fade-up" id="social">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">17</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Online Content</span>
+            <h2>Social Media Content Disclaimer</h2>
+          </div>
+        </div>
+        <p>Content published by Infinite Soul Awakening Wellness on Instagram or any social media platform — including symbolic visuals, ritual photographs, testimonials, educational posts, and aesthetic imagery — is for illustrative and inspirational purposes only. It does not constitute a guarantee of results.</p>
+        <ul class="policy-list">
+          <li>No post, reel, story, or message should be interpreted as: proof of identical outcomes for any client; medical, legal, or financial advice; or public disclosure of any specific client's identity unless the client's express consent has been obtained.</li>
+          <li>Social media imagery may include representative or symbolic content sourced from public platforms or royalty-free libraries for aesthetic purposes. Images bearing the Infinite Soul Awakening Wellness watermark or logo are authentic brand photographs and do not reveal client identities.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 18: TESTIMONIALS ── -->
+      <div class="policy-section fade-up" id="testimonials">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">18</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Client Reviews</span>
+            <h2>Testimonials</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li>Testimonials shared by Infinite Soul Awakening Wellness represent individual client experiences only and do not guarantee similar results for any other client.</li>
+          <li>Testimonials may be edited for grammar, privacy, formatting, or length without altering their essential meaning. Personal identities will not be revealed without the client's explicit consent.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 19: CONDUCT ── -->
+      <div class="policy-section fade-up" id="conduct">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">19</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Mutual Respect</span>
+            <h2>Client Conduct and Communication Standards</h2>
+          </div>
+        </div>
+        <p>Clients must maintain respectful, honest, and professional communication across all channels — Instagram, WhatsApp, and email.</p>
+        <p>Infinite Soul Awakening Wellness may immediately terminate or refuse service without refund if the client engages in:</p>
+        <ul class="policy-list">
+          <li>Abuse, threats, or harassment</li>
+          <li>Pressure for guarantees or inappropriate demands</li>
+          <li>Sexually inappropriate behaviour</li>
+          <li>Repeated hostile messages</li>
+          <li>False claims or misrepresentations</li>
+          <li>Attempts at blackmail or extortion</li>
+          <li>Misuse of screenshots or recordings</li>
+          <li>Impersonation of another person</li>
+          <li>Violation of personal or professional boundaries</li>
+          <li>Demands for unethical work</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 20: DEFAMATION ── -->
+      <div class="policy-section fade-up" id="defamation">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">20</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Brand Protection</span>
+            <h2>Brand Protection and Defamation</h2>
+          </div>
+        </div>
+        <p>Clients may raise genuine concerns privately and lawfully through official channels. False allegations, malicious reviews, edited screenshots, threats, harassment, impersonation, extortion, or coordinated reputation attacks — whether on Instagram, Google, WhatsApp, or any platform — may invite legal remedies under the Bharatiya Nyaya Sanhita, 2023 (Sections 356–358) and the Information Technology Act, 2000.</p>
+        <div class="policy-callout">
+          This clause does not restrict lawful consumer complaints, honest factual reviews, or rights available under the Consumer Protection Act, 2019.
+        </div>
+      </div>
+
+      <!-- ── SECTION 21: THIRD PARTY ── -->
+      <div class="policy-section fade-up" id="third-party">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">21</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">External Services</span>
+            <h2>Third-Party Platforms and Services</h2>
+          </div>
+        </div>
+        <p>Infinite Soul Awakening Wellness operates across Instagram, WhatsApp, email, Razorpay, PayPal, and cloud tools. These are third-party services operated independently.</p>
+        <p>Infinite Soul Awakening Wellness is not responsible for:</p>
+        <ul class="policy-list">
+          <li>Platform outages or downtime</li>
+          <li>Message delays or non-delivery</li>
+          <li>Account hacks or platform-side breaches</li>
+          <li>Impersonation accounts</li>
+          <li>Razorpay or PayPal processing failures</li>
+          <li>Third-party privacy practices</li>
+          <li>Client-side internet or device failures</li>
+        </ul>
+        <p>Clients must independently verify official channels before making any payment. Infinite Soul Awakening Wellness's sole official payment channels are Razorpay links and PayPal details shared directly through verified official accounts only.</p>
+      </div>
+
+      <!-- ── SECTION 22: LIABILITY ── -->
+      <div class="policy-section fade-up" id="liability">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">22</div>
           <div class="section-heading-wrap">
             <span class="sec-label">Legal Boundary</span>
             <h2>Limitation of Liability</h2>
           </div>
         </div>
-        <p>Infinite Soul Awakening is not responsible for decisions or actions taken based on readings or rituals.</p>
-        <p>Clients agree to <strong>indemnify and hold harmless</strong> Infinite Soul Awakening from any claims or disputes arising from their engagement with our services.</p>
-      </div>
-
-      <!-- ── SECTION 9 ── -->
-      <div class="policy-section fade-up" id="s9">
-        <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">9</div>
-          <div class="section-heading-wrap">
-            <span class="sec-label">Legal Governance</span>
-            <h2>Jurisdiction and Governing Law</h2>
-          </div>
-        </div>
-        <p>These Terms are governed by the <strong>laws of India</strong>. All disputes fall under the exclusive jurisdiction of the courts in <strong>Mumbai, Maharashtra</strong>.</p>
-        <div class="policy-callout">
-          All official communication or grievances must be made via email or Instagram to Infinite Soul Awakening's <strong>verified accounts only</strong>.
-        </div>
-      </div>
-
-      <!-- ── SECTION 10 ── -->
-      <div class="policy-section fade-up" id="s10">
-        <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">10</div>
-          <div class="section-heading-wrap">
-            <span class="sec-label">Your Agreement</span>
-            <h2>Acceptance of Terms</h2>
-          </div>
-        </div>
-        <p>By booking or communicating via Instagram or email, clients confirm they have <strong>read, understood, and accepted</strong> these Terms fully and unconditionally.</p>
-      </div>
-
-      <!-- ── SECTION 11 ── -->
-      <div class="policy-section fade-up" id="s11">
-        <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">11</div>
-          <div class="section-heading-wrap">
-            <span class="sec-label">Digital Law</span>
-            <h2>Electronic Consent and Communication</h2>
-          </div>
-        </div>
-        <p>Engaging with Infinite Soul Awakening via Instagram or email constitutes <strong>legal electronic consent</strong> under the Information Technology Act, 2000.</p>
-        <p>All messages, confirmations, and communications exchanged digitally are deemed valid and binding.</p>
-      </div>
-
-      <!-- ── SECTION 12 ── -->
-      <div class="policy-section fade-up" id="s12">
-        <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">12</div>
-          <div class="section-heading-wrap">
-            <span class="sec-label">Updates</span>
-            <h2>Modification of Terms</h2>
-          </div>
-        </div>
-        <p>Infinite Soul Awakening may update or modify these Terms at any time. The <strong>latest version</strong>, published via official platforms, applies to all bookings and services.</p>
-        <p>Continued engagement with our services following any modification constitutes acceptance of the updated Terms.</p>
-      </div>
-
-      <!-- ── SECTION 13 ── -->
-      <div class="policy-section fade-up" id="s13">
-        <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">13</div>
-          <div class="section-heading-wrap">
-            <span class="sec-label">Scheduling</span>
-            <h2>Service Delivery and Scheduling</h2>
-          </div>
-        </div>
-        <p>All services are conducted online and strictly booking-based. No session is confirmed without full payment and written acknowledgment via official email or Instagram.</p>
+        <p>To the maximum extent permitted by applicable Indian law, Infinite Soul Awakening Wellness's total liability to any client for any claim arising under this Agreement shall not exceed the amount paid by that client for the specific service or product in respect of which the claim arises.</p>
+        <p>Infinite Soul Awakening Wellness is not liable for:</p>
         <ul class="policy-list">
-          <li><strong>Missed sessions</strong> without prior notice are non-refundable.</li>
-          <li>In rare cases of unavoidable circumstances (e.g., illness or technical issues), the brand may reschedule a session with reasonable notice.</li>
-          <li>Session timing is subject to availability and confirmed in writing only.</li>
+          <li>Indirect loss or emotional distress</li>
+          <li>Financial or business loss</li>
+          <li>Relationship breakdown or career consequences</li>
+          <li>Medical or legal consequences</li>
+          <li>Reliance-based decisions or third-party actions</li>
+          <li>Misunderstanding of guidance</li>
+          <li>Non-achievement of desired outcomes</li>
+        </ul>
+        <div class="policy-callout">
+          Nothing in these Terms excludes liability that cannot lawfully be excluded under mandatory Indian consumer protection legislation.
+        </div>
+      </div>
+
+      <!-- ── SECTION 23: INDEMNITY ── -->
+      <div class="policy-section fade-up" id="indemnity">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">23</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Client Agreement</span>
+            <h2>Client Indemnity</h2>
+          </div>
+        </div>
+        <p>The client agrees to indemnify, defend, and hold harmless Infinite Soul Awakening Wellness, its founder, practitioners, and support team against all claims, losses, damages, costs, and legal expenses arising from:</p>
+        <ul class="policy-list">
+          <li>Breach of these Terms</li>
+          <li>Provision of false information</li>
+          <li>Misuse of services or unlawful conduct</li>
+          <li>Unauthorised publication of session content</li>
+          <li>Defamatory statements</li>
+          <li>Bad-faith payment disputes including Razorpay or PayPal chargebacks</li>
+          <li>Third-party claims caused by the client's actions</li>
         </ul>
       </div>
 
-      <!-- ── SECTION 14 ── -->
-      <div class="policy-section fade-up" id="s14">
+      <!-- ── SECTION 24: INTERNATIONAL CLIENTS ── -->
+      <div class="policy-section fade-up" id="international">
         <div class="section-header">
-          <div class="section-num-badge" aria-hidden="true">14</div>
+          <div class="section-num-badge" aria-hidden="true">24</div>
           <div class="section-heading-wrap">
-            <span class="sec-label">Verified Channels Only</span>
-            <h2>Digital Communication and Authenticity</h2>
+            <span class="sec-label">Global Clients</span>
+            <h2>International Clients — Specific Terms</h2>
           </div>
         </div>
-        <p>All official interactions occur <strong>only via email or Instagram</strong> under verified handles of Infinite Soul Awakening. No other person, page, or platform is authorised to represent or collect payments on behalf of the brand.</p>
+        <p>Infinite Soul Awakening Wellness welcomes international clients and delivers all services exclusively online through Instagram, WhatsApp, and email.</p>
+        <p>International clients acknowledge and agree that:</p>
+        <ul class="policy-sublist">
+          <li><span class="sub-marker">(a)</span>All services are governed exclusively by Indian law</li>
+          <li><span class="sub-marker">(b)</span>Disputes are subject to the exclusive jurisdiction of courts in Mumbai, Maharashtra, India</li>
+          <li><span class="sub-marker">(c)</span>Infinite Soul Awakening Wellness makes no representation that its services comply with the laws of any jurisdiction other than India</li>
+          <li><span class="sub-marker">(d)</span>It is the international client's sole responsibility to verify that engaging with Infinite Soul Awakening Wellness's services is lawful in their country of residence</li>
+        </ul>
+        <p style="margin-top:14px;">Payment by international clients via PayPal constitutes acceptance that the transaction is subject to PayPal's terms and Infinite Soul Awakening Wellness's refund and dispute policy as set out in Sections 8, 9, and 10 of these Terms.</p>
+        <p>Currency conversion, international transaction fees, and PayPal charges are entirely the international client's responsibility. Refunds — where exceptionally applicable under these Terms — will be processed in INR equivalent at the conversion rate at the time of the original transaction.</p>
+      </div>
+
+      <!-- ── SECTION 25: JURISDICTION ── -->
+      <div class="policy-section fade-up" id="jurisdiction">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">25</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Legal Governance</span>
+            <h2>Governing Law, Jurisdiction and Dispute Resolution</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li>These Terms are governed by and construed in accordance with the <strong>laws of India</strong>.</li>
+          <li>In the event of any dispute, the parties shall first attempt resolution through direct written communication within 45 days of written notice.</li>
+          <li>If unresolved, the dispute shall be subject to the exclusive jurisdiction of competent courts or consumer forums in <strong>Mumbai, Maharashtra, India</strong> — applicable to all clients, including international clients, regardless of their country of residence.</li>
+          <li>Nothing in this clause restricts a client's right to approach a consumer forum as available under the Consumer Protection Act, 2019.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 26: MODIFICATIONS ── -->
+      <div class="policy-section fade-up" id="modifications">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">26</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Updates</span>
+            <h2>Modifications to These Terms</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li>Infinite Soul Awakening Wellness may update these Terms at any time. The most current version, published via official platforms, applies to all future bookings from the date of publication.</li>
+          <li>For existing confirmed bookings, the version accepted at time of booking generally applies, unless a legal compliance requirement necessitates immediate update.</li>
+          <li>Continued engagement after publication of revised Terms constitutes acceptance of the revised version.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 27: GENERAL PROVISIONS ── -->
+      <div class="policy-section fade-up" id="general">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">27</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Legal Framework</span>
+            <h2>General Provisions</h2>
+          </div>
+        </div>
+        <ul class="policy-list">
+          <li><strong>Severability:</strong> If any provision of these Terms is found invalid or unenforceable by a competent court, that provision shall be severed and the remaining Terms shall continue in full force.</li>
+          <li><strong>Entire Agreement:</strong> These Terms constitute the entire agreement between Infinite Soul Awakening Wellness and the client and supersede all prior oral or written agreements relating to the subject matter.</li>
+          <li><strong>Survival:</strong> Sections 13 (Confidentiality), 14 (Privacy and DPDP), 16 (Intellectual Property), 20 (Brand Protection), 22 (Limitation of Liability), and 23 (Client Indemnity) survive termination of this Agreement.</li>
+          <li><strong>Waiver:</strong> No failure by Infinite Soul Awakening Wellness to enforce any provision constitutes a waiver of that right.</li>
+          <li><strong>Language:</strong> These Terms are in English. In any dispute, the English version prevails over any translation.</li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION 28: FINAL DECLARATION ── -->
+      <div class="policy-section fade-up" id="declaration">
+        <div class="section-header">
+          <div class="section-num-badge" aria-hidden="true">28</div>
+          <div class="section-heading-wrap">
+            <span class="sec-label">Client Confirmation</span>
+            <h2>Final Client Declaration</h2>
+          </div>
+        </div>
         <div class="policy-callout">
-          Infinite Soul Awakening is not liable for any third-party impersonation or message delivery delays on these platforms. <strong>Clients must confirm they are engaging solely with verified official channels.</strong>
+          <em style="font-family:var(--font-serif);font-style:italic;font-size:.95rem;line-height:1.8;display:block;">
+            By booking or engaging with Infinite Soul Awakening Wellness, the client confirms: "I understand that Infinite Soul Awakening Wellness provides spiritual and intuitive guidance only. I understand that no result is guaranteed. I understand that the service is not medical, legal, financial, psychological, or emergency advice. I accept full responsibility for my decisions. I consent to processing of my personal data for service delivery and related purposes under the DPDP Act, 2023. I accept the refund, conduct, confidentiality, and legal terms stated in this Agreement in their entirety."
+          </em>
         </div>
       </div>
 
-      <!-- ── FINAL DECLARATION ── -->
+      <!-- ── SECTION 29: BOOKING ACKNOWLEDGEMENT ── -->
+      <section class="booking-ack-section fade-up" id="s-ack" aria-labelledby="s-ack-title">
+
+        <div class="booking-ack-header">
+          <div class="booking-ack-badge" aria-hidden="true">29</div>
+          <div>
+            <span class="sec-label" style="font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent-light);margin-bottom:4px;display:block;">Pre-Booking Consent</span>
+            <h2 id="s-ack-title">Booking Acknowledgement</h2>
+          </div>
+        </div>
+
+        <div class="booking-ack-intro">
+          <strong>Before confirming your booking with Infinite Soul Awakening Wellness, please read and acknowledge the following.</strong><br/>
+          Your booking will be confirmed only after this acknowledgement and payment.
+        </div>
+
+        <ol class="ack-list" aria-label="Booking acknowledgement statements">
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">1</span>
+            <div class="ack-text">I understand this is a <strong>spiritual, intuitive, tarot, rune, ritual, and energy guidance service only</strong>.</div>
+          </li>
+
+          <li class="ack-item ack-important">
+            <span class="ack-num" aria-hidden="true">2</span>
+            <div class="ack-text">I understand this is <strong>not medical, psychological, legal, financial, emergency, investment, matrimonial, or professional advice</strong>.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">3</span>
+            <div class="ack-text">I understand that <strong>no specific result, timeline, reconciliation, marriage, job, money, legal outcome, health outcome, pregnancy, or third-party action is guaranteed</strong>.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">4</span>
+            <div class="ack-text">I confirm that I am <strong>18 years or older</strong>.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">5</span>
+            <div class="ack-text">I confirm that all details I provide — including <strong>name, date, time, and place of birth, questions, and contact information</strong> — are accurate to the best of my knowledge.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">6</span>
+            <div class="ack-text">I understand that my <strong>decisions, actions, interpretations, and life choices remain my own responsibility</strong>.</div>
+          </li>
+
+          <li class="ack-item ack-important">
+            <span class="ack-num" aria-hidden="true">7</span>
+            <div class="ack-text">I understand that <strong>payment confirms my booking and that refunds are not applicable</strong> once the session, reading, report preparation, ritual preparation, or energy work has started.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">8</span>
+            <div class="ack-text">I understand that <strong>rescheduling is subject to availability</strong> and must be requested at least <strong>48 hours</strong> before the confirmed slot.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">9</span>
+            <div class="ack-text">I agree <strong>not to record, screenshot, reproduce, forward, publish, edit, or publicly share</strong> private readings, rituals, remedies, reports, voice notes, chats, or guidance without written permission.</div>
+          </li>
+
+          <li class="ack-item ack-important">
+            <span class="ack-num" aria-hidden="true">10</span>
+            <div class="ack-text">I agree to maintain <strong>respectful communication</strong>. I understand that abusive, threatening, defamatory, harassing, fraudulent, or inappropriate conduct may lead to refusal or termination of service without refund.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">11</span>
+            <div class="ack-text">I consent to Infinite Soul Awakening Wellness <strong>processing my personal data</strong> — including name, contact details, birth details, questions, payment confirmation, communication history, and session notes — for booking, service delivery, personalisation, record-keeping, dispute handling, fraud prevention, and legal compliance under the DPDP Act, 2023.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">12</span>
+            <div class="ack-text">I understand that I may <strong>request access, correction, deletion, or withdrawal of consent</strong> for my personal data by contacting <a href="mailto:help@infinitesoulawakeningwellness.com" style="color:var(--accent);text-decoration:none;">help@infinitesoulawakeningwellness.com</a>, subject to legal, tax, accounting, fraud-prevention, and dispute-resolution retention requirements.</div>
+          </li>
+
+          <li class="ack-item">
+            <span class="ack-num" aria-hidden="true">13</span>
+            <div class="ack-text">I confirm that I am communicating only with the <strong>official Infinite Soul Awakening Wellness channel</strong> and understand that the brand is not responsible for payments made to impersonators or fake accounts.</div>
+          </li>
+
+          <li class="ack-item ack-important">
+            <span class="ack-num" aria-hidden="true">14</span>
+            <div class="ack-text">I have <strong>read, understood, and accepted</strong> the Terms, Disclaimer, Refund Policy, Privacy Policy, and DPDP consent statement.</div>
+          </li>
+
+        </ol>
+
+        <div class="booking-ack-reply">
+          <p>Please reply <em>exactly</em> as shown below to confirm your acknowledgement:</p>
+          <div class="ack-agree-phrase" role="text" aria-label="Required reply phrase">"I AGREE"</div>
+          <p class="ack-confirm-note">Your booking will be confirmed only after this acknowledgement and payment.</p>
+          <a href="booking.html" class="ack-cta">Reserve Your Session</a>
+        </div>
+
+      </section>
+
+      <!-- ── FINAL DECLARATION CARD ── -->
       <div class="final-declaration fade-up">
         <div class="dec-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
         <h3>Final Declaration</h3>
-        <p>By booking or engaging with Infinite Soul Awakening, the client acknowledges full understanding and acceptance of these Terms &amp; Conditions. This agreement forms a legally binding understanding between the client and Infinite Soul Awakening.</p>
-        <p><em style="font-family:var(--font-serif);font-style:italic;font-size:1rem;">With Love &amp; Light, Team Infinite Soul Awakening Wellness</em></p>
+        <p>By booking or engaging with Infinite Soul Awakening Wellness, the client acknowledges full understanding and acceptance of these Terms and Conditions. This agreement forms a legally binding understanding between the client and Infinite Soul Awakening Wellness.</p>
+        <p><em style="font-family:var(--font-serif);font-style:italic;font-size:1rem;">With warmth, Infinite Soul Awakening Wellness</em></p>
         <div class="dec-meta">
           <div class="dec-meta-item">
             <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            Effective: 02 November 2025
+            Effective: 12 May 2025 — Version 3.0
           </div>
           <div class="dec-meta-item">
             <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
@@ -615,11 +1173,15 @@
           </div>
           <div class="dec-meta-item">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:infinitesoulawakening@gmail.com">infinitesoulawakening@gmail.com</a>
+            <a href="mailto:help@infinitesoulawakeningwellness.com">help@infinitesoulawakeningwellness.com</a>
           </div>
           <div class="dec-meta-item">
             <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
             <a href="https://www.instagram.com/infinitesoulawakening" target="_blank" rel="noopener noreferrer">@infinitesoulawakening</a>
+          </div>
+          <div class="dec-meta-item">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <a href="https://www.instagram.com/infinite.soulawakening" target="_blank" rel="noopener noreferrer">@infinite.soulawakening</a>
           </div>
         </div>
       </div>
@@ -628,31 +1190,25 @@
   </div><!-- /policy-layout -->
 </div><!-- /container -->
 
-  <!-- Shared header, footer, nav, observers -->
-  <script src="js/components.js"></script>
-
-  <!-- Page-specific JS -->
+  <script src="assets/js/components.js"></script>
   <script>
-/* Header scroll */
-
-  /* Mobile nav */
-
-  /* Fade-up observer */
-    });
-
   /* ── Active TOC highlighting on scroll ── */
-  const sections = document.querySelectorAll('.policy-section');
+  const sections = document.querySelectorAll('.policy-section, .booking-ack-section');
   const tocLinks = document.querySelectorAll('.toc-link');
 
-        const id = entry.target.id;
-        tocLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
-        });
-      }
-    });
-  }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
-
-  sections.forEach(sec => tocObserver.observe(sec));
+  if ('IntersectionObserver' in window) {
+    const tocObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.id;
+          tocLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+          });
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+    sections.forEach(sec => tocObserver.observe(sec));
+  }
 
   /* Smooth scroll for TOC links */
   tocLinks.forEach(link => {
@@ -663,6 +1219,5 @@
     });
   });
   </script>
-
 </body>
 </html>

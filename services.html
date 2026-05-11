@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
-  <title>Services — Infinite Soul Awakening</title>
-
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="css/global.css"/>
-
-  <!-- Page-specific styles -->
+  <meta name="description" content="Infinite Soul Awakening Wellness — personalised online guidance and wellness-focused experiences. Intuitive guidance, energy wellness, sacred wellness practices, and crystal products."/>
+  <title>Services — Infinite Soul Awakening Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="assets/css/global.css"/>
   <style>
 /* ─── PAGE HERO ──────────────────────────────────────── */
     .page-hero {
@@ -74,33 +72,10 @@
     }
     .intro-bar p em { font-family: var(--font-serif); font-style: italic; color: var(--text); }
 
-    /* ─── SERVICE FILTER TABS ────────────────────────────── */
-    .filter-tabs {
-      padding: 48px 0 0;
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-    .filter-tab {
-      font-family: var(--font-sans);
-      font-size: .72rem; font-weight: 400;
-      letter-spacing: .14em; text-transform: uppercase;
-      padding: 9px 22px;
-      border: 1px solid var(--border);
-      background: none; color: var(--text-soft);
-      cursor: pointer;
-      transition: all .22s;
-    }
-    .filter-tab:hover { border-color: var(--accent-light); color: var(--text); }
-    .filter-tab.active {
-      background: var(--accent); color: var(--white); border-color: var(--accent);
-    }
-
     /* ─── SERVICES GRID ──────────────────────────────────── */
     .services-section { padding: 60px 0 110px; }
 
-    /* ── Large feature card (first item, spans full width) ── */
+    /* ── Large feature card ── */
     .service-feature-card {
       display: grid;
       grid-template-columns: 1.1fr 1fr;
@@ -164,7 +139,6 @@
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
     }
-    .sfc-meta-item { }
     .sfc-meta-item span {
       display: block; font-size: .68rem;
       letter-spacing: .16em; text-transform: uppercase;
@@ -175,10 +149,10 @@
       font-size: 1.1rem; font-weight: 400; color: var(--text);
     }
 
-    /* ── Regular 3-col grid ── */
-    .services-three-grid {
+    /* ── Regular 2-col grid ── */
+    .services-two-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 24px;
       margin-bottom: 28px;
     }
@@ -239,24 +213,8 @@
       font-size: .88rem; color: var(--text-soft);
       line-height: 1.82; margin-bottom: 24px; flex: 1;
     }
-    .sc-footer {
-      display: flex; align-items: center;
-      justify-content: space-between;
-      padding-top: 20px;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap; gap: 12px;
-    }
-    .sc-price {
-      font-family: var(--font-serif);
-      font-size: 1.25rem; font-weight: 400; color: var(--accent);
-    }
-    .sc-price span {
-      font-family: var(--font-sans);
-      font-size: .72rem; font-weight: 300; color: var(--text-soft);
-      margin-left: 4px;
-    }
 
-    /* ── Bottom wide card (Ritual Work) ── */
+    /* ── Bottom wide card ── */
     .service-wide-card {
       display: grid;
       grid-template-columns: 1fr 1.6fr;
@@ -302,6 +260,19 @@
       font-size: .72rem; letter-spacing: .1em;
       text-transform: uppercase; color: var(--text-soft);
     }
+
+    /* ─── ONLINE NOTICE BANNER ───────────────────────────── */
+    .online-notice {
+      background: var(--parchment);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      padding: 22px 28px;
+      margin-bottom: 36px;
+      font-size: .88rem;
+      color: var(--text-soft);
+      line-height: 1.75;
+    }
+    .online-notice strong { color: var(--text); display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 6px; }
 
     /* ─── TESTIMONIAL BAND ───────────────────────────────── */
     .testimonial-band {
@@ -354,7 +325,6 @@
       position: relative;
       gap: 0;
     }
-    /* connecting line */
     .process-timeline::before {
       content: '';
       position: absolute;
@@ -414,7 +384,6 @@
       line-height: 1.82;
     }
 
-    /* step images below text */
     .process-img-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -451,7 +420,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
-      max-width: 900px;
+      max-width: 940px;
       margin: 0 auto;
     }
     .faq-item {
@@ -470,7 +439,7 @@
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-q {
       font-family: var(--font-serif);
-      font-size: 1.1rem; font-weight: 400; color: var(--text);
+      font-size: 1.05rem; font-weight: 400; color: var(--text);
       line-height: 1.3;
     }
     .faq-icon {
@@ -514,34 +483,6 @@
     }
     .cta-btn-group { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
-    /* ─── FOOTER ─────────────────────────────────────────── */
-    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
-    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
-    .footer-brand .logo span { color: var(--accent-light); }
-    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
-    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
-    .footer-socials a {
-      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.5); text-decoration: none;
-      font-size: .75rem; transition: border-color .2s, color .2s;
-    }
-    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
-    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 11px; }
-    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--accent-light); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px; font-size: .79rem;
-    }
-    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
-    .footer-bottom a:hover { color: var(--accent-light); }
-    .footer-bottom-links { display: flex; gap: 24px; }
-
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
       .sfc-body { padding: 40px 38px; }
@@ -552,7 +493,7 @@
       .hamburger { display: flex; }
       .service-feature-card { grid-template-columns: 1fr; }
       .sfc-img-wrap img { min-height: 320px; }
-      .services-three-grid { grid-template-columns: 1fr 1fr; }
+      .services-two-grid { grid-template-columns: 1fr; }
       .service-wide-card { grid-template-columns: 1fr; }
       .swc-img-wrap img { min-height: 280px; }
       .process-timeline::before { display: none; }
@@ -561,15 +502,11 @@
       .testimonial-band-inner { grid-template-columns: 1fr; gap: 40px; }
       .tb-divider { display: none; }
       .faq-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 620px) {
       .container { padding: 0 20px; }
       .page-hero { height: 420px; }
-      .services-three-grid { grid-template-columns: 1fr; }
       .process-img-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
       .final-cta-img { height: 420px; }
       .intro-bar-inner { flex-direction: column; }
       .sfc-meta { gap: 18px; }
@@ -582,8 +519,8 @@
 <section class="page-hero" aria-labelledby="page-title">
   <img
     class="page-hero-img"
-    src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1800&q=85"
-    alt="Tarot cards and crystals laid on a warm-lit marble surface"
+    src="assets/images/tarot-reading-flatlay.jpeg"
+    alt="Wellness session with symbolic guidance materials on a warm-lit surface"
     fetchpriority="high"
   />
   <div class="container">
@@ -594,9 +531,9 @@
         <span style="color:rgba(255,255,255,.75)">Services</span>
       </div>
       <h1 id="page-title">
-        Services Designed for<br><em>Clarity &amp; Alignment</em>
+        Personalised Wellness<br><em>Experiences Online</em>
       </h1>
-      <p>Four sacred pathways. One destination — a life lived in full alignment with who you truly are.</p>
+      <p>Four wellness-focused services, each thoughtfully designed to support mindfulness, self-reflection, and personal clarity through personalised online sessions.</p>
     </div>
   </div>
 </section>
@@ -605,8 +542,8 @@
 <div class="intro-bar">
   <div class="container">
     <div class="intro-bar-inner">
-      <p>Each service is a deeply <em>personalised, one-on-one experience</em>. Sessions are available online and in person, and are conducted with complete confidentiality.</p>
-      <a href="booking.html" class="btn btn-filled" style="font-size:.72rem;padding:11px 26px;flex-shrink:0;">View All Bookings</a>
+      <p>Each experience is thoughtfully curated as a <em>private online session</em> designed to support personal clarity, mindfulness, and intentional living through a personalised wellness-focused approach.</p>
+      <a href="booking.html" class="btn btn-filled" style="font-size:.72rem;padding:11px 26px;flex-shrink:0;">Reserve Your Session</a>
     </div>
   </div>
 </div>
@@ -615,19 +552,25 @@
 <section class="services-section" aria-labelledby="services-heading">
   <div class="container">
 
-    <div style="text-align:center;padding-top:16px;margin-bottom:52px;" class="fade-up">
+    <div style="text-align:center;padding-top:16px;margin-bottom:36px;" class="fade-up">
       <span class="section-label" style="margin-bottom:10px;">What We Offer</span>
       <h2 class="section-title" id="services-heading">
-        Four pathways to<br><em>your awakening</em>
+        Four personalised wellness<br><em>experiences online</em>
       </h2>
     </div>
 
-    <!-- ── SERVICE 1: TAROT (Feature Card) ── -->
+    <!-- Online-Only Notice -->
+    <div class="online-notice fade-up">
+      <strong>Session Format</strong>
+      Services are conducted privately and are intended for personal wellness and self-reflection purposes. All services are offered exclusively through online communication methods such as chat, voice notes, written guidance, or scheduled audio calls. In-person sessions and video call sessions are not provided. Visual documentation of sessions or ceremonial practices is not provided. Communication and session-related updates may be shared digitally where appropriate.
+    </div>
+
+    <!-- ── SERVICE 1: INTUITIVE GUIDANCE (Feature Card) ── -->
     <article class="service-feature-card fade-up" id="tarot" aria-labelledby="tarot-title">
       <div class="sfc-img-wrap">
         <img
-          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1000&q=85"
-          alt="Tarot cards spread on a soft linen cloth in warm candlelight"
+          src="assets/images/tarot-reading-flatlay.jpeg"
+          alt="Guidance session with symbolic cards on a soft linen surface in warm light"
           loading="lazy"
         />
         <span class="sfc-badge">Most Requested</span>
@@ -637,128 +580,110 @@
         <div class="sfc-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="11" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="18" width="7" height="3" rx="1"/></svg>
         </div>
-        <h2 id="tarot-title">Intuitive Tarot<br><em>Readings</em></h2>
+        <h2 id="tarot-title">Intuitive Tarot<br><em>Guidance</em></h2>
         <p>
-          The tarot is not a fortune-telling tool — it is a mirror. In each card lies a symbol,
-          an archetype, a truth that your subconscious already knows. My role is to translate
-          that language into clarity you can act on today.
+          Thoughtfully guided tarot sessions designed to support mindfulness, self-reflection, and personal clarity through symbolic interpretation and intuitive guidance practices.
         </p>
         <p>
-          Whether you are at a crossroads in love, career, or identity, a tarot reading offers
-          a perspective untangled from the noise of everyday thinking. Each spread is designed
-          around your specific question and current life energy.
+          Each session is personalised based on the individual's chosen area of focus and is intended to encourage perspective, reflection, and mindful exploration in a respectful and professional setting.
         </p>
         <div class="sfc-meta">
           <div class="sfc-meta-item">
-            <span>Duration</span>
-            <strong>60 minutes</strong>
+            <span>Session Format</span>
+            <strong>Online Sessions Only</strong>
           </div>
           <div class="sfc-meta-item">
-            <span>Format</span>
-            <strong>Online / In-Person</strong>
-          </div>
-          <div class="sfc-meta-item">
-            <span>Starting from</span>
-            <strong>$95</strong>
+            <span>Method</span>
+            <strong>Chat, Voice Notes, or Audio Calls</strong>
           </div>
         </div>
-        <a href="booking.html" class="btn btn-filled">Book a Tarot Reading</a>
+        <a href="booking.html" class="btn btn-filled">Reserve Your Session</a>
       </div>
     </article>
 
-    <!-- ── SERVICES 2 & 3: ASTROLOGY + ENERGY (Side-by-side cards) ── -->
-    <div class="services-three-grid" style="grid-template-columns:1fr 1fr;gap:24px;margin-bottom:28px;">
+    <!-- ── SERVICES 2 & 3: RUNE + ENERGY (Side-by-side cards) ── -->
+    <div class="services-two-grid">
 
-      <!-- Astrology -->
+      <!-- Rune Guidance -->
       <article class="service-card fade-up" id="astrology" style="transition-delay:.1s" aria-labelledby="astro-title">
         <div class="sc-img-wrap">
           <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
-            alt="Star map and astrology chart in warm golden light"
+            src="assets/images/insta-spiritual-workspace.jpeg"
+            alt="Symbolic wellness workspace in warm golden light"
             loading="lazy"
           />
-          <span class="sc-tag">Soul Blueprint</span>
+          <span class="sc-tag">Symbolic Guidance</span>
         </div>
         <div class="sc-body">
           <div class="sc-num" aria-hidden="true">02</div>
           <div class="sc-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
           </div>
-          <h3 id="astro-title">Soul Path<br>Astrology</h3>
+          <h3 id="astro-title">Rune Symbol<br>Guidance</h3>
           <p>
-            Your natal chart is a cosmic blueprint — a map of the sky at the exact moment you
-            arrived in this world. It reveals your soul's purpose, karmic patterns, relationship
-            archetypes, and life timing with extraordinary precision.
+            Rune guidance sessions draw from symbolic traditions and reflective practices to encourage mindfulness, personal insight, and self-reflection. Sessions are thoughtfully adapted based on the individual's chosen area of focus and are intended to provide supportive and wellness-focused guidance through symbolic interpretation.
           </p>
-          <div class="sc-footer">
-            <div class="sc-price">$130 <span>/ session</span></div>
-            <a href="booking.html" class="btn btn-filled" style="font-size:.68rem;padding:10px 20px;">Book Session</a>
+          <div>
+            <p style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-soft);margin-bottom:8px;">Session Format</p>
+            <p style="font-size:.82rem;color:var(--text-soft);margin-bottom:20px;">Online Sessions Only — Personalised Reflective Guidance</p>
+            <a href="booking.html" class="btn btn-filled" style="font-size:.68rem;padding:10px 20px;">Reserve Your Session</a>
           </div>
         </div>
       </article>
 
-      <!-- Energy Healing -->
+      <!-- Energy Wellness -->
       <article class="service-card fade-up" id="energy" style="transition-delay:.2s" aria-labelledby="energy-title">
         <div class="sc-img-wrap">
           <img
-            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=800&q=80"
-            alt="Gentle healing hands with soft warm light between them"
+            src="assets/images/energy-healing-hands.jpeg"
+            alt="Energy wellness session with soft warm light and peaceful setting"
             loading="lazy"
           />
-          <span class="sc-tag">Chakra Aligned</span>
+          <span class="sc-tag">Wellness Focused</span>
         </div>
         <div class="sc-body">
           <div class="sc-num" aria-hidden="true">03</div>
           <div class="sc-icon" aria-hidden="true">
             <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
-          <h3 id="energy-title">Energy<br>Healing</h3>
+          <h3 id="energy-title">Energy<br>Wellness Sessions</h3>
           <p>
-            Energetic blockages accumulate through grief, stress, trauma, and transition.
-            This Reiki-based session works directly on the body's energy centres — clearing,
-            restoring, and rebalancing so you can move and feel freely again.
+            Designed to support mindfulness, relaxation, and personal balance, these personalised online sessions may incorporate crystal and candle wellness practices within a calm and reflective setting. Sessions are thoughtfully adapted based on the selected area of focus and individual preferences, encouraging mindfulness, grounding, and personal reflection through wellness-focused supportive practices.
           </p>
-          <div class="sc-footer">
-            <div class="sc-price">$110 <span>/ session</span></div>
-            <a href="booking.html" class="btn btn-ghost" style="font-size:.68rem;padding:10px 20px;">Book Session</a>
+          <div>
+            <p style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-soft);margin-bottom:8px;">Session Format</p>
+            <p style="font-size:.82rem;color:var(--text-soft);margin-bottom:20px;">Online Sessions Only — Practitioner-Led</p>
+            <a href="booking.html" class="btn btn-ghost" style="font-size:.68rem;padding:10px 20px;">Reserve Your Session</a>
           </div>
         </div>
       </article>
 
     </div>
 
-    <!-- ── SERVICE 4: RITUAL WORK (Wide bottom card) ── -->
+    <!-- ── SERVICE 4: SACRED WELLNESS (Wide bottom card) ── -->
     <article class="service-wide-card fade-up" id="ritual" aria-labelledby="ritual-title">
       <div class="swc-img-wrap">
         <img
-          src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=900&q=80"
-          alt="Sacred ritual space with candles, flowers and spiritual objects on linen"
+          src="assets/images/about-spiritual-flatlay.jpeg"
+          alt="Sacred wellness space with candles and mindful objects on a linen surface"
           loading="lazy"
         />
       </div>
       <div class="swc-body">
         <span class="section-label">New Moon &amp; Seasonal</span>
-        <h2 id="ritual-title">Sacred<br><em>Ritual Work</em></h2>
+        <h2 id="ritual-title">Intention &amp;<br><em>Wellness Practices</em></h2>
         <p>
-          Ritual is the bridge between intention and manifestation. Working with the cycles
-          of the moon, the seasons, and your personal chart, we design bespoke ceremonies
-          that mark transitions, release what no longer serves, and call in what is truly yours.
-        </p>
-        <p>
-          Ritual sessions are highly personal and may include candle ceremonies, cord-cutting
-          practices, crystal grid activations, and guided meditation journeys. Each is created
-          uniquely for you.
+          Personalised wellness-focused practices designed to support mindfulness, reflection, relaxation, and personal exploration. Sessions may incorporate symbolic, reflective, and wellness-inspired methods thoughtfully adapted to the selected area of focus and individual preferences.
         </p>
         <div class="swc-pills">
-          <span class="swc-pill">New Moon Ritual</span>
-          <span class="swc-pill">Full Moon Release</span>
-          <span class="swc-pill">Cord Cutting</span>
-          <span class="swc-pill">Crystal Grids</span>
-          <span class="swc-pill">Seasonal Ceremony</span>
+          <span class="swc-pill">New Moon Alignment Session</span>
+          <span class="swc-pill">Full Moon Renewal Session</span>
+          <span class="swc-pill">Guided Release Practice</span>
+          <span class="swc-pill">Crystal Wellness Alignment</span>
+          <span class="swc-pill">Seasonal Mindfulness Practice</span>
         </div>
         <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
-          <a href="booking.html" class="btn btn-filled">Book Ritual Session</a>
-          <span style="font-family:var(--font-serif);font-size:1.1rem;color:var(--accent);">From $150</span>
+          <a href="booking.html" class="btn btn-filled">Request Private Session</a>
         </div>
       </div>
     </article>
@@ -767,7 +692,7 @@
 </section>
 
 <!-- ══════════════ TESTIMONIAL BAND ══════════════ -->
-<div class="testimonial-band" aria-label="Client testimonials">
+<div class="testimonial-band" aria-label="Client feedback">
   <div class="container">
     <div class="testimonial-band-inner">
 
@@ -779,12 +704,12 @@
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <blockquote>"The tarot reading gave me more clarity in 60 minutes than years of overthinking ever did."</blockquote>
+        <blockquote>"The guidance session gave me such clarity. It was thoughtful, professional, and completely private. I felt heard and supported the entire time."</blockquote>
         <div class="tb-author">
-          <img class="tb-avatar" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Gianna B." loading="lazy"/>
+          <img class="tb-avatar" src="assets/images/testimonial-candle-avatar.jpeg" alt="Priya S." loading="lazy"/>
           <div class="tb-author-info">
-            <strong>Gianna B.</strong>
-            <span>Tarot Reading</span>
+            <strong>Priya S.</strong>
+            <span>Mumbai, India</span>
           </div>
         </div>
       </div>
@@ -799,12 +724,12 @@
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <blockquote>"My natal chart reading was one of the most profound experiences of my life. Seen and understood at last."</blockquote>
+        <blockquote>"The wellness session was a very calming experience. I was not sure what to expect, but I came away feeling much more settled and with a clearer sense of direction."</blockquote>
         <div class="tb-author">
-          <img class="tb-avatar" src="https://randomuser.me/api/portraits/women/65.jpg" alt="Mawa D." loading="lazy"/>
+          <img class="tb-avatar" src="assets/images/testimonial-lotus-avatar.jpeg" alt="Ananya R." loading="lazy"/>
           <div class="tb-author-info">
-            <strong>Mawa D.</strong>
-            <span>Soul Path Astrology</span>
+            <strong>Ananya R.</strong>
+            <span>Bengaluru, India</span>
           </div>
         </div>
       </div>
@@ -819,12 +744,12 @@
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
           <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
         </div>
-        <blockquote>"The ritual session for the new moon was breathtaking. I felt the shift immediately — real, tangible change."</blockquote>
+        <blockquote>"The session felt very personal and respectful. It was easy to participate from home and I appreciated how private and professional the whole process was."</blockquote>
         <div class="tb-author">
-          <img class="tb-avatar" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Siris B." loading="lazy"/>
+          <img class="tb-avatar" src="assets/images/testimonial-crystal-avatar.jpeg" alt="Meera K." loading="lazy"/>
           <div class="tb-author-info">
-            <strong>Siris B.</strong>
-            <span>Sacred Ritual Work</span>
+            <strong>Meera K.</strong>
+            <span>Delhi, India</span>
           </div>
         </div>
       </div>
@@ -842,7 +767,7 @@
       <h2 class="section-title" id="process-heading">
         How it<br><em>works</em>
       </h2>
-      <p>A simple, sacred three-step journey from first contact to lasting clarity.</p>
+      <p>A simple, thoughtful three-step journey from choosing your session to receiving personalised guidance and support.</p>
     </div>
 
     <div class="process-timeline" role="list">
@@ -853,7 +778,7 @@
           <div class="step-num">01</div>
         </div>
         <h3>Choose &amp; Book</h3>
-        <p>Select the service that calls to you. Use our booking page to choose your preferred date, time, and format — online or in person. You will receive a confirmation and a short pre-session questionnaire.</p>
+        <p>Explore the personalised wellness and guidance offerings and schedule the online session that best aligns with your interests and intentions. After booking, you may receive a short pre-session questionnaire to help personalise your experience.</p>
       </div>
 
       <div class="process-step fade-up" style="transition-delay:.18s" role="listitem">
@@ -862,7 +787,7 @@
           <div class="step-num">02</div>
         </div>
         <h3>Your Session</h3>
-        <p>We meet in a sacred, unhurried space. Your session unfolds organically — guided by the tools of your chosen service and the specific energy you bring. Every detail is tailored entirely to you.</p>
+        <p>Your private online session is thoughtfully designed to provide a calm, personalised, and wellness-focused experience using guided reflective practices through your preferred digital communication method.</p>
       </div>
 
       <div class="process-step fade-up" style="transition-delay:.28s" role="listitem">
@@ -870,37 +795,36 @@
           <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           <div class="step-num">03</div>
         </div>
-        <h3>Clarity &amp; Integration</h3>
-        <p>You leave with a clear set of insights, recorded notes, and — if needed — a follow-up pathway. The clarity you gain is yours to keep and build upon, long after the session ends.</p>
+        <h3>Reflection &amp; Guidance</h3>
+        <p>After your session, personalised reflections or supportive guidance may be shared digitally to support ongoing mindfulness and intentional living based on the selected service.</p>
       </div>
 
     </div>
 
-    <!-- Process imagery row -->
     <div class="process-img-row fade-up" style="transition-delay:.1s">
       <div class="process-img-cell">
         <img
-          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=700&q=80"
-          alt="Tarot cards on a marble surface — your reading begins"
+          src="assets/images/tarot-reading-flatlay.jpeg"
+          alt="Guidance session with symbolic materials on a warm surface"
           loading="lazy"
         />
-        <div class="process-img-label"><span>Step into the reading</span></div>
+        <div class="process-img-label"><span>Choose your session</span></div>
       </div>
       <div class="process-img-cell">
         <img
-          src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80"
-          alt="Session in warm candlelit space"
+          src="assets/images/energy-healing-hands.jpeg"
+          alt="Wellness session in a calm and peaceful setting"
           loading="lazy"
         />
-        <div class="process-img-label"><span>Be held in sacred space</span></div>
+        <div class="process-img-label"><span>Experience personalised guidance</span></div>
       </div>
       <div class="process-img-cell">
         <img
-          src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=700&q=80"
-          alt="Woman in peaceful clarity after her session"
+          src="assets/images/hero-spiritual-woman.png"
+          alt="Person in peaceful mindful reflection"
           loading="lazy"
         />
-        <div class="process-img-label"><span>Leave with clarity</span></div>
+        <div class="process-img-label"><span>Receive clarity and reflection</span></div>
       </div>
     </div>
 
@@ -920,34 +844,66 @@
 
       <details class="faq-item fade-up" style="transition-delay:.06s">
         <summary>
-          <span class="faq-q">Do I need to believe in tarot for it to work?</span>
+          <span class="faq-q">How do I choose the right session?</span>
           <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
         </summary>
-        <p class="faq-a">Not at all. Sceptics often receive the most powerful readings precisely because they are open — not filtering the insights through expectation. Curiosity is the only requirement.</p>
+        <p class="faq-a">You may choose a session based on the area in which you are seeking guidance, clarity, mindfulness support, or personal reflection. Session descriptions are provided to help you select the most suitable option.</p>
       </details>
 
       <details class="faq-item fade-up" style="transition-delay:.12s">
         <summary>
-          <span class="faq-q">Are sessions available outside of India?</span>
+          <span class="faq-q">Are services available internationally?</span>
           <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
         </summary>
-        <p class="faq-a">Yes. All services are available online via video call, which means we can work together regardless of your location. Clients currently span 18+ countries across six continents.</p>
+        <p class="faq-a">Yes. All services are offered online and are accessible to clients in different locations worldwide.</p>
       </details>
 
       <details class="faq-item fade-up" style="transition-delay:.18s">
         <summary>
-          <span class="faq-q">How should I prepare for my session?</span>
+          <span class="faq-q">Do I need prior experience with wellness practices?</span>
           <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
         </summary>
-        <p class="faq-a">Come with one or two specific questions or areas of focus. Find a quiet, private space. Hydrate well beforehand. If you have a crystal or meaningful object, feel free to hold it during the session.</p>
+        <p class="faq-a">No. Sessions are designed to be accessible to individuals from all backgrounds and experience levels. No prior knowledge is required.</p>
       </details>
 
       <details class="faq-item fade-up" style="transition-delay:.24s">
         <summary>
-          <span class="faq-q">Is everything I share kept confidential?</span>
+          <span class="faq-q">Are sessions private?</span>
           <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
         </summary>
-        <p class="faq-a">Absolutely. Your session content, personal details, and anything shared in the questionnaire are held in complete confidence and are never shared with any third party under any circumstance.</p>
+        <p class="faq-a">Information voluntarily shared during the booking and session process is handled respectfully and privately in accordance with applicable privacy practices and the Digital Personal Data Protection (DPDP) Act, 2023.</p>
+      </details>
+
+      <details class="faq-item fade-up" style="transition-delay:.30s">
+        <summary>
+          <span class="faq-q">Do I need to share photographs or personal images?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">No. Photographs, videos, identification documents, or personal images are not required for any service.</p>
+      </details>
+
+      <details class="faq-item fade-up" style="transition-delay:.36s">
+        <summary>
+          <span class="faq-q">How are sessions conducted?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">Sessions and guidance are provided online through chat, voice notes, scheduled calls, written reflections, or other agreed digital communication methods depending on the selected service. All sessions are online only. In-person and video call sessions are not provided.</p>
+      </details>
+
+      <details class="faq-item fade-up" style="transition-delay:.42s">
+        <summary>
+          <span class="faq-q">Do I need to perform any practices myself?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">No. Services are practitioner-led, and the selected session or wellness-focused practice is conducted independently by the practitioner.</p>
+      </details>
+
+      <details class="faq-item fade-up" style="transition-delay:.48s">
+        <summary>
+          <span class="faq-q">Are results guaranteed or intended as professional advice?</span>
+          <div class="faq-icon"><svg viewBox="0 0 14 14"><line x1="7" y1="1" x2="7" y2="13"/><line x1="1" y1="7" x2="13" y2="7"/></svg></div>
+        </summary>
+        <p class="faq-a">No. Services are intended for personal wellness, mindfulness, self-reflection, and spiritual exploration purposes only. Individual experiences and outcomes may vary. Services are not intended to diagnose, treat, cure, or replace medical, psychological, legal, or financial advice, treatment, or professional services.</p>
       </details>
 
     </div>
@@ -958,38 +914,25 @@
 <section class="final-cta" aria-labelledby="cta-heading">
   <img
     class="final-cta-img"
-    src="https://images.unsplash.com/photo-1519821172141-b5d8d7e0fa1b?auto=format&fit=crop&w=1800&q=80"
-    alt="Warm candlelit spiritual space inviting you to begin your reading"
+    src="assets/images/insta-crystal-candle.jpeg"
+    alt="Warm wellness space with candles and crystals"
     loading="lazy"
   />
   <div class="final-cta-overlay">
     <span class="section-label fade-up">Your Next Step</span>
     <h2 id="cta-heading" class="fade-up" style="transition-delay:.1s">
-      Choose your path.<br><em>Begin your reading.</em>
+      Reserve your session.<br><em>Begin your journey.</em>
     </h2>
     <p class="fade-up" style="transition-delay:.2s">
-      Every journey begins with a single, courageous step toward clarity.
-      Your session is waiting.
+      Each personalised session is thoughtfully designed to support mindfulness, self-reflection, and personal clarity. Your session awaits.
     </p>
     <div class="cta-btn-group fade-up" style="transition-delay:.3s">
-      <a href="booking.html" class="btn btn-white">Book a Session</a>
-      <a href="about.html" class="btn" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);">Meet Your Guide</a>
+      <a href="booking.html" class="btn btn-white">Reserve Your Session</a>
+      <a href="about.html" class="btn" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);">About the Practice</a>
     </div>
   </div>
 </section>
 
-  <!-- Shared header, footer, nav, observers -->
-  <script src="js/components.js"></script>
-
-  <!-- Page-specific JS -->
-  <script>
-/* Header scroll */
-
-  /* Mobile nav */
-
-  /* Fade-up observer */
-    });
-  </script>
-
+  <script src="assets/js/components.js"></script>
 </body>
 </html>

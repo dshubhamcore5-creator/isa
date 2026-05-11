@@ -1,644 +1,378 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
-  <title>Book a Reading — Infinite Soul Awakening</title>
-
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="css/global.css"/>
-
-  <!-- Page-specific styles -->
+  <meta name="description" content="Reserve a personalised wellness and guidance session with Infinite Soul Awakening Wellness. Online sessions available. Responses within 24-48 hours."/>
+  <title>Reserve Your Session — Infinite Soul Awakening Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="assets/css/global.css"/>
   <style>
-/* ─── PAGE HERO ──────────────────────────────────────── */
-    .page-hero {
-      position: relative;
-      padding-top: 76px;
-      height: 460px;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-    }
-    .page-hero-img {
-      position: absolute; inset: 0;
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%;
-      display: block;
-      filter: brightness(.55) saturate(.82);
-    }
-    .page-hero::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(20,10,3,.05) 0%, rgba(20,10,3,.62) 100%);
-      pointer-events: none;
-    }
-    .page-hero-content {
-      position: relative; z-index: 2;
-      padding: 0 0 64px; width: 100%;
-    }
-    .breadcrumb {
-      display: flex; align-items: center; gap: 10px;
-      font-size: .68rem; letter-spacing: .2em;
-      text-transform: uppercase; color: rgba(255,255,255,.5);
-      margin-bottom: 18px;
-    }
-    .breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
-    .breadcrumb a:hover { color: rgba(255,255,255,.85); }
-    .breadcrumb span { color: rgba(255,255,255,.28); }
-    .page-hero-content h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.4rem, 5vw, 4.4rem);
-      font-weight: 400; color: var(--white);
-      line-height: 1.08; max-width: 700px;
-    }
-    .page-hero-content h1 em { font-style: italic; font-weight: 300; color: rgba(255,220,180,.9); }
-    .page-hero-content p {
-      font-size: .95rem; color: rgba(255,255,255,.68);
-      max-width: 480px; margin-top: 16px; line-height: 1.82;
-    }
+    .booking-section { padding: 88px 0 110px; }
+    .booking-grid { display: grid; grid-template-columns: 1fr 1.55fr; gap: 68px; align-items: start; }
 
-    /* ─── BOOKING LAYOUT ─────────────────────────────────── */
-    .booking-section { padding: 96px 0 110px; }
-    .booking-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.62fr;
-      gap: 72px;
-      align-items: start;
-    }
+    /* ── SIDEBAR ─────────────────────────────────────────────── */
+    .booking-sidebar { position: sticky; top: 100px; }
+    .sidebar-intro { margin-bottom: 36px; }
+    .sidebar-intro .section-title { margin-bottom: 16px; }
+    .sidebar-intro p { font-size: .9rem; color: var(--text-soft); line-height: 1.88; margin-bottom: 12px; }
 
-    /* ─── LEFT SIDEBAR ───────────────────────────────────── */
-    .booking-sidebar { position: sticky; top: 108px; }
-
-    .sidebar-intro { margin-bottom: 44px; }
-    .sidebar-intro .section-title { margin-bottom: 18px; }
-    .sidebar-intro p {
-      font-size: .92rem; color: var(--text-soft); line-height: 1.88;
-      margin-bottom: 14px;
-    }
-
-    /* Response time badge */
     .response-badge {
-      display: flex; align-items: center; gap: 14px;
-      background: var(--parchment);
-      border: 1px solid var(--border);
-      padding: 18px 20px;
-      margin-bottom: 36px;
+      display: flex; align-items: center; gap: 13px;
+      background: var(--parchment); border: 1px solid var(--border);
+      padding: 16px 18px; margin-bottom: 30px;
     }
     .response-badge-icon {
-      width: 40px; height: 40px; flex-shrink: 0;
-      background: var(--white);
-      border: 1px solid var(--border);
+      width: 38px; height: 38px; flex-shrink: 0;
+      background: var(--white); border: 1px solid var(--border);
       display: flex; align-items: center; justify-content: center;
     }
-    .response-badge-icon svg { width: 18px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
-    .response-badge-text strong {
-      display: block; font-size: .82rem; font-weight: 500; color: var(--text);
-      margin-bottom: 2px;
-    }
-    .response-badge-text span { font-size: .78rem; color: var(--text-soft); }
+    .response-badge-icon svg { width: 17px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
+    .response-badge-text strong { display: block; font-size: .81rem; font-weight: 500; color: var(--text); margin-bottom: 2px; }
+    .response-badge-text span { font-size: .76rem; color: var(--text-soft); }
 
-    /* Service highlights */
-    .sidebar-services { display: flex; flex-direction: column; gap: 2px; margin-bottom: 36px; }
+    .sidebar-services { display: flex; flex-direction: column; gap: 2px; margin-bottom: 30px; }
     .sidebar-service {
-      display: flex; align-items: center; gap: 14px;
-      padding: 16px 18px;
-      background: var(--white); border: 1px solid var(--border);
-      cursor: pointer;
-      transition: border-color .2s, background .2s;
-      text-decoration: none;
+      display: flex; align-items: center; gap: 13px;
+      padding: 14px 16px; background: var(--white); border: 1px solid var(--border);
+      text-decoration: none; transition: border-color .2s, background .2s;
     }
     .sidebar-service:hover { border-color: var(--accent-light); background: var(--parchment); }
-    .ss-dot {
-      width: 6px; height: 6px; border-radius: 50%;
-      background: var(--accent-light); flex-shrink: 0;
-    }
+    .ss-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent-light); flex-shrink: 0; }
     .ss-info { flex: 1; }
-    .ss-info strong { display: block; font-size: .84rem; font-weight: 500; color: var(--text); }
-    .ss-info span { font-size: .76rem; color: var(--text-soft); }
-    .ss-price {
-      font-family: var(--font-serif);
-      font-size: 1.05rem; font-weight: 400; color: var(--accent);
-    }
+    .ss-info strong { display: block; font-size: .82rem; font-weight: 500; color: var(--text); }
+    .ss-info span { font-size: .74rem; color: var(--text-soft); }
+    .ss-price { font-family: var(--font-serif); font-size: 1rem; font-weight: 400; color: var(--accent); }
 
-    /* Trust signals */
-    .sidebar-trust { display: flex; flex-direction: column; gap: 12px; }
-    .trust-line {
-      display: flex; align-items: center; gap: 10px;
-      font-size: .82rem; color: var(--text-soft);
-    }
-    .trust-line svg { width: 15px; stroke: var(--accent); fill: none; stroke-width: 1.5; flex-shrink: 0; }
+    .sidebar-trust { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+    .trust-line { display: flex; align-items: center; gap: 10px; font-size: .82rem; color: var(--text-soft); }
+    .trust-line svg { width: 14px; stroke: var(--accent); fill: none; stroke-width: 1.5; flex-shrink: 0; }
 
-    /* Sidebar image */
-    .sidebar-img-wrap {
-      margin-top: 36px;
-      position: relative;
-    }
-    .sidebar-img-wrap img {
-      width: 100%; aspect-ratio: 4/3;
-      object-fit: cover; display: block;
-      box-shadow: var(--shadow-warm);
-    }
+    /* Alternative contact CTAs */
+    .sidebar-alt-cta { margin-top: 28px; }
+    .sidebar-alt-cta p { font-size: .78rem; color: var(--text-soft); margin-bottom: 12px; letter-spacing: .04em; }
+    .alt-cta-btns { display: flex; flex-direction: column; gap: 8px; }
+    .alt-cta-btns a { padding: 11px 18px; font-size: .68rem; justify-content: center; }
+
+    .sidebar-img-wrap { margin-top: 30px; position: relative; }
+    .sidebar-img-wrap img { width: 100%; aspect-ratio: 4/3; object-fit: cover; box-shadow: var(--shadow-warm); }
     .sidebar-img-wrap::after {
-      content: '';
-      position: absolute;
-      bottom: -10px; right: -10px;
-      top: 10px; left: 10px;
-      border: 1px solid var(--accent-light);
-      z-index: -1;
+      content: ''; position: absolute; bottom: -10px; right: -10px;
+      top: 10px; left: 10px; border: 1px solid var(--accent-light); z-index: -1;
     }
 
-    /* ─── BOOKING FORM ───────────────────────────────────── */
-    .booking-form-wrap {
-      background: var(--white);
-      box-shadow: var(--shadow-warm);
-      padding: 52px 52px 56px;
-    }
-    .form-header { margin-bottom: 40px; }
-    .form-header h2 {
-      font-family: var(--font-serif);
-      font-size: 1.9rem; font-weight: 400; color: var(--text);
-      margin-bottom: 10px; line-height: 1.2;
-    }
-    .form-header p { font-size: .88rem; color: var(--text-soft); line-height: 1.75; }
+    /* ── FORM ────────────────────────────────────────────────── */
+    .booking-form-wrap { background: var(--white); box-shadow: var(--shadow-warm); padding: 48px 48px 52px; }
+    .form-header { margin-bottom: 36px; }
+    .form-header h2 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 400; color: var(--text); margin-bottom: 8px; }
+    .form-header p { font-size: .86rem; color: var(--text-soft); line-height: 1.72; }
 
-    /* Form rows */
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
-    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 20px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+    .form-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
     .form-group:last-of-type { margin-bottom: 0; }
-    label {
-      font-size: .72rem; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--text-soft);
-      font-weight: 400;
-    }
-    label .required { color: var(--accent); margin-left: 2px; }
+    label { font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--text-soft); font-weight: 400; }
+    label .req { color: var(--accent); margin-left: 2px; }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="time"],
-    select,
-    textarea {
-      width: 100%;
-      font-family: var(--font-sans);
-      font-size: .9rem; font-weight: 300;
-      color: var(--text);
-      background: var(--cream);
-      border: 1px solid var(--border);
-      padding: 13px 16px;
-      outline: none;
+    input, select, textarea {
+      width: 100%; font-family: var(--font-sans); font-size: .88rem; font-weight: 300;
+      color: var(--text); background: var(--cream); border: 1px solid var(--border);
+      padding: 12px 15px; outline: none; border-radius: 0;
       transition: border-color .22s, background .22s, box-shadow .22s;
-      appearance: none;
-      -webkit-appearance: none;
-      border-radius: 0;
+      appearance: none; -webkit-appearance: none;
     }
     input:focus, select:focus, textarea:focus {
-      border-color: var(--accent);
-      background: var(--white);
-      box-shadow: 0 0 0 3px rgba(155,115,85,.1);
+      border-color: var(--accent); background: var(--white);
+      box-shadow: 0 0 0 3px rgba(155,115,85,.09);
     }
-    input.error, select.error, textarea.error {
-      border-color: var(--error);
-      background: var(--error-bg);
-    }
-    .field-error {
-      font-size: .72rem; color: var(--error);
-      letter-spacing: .04em;
-      display: none;
-    }
-    .field-error.show { display: block; }
-
-    /* Select custom arrow */
+    input.err, select.err, textarea.err { border-color: #b94a4a; background: #fdf5f5; }
+    .field-err { font-size: .7rem; color: #b94a4a; display: none; }
+    .field-err.show { display: block; }
     .select-wrap { position: relative; }
     .select-wrap::after {
-      content: '';
-      position: absolute; right: 16px; top: 50%;
-      transform: translateY(-50%);
-      width: 0; height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      border-top: 5px solid var(--accent);
-      pointer-events: none;
+      content: ''; position: absolute; right: 14px; top: 50%;
+      transform: translateY(-50%); width: 0; height: 0;
+      border-left: 4px solid transparent; border-right: 4px solid transparent;
+      border-top: 5px solid var(--accent); pointer-events: none;
     }
-    select { cursor: pointer; padding-right: 40px; }
-    select option { background: var(--white); color: var(--text); }
+    select { cursor: pointer; padding-right: 36px; }
+    textarea { resize: vertical; min-height: 120px; line-height: 1.7; }
+    .form-divider { height: 1px; background: var(--border); margin: 24px 0; }
 
-    textarea { resize: vertical; min-height: 130px; line-height: 1.7; }
-
-    /* Date / time row */
-    .datetime-row {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;
-    }
-    /* Style date/time placeholder colour */
-    input[type="date"]::-webkit-calendar-picker-indicator,
-    input[type="time"]::-webkit-calendar-picker-indicator {
-      opacity: .5; cursor: pointer; filter: sepia(.6);
-    }
-
-    /* Divider */
-    .form-divider {
-      height: 1px; background: var(--border);
-      margin: 28px 0;
-    }
-
-    /* Consent checkbox */
     .consent-row {
-      display: flex; align-items: flex-start; gap: 14px;
-      margin-bottom: 28px;
-      padding: 20px 22px;
-      background: var(--parchment);
-      border: 1px solid var(--border);
+      display: flex; align-items: flex-start; gap: 13px;
+      background: var(--parchment); border: 1px solid var(--border);
+      padding: 18px 20px; margin-bottom: 26px;
     }
     .consent-row input[type="checkbox"] {
-      width: 18px; height: 18px; min-width: 18px;
-      border: 1.5px solid var(--border);
-      background: var(--white);
-      cursor: pointer;
-      padding: 0;
-      margin-top: 2px;
-      accent-color: var(--accent);
+      width: 17px; height: 17px; min-width: 17px;
+      border: 1.5px solid var(--border); background: var(--white);
+      cursor: pointer; padding: 0; margin-top: 2px; accent-color: var(--accent);
     }
-    .consent-row input[type="checkbox"].error { outline: 2px solid var(--error); }
-    .consent-label {
-      font-size: .86rem; color: var(--text-soft); line-height: 1.65;
-      cursor: pointer; text-transform: none; letter-spacing: 0;
-    }
+    .consent-label { font-size: .84rem; color: var(--text-soft); line-height: 1.65; cursor: pointer; text-transform: none; letter-spacing: 0; }
     .consent-label strong { color: var(--text); font-weight: 500; }
 
-    /* Submit button full-width */
     .submit-btn {
-      width: 100%;
-      font-family: var(--font-sans);
-      font-size: .8rem; font-weight: 500;
-      letter-spacing: .18em; text-transform: uppercase;
-      padding: 18px 32px;
-      background: var(--accent); color: var(--white);
-      border: none; cursor: pointer;
+      width: 100%; font-family: var(--font-sans); font-size: .78rem; font-weight: 500;
+      letter-spacing: .18em; text-transform: uppercase; padding: 17px 32px;
+      background: var(--accent); color: var(--white); border: none; cursor: pointer;
       transition: background .25s, box-shadow .25s, transform .2s;
-      position: relative; overflow: hidden;
     }
     .submit-btn:hover { background: var(--accent-dark); box-shadow: 0 6px 28px rgba(122,90,62,.3); }
-    .submit-btn:active { transform: scale(.99); }
-    .submit-btn:disabled {
-      background: var(--accent-light); cursor: not-allowed;
-      transform: none; box-shadow: none;
-    }
-    /* spinner inside button */
+    .submit-btn:disabled { background: var(--accent-light); cursor: not-allowed; transform: none; box-shadow: none; }
     .btn-spinner {
-      display: none;
-      width: 18px; height: 18px;
-      border: 2px solid rgba(255,255,255,.35);
-      border-top-color: #fff;
-      border-radius: 50%;
-      animation: spin .7s linear infinite;
-      margin: 0 auto;
+      display: none; width: 17px; height: 17px;
+      border: 2px solid rgba(255,255,255,.3); border-top-color: #fff;
+      border-radius: 50%; animation: spin .7s linear infinite; margin: 0 auto;
     }
-    .btn-text { transition: opacity .2s; }
-    .submit-btn.loading .btn-text { opacity: 0; position: absolute; }
+    .submit-btn.loading .btn-text { display: none; }
     .submit-btn.loading .btn-spinner { display: block; }
     @keyframes spin { to { transform: rotate(360deg); } }
 
-    /* Privacy note under button */
     .form-privacy {
       display: flex; align-items: center; gap: 8px;
-      font-size: .76rem; color: var(--text-soft);
-      margin-top: 16px; justify-content: center;
+      font-size: .74rem; color: var(--text-soft); margin-top: 14px; justify-content: center;
     }
-    .form-privacy svg { width: 13px; stroke: var(--accent-light); fill: none; stroke-width: 1.5; }
+    .form-privacy svg { width: 12px; stroke: var(--accent-light); fill: none; stroke-width: 1.5; }
 
-    /* ─── SUCCESS STATE ───────────────────────────────────── */
-    .form-success {
-      display: none;
-      text-align: center;
-      padding: 64px 40px;
-    }
-    .success-icon {
-      width: 72px; height: 72px;
-      border-radius: 50%;
-      background: var(--success-bg);
-      border: 1.5px solid var(--success);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 28px;
-    }
-    .success-icon svg { width: 32px; stroke: var(--success); fill: none; stroke-width: 1.8; }
-    .form-success h3 {
-      font-family: var(--font-serif);
-      font-size: 2rem; font-weight: 400; color: var(--text);
-      margin-bottom: 14px;
-    }
-    .form-success p { font-size: .92rem; color: var(--text-soft); line-height: 1.82; max-width: 380px; margin: 0 auto 8px; }
-    .form-success .response-note {
-      display: inline-flex; align-items: center; gap: 8px;
-      margin-top: 22px;
-      padding: 12px 20px;
-      background: var(--parchment); border: 1px solid var(--border);
-      font-size: .78rem; color: var(--text-soft);
-    }
-    .form-success .response-note svg { width: 14px; stroke: var(--accent); fill: none; stroke-width: 1.5; }
-    .form-success .back-btn {
-      margin-top: 28px;
-      display: inline-block;
-      font-size: .72rem; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-light);
-      padding-bottom: 2px; cursor: pointer;
-      background: none; border-top: none; border-left: none; border-right: none;
-      font-family: var(--font-sans);
-      transition: color .2s;
-    }
-    .form-success .back-btn:hover { color: var(--accent-dark); }
-
-    /* ─── ERROR BANNER ───────────────────────────────────── */
+    /* Error banner */
     .form-error-banner {
-      display: none;
-      background: var(--error-bg); border: 1px solid var(--error);
-      padding: 14px 18px; margin-bottom: 24px;
-      font-size: .84rem; color: var(--error);
-      align-items: center; gap: 10px;
+      display: none; background: #fdf5f5; border: 1px solid #e5a0a0;
+      padding: 13px 16px; margin-bottom: 22px;
+      align-items: center; gap: 10px; font-size: .83rem; color: #b94a4a;
     }
     .form-error-banner.show { display: flex; }
-    .form-error-banner svg { width: 16px; stroke: var(--error); fill: none; stroke-width: 1.8; flex-shrink: 0; }
+    .form-error-banner svg { width: 15px; stroke: #b94a4a; fill: none; stroke-width: 1.8; flex-shrink: 0; }
 
-    /* ─── HOW WE WORK STRIP ──────────────────────────────── */
-    .how-strip {
-      background: var(--parchment);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 80px 0;
+    /* SUCCESS STATE */
+    .form-success { display: none; text-align: center; padding: 60px 40px; }
+    .success-icon {
+      width: 68px; height: 68px; border-radius: 50%;
+      background: #f0f7f2; border: 1.5px solid #4a7c59;
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;
     }
-    .how-strip-header { text-align: center; margin-bottom: 56px; }
-    .how-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    .success-icon svg { width: 30px; stroke: #4a7c59; fill: none; stroke-width: 1.8; }
+    .form-success h3 { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 400; color: var(--text); margin-bottom: 14px; }
+    .form-success p { font-size: .9rem; color: var(--text-soft); line-height: 1.82; max-width: 380px; margin: 0 auto 10px; }
+    .response-note {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 20px; padding: 12px 20px;
+      background: var(--parchment); border: 1px solid var(--border);
+      font-size: .77rem; color: var(--text-soft);
     }
-    .how-card {
-      text-align: center; padding: 0 16px;
-      position: relative;
+    .response-note svg { width: 13px; stroke: var(--accent); fill: none; stroke-width: 1.5; }
+    .success-alt-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+    .back-btn {
+      margin-top: 20px; display: inline-block; font-size: .7rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--accent); background: none; border: none;
+      border-bottom: 1px solid var(--accent-light); padding-bottom: 2px;
+      cursor: pointer; font-family: var(--font-sans); transition: color .2s;
     }
-    /* connector dots */
-    .how-card:not(:last-child)::after {
-      content: '···';
-      position: absolute; right: -12px; top: 28px;
-      color: var(--accent-light); font-size: 1rem; letter-spacing: 3px;
-      line-height: 1;
+    .back-btn:hover { color: var(--accent-dark); }
+
+    /* ── HOW IT WORKS ────────────────────────────────────────── */
+    .how-strip { background: var(--parchment); border-top: 1px solid var(--border); padding: 80px 0; }
+    .how-header { text-align: center; margin-bottom: 52px; }
+    .how-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+    .how-grid::before {
+      content: ''; position: absolute; top: 32px; left: 10%; right: 10%;
+      height: 1px; background: linear-gradient(to right, var(--border), var(--accent-light), var(--border));
     }
+    .how-step { text-align: center; padding: 0 16px; position: relative; z-index: 1; }
     .how-num {
-      width: 56px; height: 56px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      background: var(--white);
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 18px;
-      font-family: var(--font-serif);
-      font-size: 1.2rem; font-weight: 400; color: var(--accent);
-      box-shadow: var(--shadow-card);
+      width: 64px; height: 64px; border-radius: 50%;
+      border: 1px solid var(--border); background: var(--white);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      margin: 0 auto 20px; box-shadow: var(--shadow-card);
+      font-family: var(--font-serif); font-size: 1.2rem; font-weight: 400; color: var(--accent);
     }
-    .how-card h4 {
-      font-family: var(--font-serif);
-      font-size: 1.2rem; font-weight: 400; color: var(--text);
-      margin-bottom: 8px;
-    }
-    .how-card p { font-size: .82rem; color: var(--text-soft); line-height: 1.75; }
+    .how-step h4 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 400; color: var(--text); margin-bottom: 6px; }
+    .how-step p { font-size: .8rem; color: var(--text-soft); line-height: 1.72; }
 
-    /* ─── FOOTER ─────────────────────────────────────────── */
-    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
-    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
-    .footer-brand .logo span { color: var(--accent-light); }
-    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
-    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
-    .footer-socials a {
-      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.5); text-decoration: none;
-      font-size: .75rem; transition: border-color .2s, color .2s;
-    }
-    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
-    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 11px; }
-    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--accent-light); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px; font-size: .79rem;
-    }
-    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
-    .footer-bottom a:hover { color: var(--accent-light); }
-    .footer-bottom-links { display: flex; gap: 24px; }
-
-    /* ─── RESPONSIVE ─────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .booking-grid { grid-template-columns: 1fr 1.4fr; gap: 52px; }
-      .booking-form-wrap { padding: 40px 38px 44px; }
-    }
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
+    @media (max-width: 1024px) { .booking-grid { grid-template-columns: 1fr 1.35fr; gap: 48px; } }
     @media (max-width: 900px) {
-      nav, header .btn { display: none; }
-      .hamburger { display: flex; }
-      .booking-grid { grid-template-columns: 1fr; gap: 52px; }
+      .booking-grid { grid-template-columns: 1fr; gap: 48px; }
       .booking-sidebar { position: static; }
       .sidebar-img-wrap { display: none; }
-      .how-grid { grid-template-columns: 1fr 1fr; }
-      .how-card::after { display: none; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .how-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+      .how-grid::before { display: none; }
     }
     @media (max-width: 620px) {
-      .container { padding: 0 20px; }
-      .page-hero { height: 400px; }
       .booking-form-wrap { padding: 28px 22px 32px; }
-      .form-row, .datetime-row { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
       .how-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══════════════ PAGE HERO ══════════════ -->
+<!-- ══ PAGE HERO ═════════════════════════════════════════════ -->
 <section class="page-hero" aria-labelledby="page-title">
-  <img
-    class="page-hero-img"
-    src="https://images.unsplash.com/photo-1519821172141-b5d8d7e0fa1b?auto=format&fit=crop&w=1800&q=85"
-    alt="Tarot cards and crystals on a softly lit marble table"
-    fetchpriority="high"
-  />
+  <img class="page-hero-img"
+    src="assets/images/tarot-reading-flatlay.jpeg"
+    alt="Tarot cards and candles — begin your reading" fetchpriority="high" width="1800" height="460"/>
   <div class="container">
     <div class="page-hero-content fade-up">
       <div class="breadcrumb">
         <a href="index.html">Home</a>
-        <span>/</span>
-        <span style="color:rgba(255,255,255,.75)">Book a Reading</span>
+        <span class="breadcrumb-sep">/</span>
+        <span style="color:rgba(255,255,255,.75)">Reserve a Session</span>
       </div>
-      <h1 id="page-title">
-        Begin Your<br><em>Sacred Journey</em>
-      </h1>
-      <p>Reserve your personalised reading. Every session is held in confidence and crafted entirely for you.</p>
+      <h1 id="page-title">Reserve Your Session<br><em>Personalised Guidance &amp; Wellness Experiences</em></h1>
+      <p>Submit your booking request and preferred details to receive confirmation and scheduling information through your preferred contact method within 24-48 hours.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ BOOKING SECTION ══════════════ -->
+<!-- ══ BOOKING ═══════════════════════════════════════════════ -->
 <section class="booking-section" aria-labelledby="booking-heading">
   <div class="container">
     <div class="booking-grid">
 
-      <!-- ── LEFT: SIDEBAR ── -->
+      <!-- SIDEBAR -->
       <aside class="booking-sidebar" aria-label="Booking information">
-
         <div class="sidebar-intro fade-up">
           <span class="section-label">Reserve Your Session</span>
-          <h2 class="section-title" id="booking-heading">
-            Your reading<br><em>awaits you</em>
-          </h2>
-          <p>Fill in the form and your preferred session details. Every request is reviewed personally — not by a bot.</p>
-          <p>You will receive a confirmation email with next steps within the response window below.</p>
+          <h2 class="section-title" id="booking-heading">Your Session<br><em>Awaits</em></h2>
+          <p>Each request is reviewed personally. After submitting your booking request, confirmation and scheduling details will be shared through your preferred contact method within 24-48 hours.</p>
         </div>
 
-        <!-- Response time badge -->
         <div class="response-badge fade-up" style="transition-delay:.1s">
-          <div class="response-badge-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
+          <div class="response-badge-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
           <div class="response-badge-text">
             <strong>Responded within 24–48 hours</strong>
-            <span>All requests are reviewed personally</span>
+            <span>Through your preferred contact method</span>
           </div>
         </div>
 
-        <!-- Service list -->
-        <div class="sidebar-services fade-up" style="transition-delay:.15s" role="list" aria-label="Available services">
+        <div class="sidebar-services fade-up" style="transition-delay:.15s" role="list">
           <a href="services.html#tarot" class="sidebar-service" role="listitem">
             <div class="ss-dot"></div>
-            <div class="ss-info">
-              <strong>Intuitive Tarot Reading</strong>
-              <span>60 min · Online / In-Person</span>
-            </div>
-            <span class="ss-price">$95</span>
-          </a>
-          <a href="services.html#astrology" class="sidebar-service" role="listitem">
-            <div class="ss-dot"></div>
-            <div class="ss-info">
-              <strong>Soul Path Astrology</strong>
-              <span>75 min · Online / In-Person</span>
-            </div>
-            <span class="ss-price">$130</span>
+            <div class="ss-info"><strong>Intuitive Guidance</strong><span>Love, Career, Life Path</span></div>
           </a>
           <a href="services.html#energy" class="sidebar-service" role="listitem">
             <div class="ss-dot"></div>
-            <div class="ss-info">
-              <strong>Energy Healing</strong>
-              <span>60 min · Online / In-Person</span>
-            </div>
-            <span class="ss-price">$110</span>
+            <div class="ss-info"><strong>Energy Wellness</strong><span>Balance, Mindfulness, Relaxation</span></div>
           </a>
-          <a href="services.html#ritual" class="sidebar-service" role="listitem">
+          <a href="services.html#rituals" class="sidebar-service" role="listitem">
             <div class="ss-dot"></div>
-            <div class="ss-info">
-              <strong>Sacred Ritual Work</strong>
-              <span>90 min · Online / In-Person</span>
-            </div>
-            <span class="ss-price">$150</span>
+            <div class="ss-info"><strong>Sacred Wellness Practices</strong><span>Reflection, Intention, Personal Growth</span></div>
+          </a>
+          <a href="services.html#crystals" class="sidebar-service" role="listitem">
+            <div class="ss-dot"></div>
+            <div class="ss-info"><strong>Crystal Wellness Products</strong><span>Lifestyle &amp; Wellness Support</span></div>
           </a>
         </div>
 
-        <!-- Trust lines -->
         <div class="sidebar-trust fade-up" style="transition-delay:.2s">
-          <div class="trust-line">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>100% confidential — always</span>
-          </div>
-          <div class="trust-line">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-            <span>Personally reviewed by Aria Soleil</span>
-          </div>
-          <div class="trust-line">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            <span>Response within 24–48 hours</span>
-          </div>
-          <div class="trust-line">
-            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-            <span>Online &amp; in-person sessions available</span>
+          <div class="trust-line"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Information handled respectfully &amp; privately</span></div>
+          <div class="trust-line"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg><span>Personally reviewed by the practitioner</span></div>
+          <div class="trust-line"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg><span>Response within 24–48 hours</span></div>
+        </div>
+
+        <!-- Alternative contact options -->
+        <div class="sidebar-alt-cta fade-up" style="transition-delay:.25s">
+          <p>Prefer to reach out directly?</p>
+
+          <div class="alt-cta-btns">
+            <a href="https://wa.me/918668974489?text=Hi%21%20I%20would%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg viewBox="0 0 24 24" width="15" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M11.5 2C6.253 2 2 6.253 2 11.5c0 1.82.487 3.53 1.338 5.004L2 22l5.61-1.323A9.454 9.454 0 0 0 11.5 21C16.747 21 21 16.747 21 11.5S16.747 2 11.5 2z"/></svg>
+              WhatsApp Us
+            </a>
+            <a href="https://www.instagram.com/infinitesoulawakening" target="_blank" rel="noopener noreferrer" class="btn btn-insta">
+              <svg viewBox="0 0 24 24" width="15" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+              Instagram DM
+            </a>
+            <a href="mailto:enquiries@infinitesoulawakening.com" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" width="15" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Us
+            </a>
           </div>
         </div>
 
-        <!-- Sidebar image -->
-        <div class="sidebar-img-wrap fade-up" style="transition-delay:.25s">
-          <img
-            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=700&q=80"
-            alt="Serene tarot reading setup with candles and crystals"
-            loading="lazy"
-          />
+        <div class="sidebar-img-wrap fade-up" style="transition-delay:.28s">
+          <img src="assets/images/hero-spiritual-woman-alt.jpeg"
+            alt="Peaceful reading session setup" loading="lazy" width="700" height="525"/>
         </div>
-
       </aside>
 
-      <!-- ── RIGHT: FORM ── -->
+      <!-- FORM -->
       <div class="booking-form-wrap fade-up" style="transition-delay:.08s">
 
-        <!-- Error banner -->
         <div class="form-error-banner" id="errorBanner" role="alert">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          <span id="errorBannerText">Something went wrong. Please try again or contact us directly.</span>
+          <span id="errorBannerText">Please fill in all required fields.</span>
         </div>
 
-        <!-- The form -->
         <div id="formBody">
           <div class="form-header">
             <h2>Request Your Session</h2>
-            <p>All fields marked <span style="color:var(--accent)">*</span> are required. Your information is always kept private.</p>
+            <p>Fields marked <span style="color:var(--accent)">*</span> are required. Information voluntarily shared is handled respectfully and privately in accordance with applicable privacy practices and the Digital Personal Data Protection (DPDP) Act, 2023.</p>
           </div>
 
           <form id="bookingForm" novalidate>
 
-            <!-- Name + Email -->
+            <!-- Row 1: Name + WhatsApp -->
             <div class="form-row">
               <div class="form-group">
-                <label for="name">Full Name <span class="required">*</span></label>
-                <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" />
-                <span class="field-error" id="nameError">Please enter your full name.</span>
+                <label for="name">Full Name <span class="req">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name"/>
+                <span class="field-err" id="nameErr">Please enter your full name.</span>
               </div>
               <div class="form-group">
-                <label for="email">Email Address <span class="required">*</span></label>
-                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" />
-                <span class="field-error" id="emailError">Please enter a valid email address.</span>
+                <label for="whatsapp">WhatsApp Number <span class="req">*</span></label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="+91 98765 43210" autocomplete="tel"/>
+                <span class="field-err" id="whatsappErr">Please enter your WhatsApp number.</span>
               </div>
             </div>
 
-            <!-- Phone + Service -->
+            <!-- Row 2: Email + Instagram -->
             <div class="form-row">
               <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+                <label for="email">Email Address <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email"/>
+                <span class="field-err" id="emailErr">Please enter a valid email address.</span>
               </div>
               <div class="form-group">
-                <label for="service">Service <span class="required">*</span></label>
+                <label for="instagram">Instagram Handle</label>
+                <input type="text" id="instagram" name="instagram" placeholder="@yourhandle"/>
+              </div>
+            </div>
+
+            <!-- Row 3: Service + City/Country -->
+            <div class="form-row">
+              <div class="form-group">
+                <label for="service">Service Required <span class="req">*</span></label>
                 <div class="select-wrap">
                   <select id="service" name="service">
                     <option value="" disabled selected>Choose a service…</option>
-                    <option value="tarot">Intuitive Tarot Reading — $95</option>
-                    <option value="astrology">Soul Path Astrology — $130</option>
-                    <option value="energy">Energy Healing — $110</option>
-                    <option value="ritual">Sacred Ritual Work — $150</option>
-                    <option value="unsure">Not sure yet — help me choose</option>
+                    <option value="tarot">Intuitive Guidance</option>
+                    <option value="energy">Energy Wellness</option>
+                    <option value="ritual">Sacred Wellness Practices</option>
+                    <option value="crystals">Crystal Wellness Products</option>
+                    <option value="unsure">Not sure — help me choose</option>
                   </select>
                 </div>
-                <span class="field-error" id="serviceError">Please select a service.</span>
+                <span class="field-err" id="serviceErr">Please select a service.</span>
+              </div>
+              <div class="form-group">
+                <label for="location">City / Country <span class="req">*</span></label>
+                <input type="text" id="location" name="location" placeholder="e.g. Mumbai, India"/>
+                <span class="field-err" id="locationErr">Please enter your city/country.</span>
               </div>
             </div>
 
-            <!-- Date + Time -->
-            <div class="datetime-row">
-              <div class="form-group" style="margin-bottom:0;">
-                <label for="date">Preferred Date <span class="required">*</span></label>
-                <input type="date" id="date" name="date" />
-                <span class="field-error" id="dateError">Please choose a preferred date.</span>
+            <!-- Row 4: Date + Time -->
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0">
+                <label for="date">Preferred Date <span class="req">*</span></label>
+                <input type="date" id="date" name="date"/>
+                <span class="field-err" id="dateErr">Please choose a preferred date.</span>
               </div>
-              <div class="form-group" style="margin-bottom:0;">
+              <div class="form-group" style="margin-bottom:0">
                 <label for="time">Preferred Time</label>
-                <input type="time" id="time" name="time" />
+                <input type="time" id="time" name="time"/>
               </div>
             </div>
 
@@ -647,329 +381,192 @@
             <!-- Message -->
             <div class="form-group">
               <label for="message">Your Question or Intention</label>
-              <textarea id="message" name="message" placeholder="Share what you'd like to explore, a specific question, or any context you feel guided to share. Even a few words help…"></textarea>
+              <textarea id="message" name="message" placeholder="Share the area in which you are seeking guidance, mindfulness support, personal clarity, or self-reflection."></textarea>
             </div>
 
             <div class="form-divider"></div>
 
             <!-- Consent -->
             <div class="consent-row">
-              <input type="checkbox" id="consent" name="consent" />
+              <input type="checkbox" id="consent" name="consent"/>
               <label class="consent-label" for="consent">
-                <strong>I understand this is a spiritual guidance service</strong> and does not constitute medical, legal, or financial advice. I am 18 years of age or older, and I enter this session of my own free will.
+                <strong>I understand that these services are intended for personal wellness, mindfulness, self-reflection, and spiritual exploration purposes only. No guaranteed outcomes are promised.</strong> Services are not intended to replace medical, psychological, legal, or financial advice or treatment. I am 18 years or older.
               </label>
             </div>
-            <span class="field-error" id="consentError" style="display:none;margin-top:-16px;margin-bottom:18px;">You must agree to proceed.</span>
+            <span class="field-err" id="consentErr" style="display:none;margin:-14px 0 18px;">You must agree to continue.</span>
 
-            <!-- Submit -->
             <button type="submit" class="submit-btn" id="submitBtn">
-              <span class="btn-text">Submit Request</span>
+              <span class="btn-text">Request Session</span>
               <div class="btn-spinner" aria-hidden="true"></div>
             </button>
 
-            <!-- Privacy note -->
             <p class="form-privacy">
               <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-              Your information is encrypted and never shared with third parties.
+              Information voluntarily shared during booking is handled respectfully and privately in accordance with applicable privacy practices and the DPDP Act, 2023.
             </p>
-
           </form>
         </div>
 
-        <!-- SUCCESS STATE (hidden until submit) -->
+        <!-- SUCCESS STATE -->
         <div class="form-success" id="formSuccess" role="status" aria-live="polite">
-          <div class="success-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-          </div>
+          <div class="success-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
           <h3>Request Received</h3>
-          <p>Thank you for reaching out. Your booking request has been submitted successfully.</p>
-          <p>Aria will review your request personally and be in touch soon.</p>
+          <p>Your request has been received. Confirmation and scheduling details will be shared through your preferred contact method within 24-48 hours.</p>
           <div class="response-note">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
             You will be contacted within 24–48 hours.
           </div>
-          <br/>
+          <div class="success-alt-btns">
+            <a href="https://wa.me/918668974489" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">WhatsApp Us</a>
+            <a href="https://www.instagram.com/infinitesoulawakening" target="_blank" rel="noopener noreferrer" class="btn btn-insta btn-sm">Instagram DM</a>
+            <a href="mailto:help@infinitesoulawakeningwellness.com" class="btn btn-ghost btn-sm">Email Us</a>
+          </div>
           <button class="back-btn" id="backBtn" type="button">Submit another request</button>
         </div>
 
-      </div><!-- /form-wrap -->
-    </div><!-- /booking-grid -->
-  </div><!-- /container -->
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- ══════════════ HOW IT WORKS STRIP ══════════════ -->
+<!-- ══ HOW IT WORKS ══════════════════════════════════════════ -->
 <div class="how-strip" aria-labelledby="how-heading">
   <div class="container">
-    <div class="how-strip-header fade-up">
+    <div class="how-header fade-up">
       <span class="section-label">What Happens Next</span>
-      <h2 class="section-title" id="how-heading">
-        After you<br><em>submit</em>
-      </h2>
+      <h2 class="section-title" id="how-heading">How It<br><em>Works</em></h2>
     </div>
     <div class="how-grid">
-      <div class="how-card fade-up" style="transition-delay:.06s">
-        <div class="how-num" aria-hidden="true">1</div>
-        <h4>Request Received</h4>
-        <p>Your form is submitted securely and lands directly with Aria — no automated systems, no bots.</p>
-      </div>
-      <div class="how-card fade-up" style="transition-delay:.14s">
-        <div class="how-num" aria-hidden="true">2</div>
-        <h4>Personal Review</h4>
-        <p>Aria reads your request and your intention, and prepares a personalised response within 24–48 hours.</p>
-      </div>
-      <div class="how-card fade-up" style="transition-delay:.22s">
-        <div class="how-num" aria-hidden="true">3</div>
-        <h4>Confirmation Sent</h4>
-        <p>You receive a confirmation email with your session date, time, format details, and any preparation notes.</p>
-      </div>
-      <div class="how-card fade-up" style="transition-delay:.30s">
-        <div class="how-num" aria-hidden="true">4</div>
-        <h4>Your Session Begins</h4>
-        <p>At the agreed time, you enter a sacred, unhurried space — and your journey toward clarity begins.</p>
-      </div>
+      <div class="how-step fade-up" style="transition-delay:.05s"><div class="how-num">1</div><h4>Choose a Service</h4><p>Select the session or wellness-focused offering that best aligns with your area of interest or personal reflection.</p></div>
+      <div class="how-step fade-up" style="transition-delay:.12s"><div class="how-num">2</div><h4>Submit Form</h4><p>Complete the booking form with your preferred details, availability, and area of focus.</p></div>
+      <div class="how-step fade-up" style="transition-delay:.19s"><div class="how-num">3</div><h4>Booking Confirmation</h4><p>Confirmation and scheduling details are typically shared within 24-48 hours through your preferred contact method.</p></div>
+      <div class="how-step fade-up" style="transition-delay:.26s"><div class="how-num">4</div><h4>Payment Confirmation</h4><p>Once payment is confirmed, your selected session or service is scheduled and prepared accordingly.</p></div>
+      <div class="how-step fade-up" style="transition-delay:.33s"><div class="how-num">5</div><h4>Session &amp; Guidance</h4><p>Guidance, reflections, or supportive communication may be shared based on the selected service through chat, voice notes, written updates, or scheduled calls.</p></div>
     </div>
   </div>
 </div>
 
-  <!-- Shared header, footer, nav, observers -->
-  <script src="js/components.js"></script>
-
-  <!-- Page-specific JS -->
-  <script>
-/* ── Replace with your actual Google Apps Script Web App URL ── */
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby9rBsFSQfN-KIAQqwA2oQ0YLe5Z8cfINFEvS8l7RCX7DS-5nTkuXuByeF9h6IauLx_RA/exec';
-  /* ════════ HEADER SCROLL ════════ */
-
-  /* ════════ MOBILE NAV ════════ */
-
-  /* ════════ FADE-UP OBSERVER ════════ */
-
-  /* ════════ SET MIN DATE ════════ */
+<script src="assets/js/components.js"></script>
+<script>
+  /* ── Date constraints ── */
   const dateInput = document.getElementById('date');
-  const today = new Date();
-  // Minimum booking: tomorrow
-  const tomorrow = new Date(today);
-  tomorrow.setDate(today.getDate() + 1);
+  const tomorrow = new Date(); tomorrow.setDate(tomorrow.getDate() + 1);
+  const maxDate  = new Date(); maxDate.setMonth(maxDate.getMonth() + 3);
   dateInput.min = tomorrow.toISOString().split('T')[0];
-  // Maximum booking: 3 months ahead
-  const maxDate = new Date(today);
-  maxDate.setMonth(today.getMonth() + 3);
   dateInput.max = maxDate.toISOString().split('T')[0];
 
-  /* ════════ VALIDATION HELPERS ════════ */
-  function setError(inputId, errorId, show) {
-    const input = document.getElementById(inputId);
-    const error = document.getElementById(errorId);
-    if (show) {
-      input.classList.add('error');
-      error.classList.add('show');
-    } else {
-      input.classList.remove('error');
-      error.classList.remove('show');
-    }
+  /* ── Validation helpers ── */
+  function setErr(id, errId, show) {
+    const el = document.getElementById(id), er = document.getElementById(errId);
+    el.classList.toggle('err', show); er.classList.toggle('show', show);
   }
-
-  function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
-  }
-
-  function clearErrors() {
-    ['name', 'email', 'service', 'date'].forEach(id => {
-      document.getElementById(id).classList.remove('error');
+  function clearAll() {
+    ['name','whatsapp','email','service','location','date'].forEach(id => {
+      document.getElementById(id).classList.remove('err');
     });
-    ['nameError', 'emailError', 'serviceError', 'dateError'].forEach(id => {
+    ['nameErr','whatsappErr','emailErr','serviceErr','locationErr','dateErr'].forEach(id => {
       document.getElementById(id).classList.remove('show');
     });
-    const consentError = document.getElementById('consentError');
-    consentError.style.display = 'none';
-    document.getElementById('consent').classList.remove('error');
-    hideBanner();
-  }
-
-  function showBanner(msg) {
-    const banner = document.getElementById('errorBanner');
-    document.getElementById('errorBannerText').textContent = msg;
-    banner.classList.add('show');
-    banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-
-  function hideBanner() {
+    document.getElementById('consentErr').style.display = 'none';
+    document.getElementById('consent').classList.remove('err');
     document.getElementById('errorBanner').classList.remove('show');
   }
-
-  /* ════════ FORM VALIDATION ════════ */
-  function validateForm() {
-    let valid = true;
-
-    const name    = document.getElementById('name').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const service = document.getElementById('service').value;
-    const date    = document.getElementById('date').value;
-    const consent = document.getElementById('consent').checked;
-
-    if (!name) { setError('name', 'nameError', true); valid = false; }
-    else { setError('name', 'nameError', false); }
-
-    if (!email || !validateEmail(email)) { setError('email', 'emailError', true); valid = false; }
-    else { setError('email', 'emailError', false); }
-
-    if (!service) { setError('service', 'serviceError', true); valid = false; }
-    else { setError('service', 'serviceError', false); }
-
-    if (!date) { setError('date', 'dateError', true); valid = false; }
-    else { setError('date', 'dateError', false); }
-
-    if (!consent) {
-      document.getElementById('consent').classList.add('error');
-      document.getElementById('consentError').style.display = 'block';
-      valid = false;
+  function validate() {
+    let ok = true;
+    const v = id => document.getElementById(id).value.trim();
+    if (!v('name'))     { setErr('name','nameErr',true); ok=false; } else setErr('name','nameErr',false);
+    if (!v('whatsapp')) { setErr('whatsapp','whatsappErr',true); ok=false; } else setErr('whatsapp','whatsappErr',false);
+    const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRe.test(v('email'))) { setErr('email','emailErr',true); ok=false; } else setErr('email','emailErr',false);
+    if (!v('service'))  { setErr('service','serviceErr',true); ok=false; } else setErr('service','serviceErr',false);
+    if (!v('location')) { setErr('location','locationErr',true); ok=false; } else setErr('location','locationErr',false);
+    if (!v('date'))     { setErr('date','dateErr',true); ok=false; } else setErr('date','dateErr',false);
+    if (!document.getElementById('consent').checked) {
+      document.getElementById('consent').classList.add('err');
+      document.getElementById('consentErr').style.display = 'block';
+      ok = false;
     } else {
-      document.getElementById('consent').classList.remove('error');
-      document.getElementById('consentError').style.display = 'none';
+      document.getElementById('consent').classList.remove('err');
+      document.getElementById('consentErr').style.display = 'none';
     }
-
-    return valid;
+    return ok;
   }
 
-  /* ════════ FORM SUBMIT STATE ════════ */
-  function setLoading(on) {
-    const btn = document.getElementById('submitBtn');
-    btn.classList.toggle('loading', on);
-    btn.disabled = on;
-  }
-
-  function showSuccess() {
-    document.getElementById('formBody').style.display = 'none';
-    const success = document.getElementById('formSuccess');
-    success.style.display = 'block';
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
-
-  function resetForm() {
-    document.getElementById('bookingForm').reset();
-    clearErrors();
-    document.getElementById('formBody').style.display = 'block';
-    document.getElementById('formSuccess').style.display = 'none';
-  }
-
-  /* ════════ BACK BUTTON ════════ */
-  document.getElementById('backBtn').addEventListener('click', resetForm);
-
-  /* ════════ INLINE VALIDATION ON BLUR ════════ */
-  document.getElementById('name').addEventListener('blur', function() {
-    setError('name', 'nameError', !this.value.trim());
-  });
-  document.getElementById('email').addEventListener('blur', function() {
-    setError('email', 'emailError', !this.value.trim() || !validateEmail(this.value));
-  });
-  document.getElementById('service').addEventListener('change', function() {
-    setError('service', 'serviceError', !this.value);
-  });
-  document.getElementById('date').addEventListener('change', function() {
-    setError('date', 'dateError', !this.value);
+  /* ── Inline blur validation ── */
+  ['name','whatsapp','email','service','location','date'].forEach(id => {
+    document.getElementById(id).addEventListener('blur', function() {
+      const errId = id.charAt(0).toUpperCase() + id.slice(1) + 'Err';
+      if (id === 'email') {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        setErr('email','emailErr', !re.test(this.value.trim()));
+      } else {
+        setErr(id, id.charAt(0).toUpperCase() + id.slice(1) + 'Err', !this.value.trim());
+      }
+    });
   });
   document.getElementById('consent').addEventListener('change', function() {
-    if (this.checked) {
-      this.classList.remove('error');
-      document.getElementById('consentError').style.display = 'none';
-    }
+    if (this.checked) { this.classList.remove('err'); document.getElementById('consentErr').style.display='none'; }
   });
 
-  /* ════════ FORM SUBMISSION ════════ */
+  /* ── Submit ── */
+  const SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL';
+
   document.getElementById('bookingForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    clearErrors();
-
-    if (!validateForm()) {
-      showBanner('Please fill in all required fields before submitting.');
+    clearAll();
+    if (!validate()) {
+      document.getElementById('errorBanner').classList.add('show');
+      document.getElementById('errorBanner').scrollIntoView({ behavior:'smooth', block:'center' });
       return;
     }
+    const btn = document.getElementById('submitBtn');
+    btn.classList.add('loading'); btn.disabled = true;
 
-    /* Collect form data */
     const payload = {
-      name:    document.getElementById('name').value.trim(),
-      email:   document.getElementById('email').value.trim(),
-      phone:   document.getElementById('phone').value.trim(),
-      service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
-      date:    document.getElementById('date').value,
-      time:    document.getElementById('time').value || 'Not specified',
-      message: document.getElementById('message').value.trim() || 'No message provided',
-      consent: 'Agreed',
-      submitted_at: new Date().toISOString(),
+      name:      document.getElementById('name').value.trim(),
+      whatsapp:  document.getElementById('whatsapp').value.trim(),
+      email:     document.getElementById('email').value.trim(),
+      instagram: document.getElementById('instagram').value.trim() || 'Not provided',
+      service:   document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
+      location:  document.getElementById('location').value.trim(),
+      date:      document.getElementById('date').value,
+      time:      document.getElementById('time').value || 'Not specified',
+      message:   document.getElementById('message').value.trim() || 'No message provided',
+      consent:   'Agreed',
+      submitted: new Date().toISOString(),
     };
 
-    setLoading(true);
-
-try {
-
-  await fetch(SCRIPT_URL, {
-    method: 'POST',
-    mode: 'no-cors',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(payload)
+    try {
+      await fetch(SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        mode: 'no-cors',
+      });
+    } catch(err) {
+      if (SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL') {
+        console.warn('[ISA] Script URL not configured — showing success in demo mode.');
+      } else {
+        btn.classList.remove('loading'); btn.disabled = false;
+        const b = document.getElementById('errorBanner');
+        document.getElementById('errorBannerText').textContent = 'Could not send your request. Please WhatsApp or email us directly.';
+        b.classList.add('show');
+        return;
+      }
+    }
+    btn.classList.remove('loading'); btn.disabled = false;
+    document.getElementById('formBody').style.display = 'none';
+    const s = document.getElementById('formSuccess');
+    s.style.display = 'block';
+    s.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 
-  setLoading(false);
-
-  showSuccess();
-
-  bookingForm.reset();
-
-} catch (error) {
-
-  console.error(error);
-
-  setLoading(false);
-
-  showBanner(
-    "We couldn't send your request right now. Please try again later."
-  );
-
-}
+  document.getElementById('backBtn').addEventListener('click', function() {
+    document.getElementById('bookingForm').reset();
+    clearAll();
+    document.getElementById('formBody').style.display = 'block';
+    document.getElementById('formSuccess').style.display = 'none';
   });
-
-  /*
-   * ══════════════════════════════════════════════════════════
-   *  GOOGLE APPS SCRIPT SETUP INSTRUCTIONS
-   * ══════════════════════════════════════════════════════════
-   *
-   * 1. Go to https://script.google.com and create a new project.
-   *
-   * 2. Paste this code into the editor:
-   *
-   *    function doPost(e) {
-   *      var sheet = SpreadsheetApp.openById('YOUR_SHEET_ID').getActiveSheet();
-   *      var data  = JSON.parse(e.postData.contents);
-   *      sheet.appendRow([
-   *        data.submitted_at,
-   *        data.name,
-   *        data.email,
-   *        data.phone,
-   *        data.service,
-   *        data.date,
-   *        data.time,
-   *        data.message,
-   *        data.consent
-   *      ]);
-   *      return ContentService
-   *        .createTextOutput(JSON.stringify({ result: 'success' }))
-   *        .setMimeType(ContentService.MimeType.JSON);
-   *    }
-   *
-   * 3. Click Deploy > New deployment > Web app.
-   *    - Execute as: Me
-   *    - Who has access: Anyone
-   *
-   * 4. Copy the Web App URL and replace YOUR_GOOGLE_SCRIPT_URL above.
-   *
-   * 5. Replace YOUR_SHEET_ID with the ID from your Google Sheet URL.
-   *    (Found between /d/ and /edit in the Sheet URL)
-   *
-   * ══════════════════════════════════════════════════════════
-   */
-  </script>
-
+</script>
 </body>
 </html>

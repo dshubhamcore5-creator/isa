@@ -1,574 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
-  <title>Infinite Soul Awakening</title>
-
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="css/global.css"/>
-
-  <!-- Page-specific styles -->
+  <meta name="description" content="Infinite Soul Awakening Wellness — personalised guidance and wellness-focused experiences designed to support mindfulness, self-reflection, personal clarity, and intentional living."/>
+  <title>Infinite Soul Awakening Wellness — Mindfulness. Clarity. Intentional Living.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="assets/css/global.css"/>
   <style>
-/* ─── HERO — SPLIT LAYOUT ────────────────────────────── */
+    /* ── HERO ───────────────────────────────────────────────── */
     .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 100svh;
-      padding-top: 76px;
-      overflow: hidden;
+      display: grid; grid-template-columns: 1fr 1fr;
+      min-height: 100svh; padding-top: var(--header-h); overflow: hidden;
     }
     .hero-left {
-      display: flex; flex-direction: column;
-      justify-content: center;
-      padding: 80px 64px 80px 0;
-      padding-left: max(40px, calc((100vw - 1180px) / 2 + 40px));
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 80px 60px 80px max(40px, calc((100vw - 1180px)/2 + 40px));
     }
     .hero-eyebrow {
       display: flex; align-items: center; gap: 14px;
-      font-size: .7rem; letter-spacing: .22em;
-      text-transform: uppercase; color: var(--accent);
-      margin-bottom: 28px;
+      font-size: .66rem; letter-spacing: .26em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 26px;
     }
-    .hero-eyebrow::before {
-      content: ''; display: block;
-      width: 36px; height: 1px; background: var(--accent-light);
-    }
+    .hero-eyebrow::before { content:''; width:30px; height:1px; background:var(--accent-light); flex-shrink:0; }
     .hero h1 {
       font-family: var(--font-serif);
-      font-size: clamp(3rem, 5vw, 5rem);
-      font-weight: 400; line-height: 1.05;
-      color: var(--text); margin-bottom: 26px;
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 400; line-height: 1.04; color: var(--text); margin-bottom: 22px;
     }
     .hero h1 em { font-style: italic; font-weight: 300; color: var(--accent); }
     .hero-sub {
-      font-size: 1rem; color: var(--text-soft);
-      max-width: 400px; margin-bottom: 40px; line-height: 1.85;
+      font-size: .95rem; color: var(--text-soft);
+      max-width: 380px; line-height: 1.88; margin-bottom: 36px;
     }
-    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-insta {
+      margin-top: 28px;
+      display: flex; align-items: center; gap: 10px;
+      font-size: .76rem; color: var(--text-soft); letter-spacing: .04em;
+    }
+    .hero-insta a {
+      color: var(--accent); text-decoration: none;
+      font-style: italic; font-size: .82rem;
+      border-bottom: 1px solid var(--accent-light);
+      padding-bottom: 1px; transition: color .2s;
+    }
+    .hero-insta a:hover { color: var(--accent-dark); }
+    .hero-insta svg { width: 14px; stroke: var(--accent-light); fill: none; stroke-width: 1.5; }
     .hero-stats {
-      display: flex; gap: 40px;
-      margin-top: 52px;
-      padding-top: 36px;
-      border-top: 1px solid var(--border);
+      display: flex; gap: 32px; margin-top: 44px;
+      padding-top: 32px; border-top: 1px solid var(--border);
     }
     .hero-stat strong {
-      display: block;
-      font-family: var(--font-serif);
-      font-size: 2rem; font-weight: 400;
-      color: var(--text); line-height: 1;
-      margin-bottom: 4px;
+      display: block; font-family: var(--font-serif);
+      font-size: 1.9rem; font-weight: 400; color: var(--text); line-height: 1; margin-bottom: 3px;
     }
-    .hero-stat span { font-size: .78rem; color: var(--text-soft); letter-spacing: .06em; }
-
+    .hero-stat span { font-size: .72rem; letter-spacing: .07em; color: var(--text-soft); }
     .hero-right { position: relative; overflow: hidden; }
     .hero-right img {
       width: 100%; height: 100%;
-      object-fit: cover; object-position: center top;
-      display: block;
-      transition: transform .8s ease;
+      object-fit: cover; object-position: center 20%;
+      transition: transform 1.2s ease;
     }
-    .hero-right:hover img { transform: scale(1.02); }
-    .hero-right::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(160deg, rgba(253,248,242,.12) 0%, rgba(155,115,85,.08) 100%);
-      pointer-events: none;
-    }
+    .hero-right:hover img { transform: scale(1.03); }
     .hero-badge {
-      position: absolute; bottom: 40px; left: -28px;
-      background: var(--white);
-      box-shadow: var(--shadow-warm);
-      padding: 18px 24px;
-      z-index: 2; min-width: 180px;
+      position: absolute; bottom: 40px; left: -22px;
+      background: var(--white); box-shadow: var(--shadow-warm);
+      padding: 16px 20px; z-index: 2; min-width: 160px;
     }
     .hero-badge strong {
-      display: block;
-      font-family: var(--font-serif);
-      font-size: 1.5rem; font-weight: 400; color: var(--text); line-height: 1;
+      display: block; font-family: var(--font-serif);
+      font-size: 1.4rem; font-weight: 400; color: var(--text); line-height: 1; margin-bottom: 4px;
     }
-    .hero-badge span { font-size: .72rem; color: var(--text-soft); letter-spacing: .08em; }
+    .hero-badge span { font-size: .68rem; color: var(--text-soft); letter-spacing: .08em; }
 
-    /* ─── TRUST BAR ──────────────────────────────────────── */
-    .trust-bar {
-      background: var(--parchment);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .trust-inner {
-      display: flex; justify-content: center;
-      align-items: stretch; flex-wrap: wrap;
-    }
-    .trust-item {
-      display: flex; align-items: center; gap: 14px;
-      padding: 26px 52px;
-      border-right: 1px solid var(--border);
-      transition: background .2s;
-    }
-    .trust-item:last-child { border-right: none; }
-    .trust-item:hover { background: rgba(155,115,85,.05); }
-    .trust-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
-    .trust-label {
-      font-size: .78rem; letter-spacing: .1em;
-      text-transform: uppercase; color: var(--text-soft); font-weight: 400;
-    }
-
-    /* ─── ABOUT PREVIEW ──────────────────────────────────── */
-    .about-preview { padding: 120px 0; }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 90px; align-items: center;
-    }
-    .about-image-stack { position: relative; padding: 28px 0 28px 28px; }
+    /* ── ABOUT PREVIEW ──────────────────────────────────────── */
+    .about-preview { padding: var(--section-pad) 0; }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-image-stack { position: relative; padding: 24px 0 24px 24px; }
     .about-img-main {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      box-shadow: 0 24px 60px rgba(100,60,20,.18);
       position: relative; z-index: 2;
-      width: 100%; aspect-ratio: 3/4;
-      object-fit: cover; display: block;
-      box-shadow: 0 20px 60px rgba(100,60,20,.18);
     }
     .about-img-secondary {
-      position: absolute;
-      bottom: -20px; right: -30px; z-index: 3;
-      width: 52%; aspect-ratio: 1;
-      object-fit: cover;
-      box-shadow: 0 12px 40px rgba(100,60,20,.2);
-      border: 5px solid var(--white);
+      position: absolute; bottom: -16px; right: -26px; z-index: 3;
+      width: 48%; aspect-ratio: 1; object-fit: cover;
+      border: 5px solid var(--white); box-shadow: 0 10px 32px rgba(100,60,20,.16);
     }
     .about-image-stack::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 28px; bottom: 28px;
+      content: ''; position: absolute;
+      top: 0; left: 0; right: 24px; bottom: 24px;
       border: 1px solid var(--accent-light); z-index: 0;
     }
-    .about-text { padding-right: 10px; }
-    .about-text .section-title { margin-bottom: 24px; }
-    .about-text p { font-size: .95rem; color: var(--text-soft); margin-bottom: 18px; line-height: 1.9; }
-    .about-text p:last-of-type { margin-bottom: 34px; }
-    .text-link {
-      font-size: .76rem; letter-spacing: .14em;
-      text-transform: uppercase; color: var(--accent);
-      text-decoration: none; border-bottom: 1px solid var(--accent-light);
-      padding-bottom: 3px; transition: color .2s, border-color .2s;
-    }
-    .text-link:hover { color: var(--accent-dark); border-color: var(--accent); }
+    .about-text .section-title { margin-bottom: 20px; }
+    .about-text p { font-size: .93rem; color: var(--text-soft); line-height: 1.9; margin-bottom: 18px; }
+    .about-text p:last-of-type { margin-bottom: 30px; }
 
-    /* ─── LUXURY INTERLUDE ───────────────────────────────── */
-    .luxury-strip { position: relative; height: 480px; overflow: hidden; }
+    /* ── SERVICES PREVIEW ───────────────────────────────────── */
+    .services-preview { padding: var(--section-pad) 0; background: var(--parchment); }
+    .services-header { text-align: center; margin-bottom: 56px; }
+    .services-header .section-title { margin-bottom: 12px; }
+    .services-header p { font-size: .93rem; color: var(--text-soft); max-width: 460px; margin: 0 auto; }
+    .services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .svc-card {
+      background: var(--white); box-shadow: var(--shadow-card); overflow: hidden;
+      transition: transform .35s, box-shadow .35s; position: relative;
+      display: flex; flex-direction: column;
+    }
+    .svc-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-hover); }
+    .svc-card.featured { border-top: 3px solid var(--accent); }
+    .svc-img-wrap { width: 100%; aspect-ratio: 1; overflow: hidden; }
+    .svc-img-wrap img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .55s ease;
+    }
+    .svc-card:hover .svc-img-wrap img { transform: scale(1.07); }
+    .svc-body { padding: 24px 22px 28px; flex: 1; display: flex; flex-direction: column; }
+    .svc-icon {
+      width: 38px; height: 38px; border: 1px solid var(--border); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
+    }
+    .svc-icon svg { width: 16px; stroke: var(--accent); fill: none; stroke-width: 1.4; }
+    .svc-card h3 {
+      font-family: var(--font-serif); font-size: 1.35rem;
+      font-weight: 400; color: var(--text); margin-bottom: 10px; line-height: 1.2;
+    }
+    .svc-card p { font-size: .84rem; color: var(--text-soft); line-height: 1.78; margin-bottom: 18px; flex: 1; }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 18px; }
+    .svc-tag {
+      font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+      padding: 4px 10px; border: 1px solid var(--border); color: var(--text-soft);
+    }
+
+    /* ── WHY CHOOSE US ──────────────────────────────────────── */
+    .why-us { padding: var(--section-pad) 0; }
+    .why-header { text-align: center; margin-bottom: 56px; }
+    .why-header .section-title { margin-bottom: 12px; }
+    .why-header p { font-size: .93rem; color: var(--text-soft); max-width: 480px; margin: 0 auto; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .why-card {
+      background: var(--white); border: 1px solid var(--border);
+      padding: 36px 28px; text-align: center;
+      transition: border-color .3s, transform .3s, box-shadow .3s;
+      position: relative; overflow: hidden;
+    }
+    .why-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--accent-light);
+      transform: scaleX(0); transform-origin: left; transition: transform .4s ease;
+    }
+    .why-card:hover { border-color: var(--accent-light); transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .why-card:hover::before { transform: scaleX(1); }
+    .why-icon {
+      width: 52px; height: 52px; margin: 0 auto 20px;
+      border: 1px solid var(--border); background: var(--parchment);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .why-icon svg { width: 22px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
+    .why-card h3 {
+      font-family: var(--font-serif); font-size: 1.3rem;
+      font-weight: 400; color: var(--text); margin-bottom: 10px;
+    }
+    .why-card p { font-size: .86rem; color: var(--text-soft); line-height: 1.78; }
+
+    /* ── TESTIMONIALS ───────────────────────────────────────── */
+    .testimonials { padding: var(--section-pad) 0; background: var(--parchment); }
+    .testimonials-header { text-align: center; margin-bottom: 56px; }
+    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .t-card {
+      background: var(--white); padding: 34px 28px 30px;
+      position: relative; box-shadow: var(--shadow-card); transition: transform .3s;
+    }
+    .t-card:hover { transform: translateY(-3px); }
+    .t-quote-mark {
+      font-family: var(--font-serif); font-size: 4.8rem; line-height: .85;
+      color: var(--accent-light); opacity: .35;
+      position: absolute; top: 14px; left: 22px; pointer-events: none;
+    }
+    .t-stars { display: flex; gap: 3px; margin-bottom: 14px; }
+    .t-stars svg { width: 12px; fill: var(--accent-light); }
+    .t-card blockquote {
+      font-family: var(--font-serif); font-size: 1.02rem;
+      font-style: italic; font-weight: 300; color: var(--text);
+      line-height: 1.76; margin-bottom: 22px;
+    }
+    .t-author { display: flex; align-items: center; gap: 12px; }
+    .t-avatar {
+      width: 44px; height: 44px; border-radius: 50%; object-fit: cover;
+      border: 3px solid var(--parchment); box-shadow: 0 2px 8px rgba(100,60,20,.1);
+    }
+    .t-info strong { display: block; font-size: .84rem; font-weight: 500; color: var(--text); }
+    .t-info span { font-size: .74rem; color: var(--text-soft); }
+
+    /* ── INSTAGRAM SECTION ──────────────────────────────────── */
+    .instagram-section { padding: var(--section-pad) 0; }
+    .instagram-header { text-align: center; margin-bottom: 44px; }
+    .instagram-header .section-title { margin-bottom: 10px; }
+    .insta-handle-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .84rem; color: var(--accent); text-decoration: none;
+      font-style: italic; letter-spacing: .04em;
+      border-bottom: 1px solid var(--accent-light); padding-bottom: 2px;
+      transition: color .2s; margin-bottom: 18px;
+    }
+    .insta-handle-link:hover { color: var(--accent-dark); }
+    .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-bottom: 36px; }
+    .insta-cell { aspect-ratio: 1; overflow: hidden; position: relative; cursor: pointer; }
+    .insta-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .insta-cell:hover img { transform: scale(1.08); }
+    .insta-cell::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(155,115,85,0); transition: background .35s;
+    }
+    .insta-cell:hover::after { background: rgba(155,115,85,.22); }
+    .instagram-cta { text-align: center; }
+
+    /* ── LUXURY STRIP ───────────────────────────────────────── */
+    .luxury-strip { position: relative; height: 440px; overflow: hidden; }
     .luxury-strip img {
       width: 100%; height: 100%;
-      object-fit: cover; object-position: center 60%;
-      display: block; transition: transform 12s ease;
+      object-fit: cover; object-position: center 55%;
+      filter: brightness(.58) saturate(.82);
+      transition: transform 14s ease;
     }
     .luxury-strip:hover img { transform: scale(1.04); }
     .luxury-strip-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(20,10,3,.3) 0%, rgba(20,10,3,.18) 50%, rgba(20,10,3,.45) 100%);
       display: flex; align-items: center; justify-content: center;
     }
-    .luxury-strip-text { text-align: center; color: var(--white); }
-    .luxury-strip-text p {
+    .luxury-quote { text-align: center; padding: 0 24px; }
+    .luxury-quote p {
       font-family: var(--font-serif);
-      font-size: clamp(1.8rem, 4vw, 3.2rem);
-      font-weight: 300; font-style: italic;
-      line-height: 1.3; letter-spacing: .02em;
-      text-shadow: 0 2px 20px rgba(0,0,0,.3);
-      max-width: 680px; padding: 0 24px;
+      font-size: clamp(1.6rem, 3.6vw, 2.8rem);
+      font-weight: 300; font-style: italic; color: var(--white);
+      line-height: 1.38; text-shadow: 0 2px 24px rgba(0,0,0,.3); max-width: 680px;
     }
-    .luxury-strip-text span {
-      display: block; font-size: .7rem;
-      letter-spacing: .22em; text-transform: uppercase;
-      color: rgba(255,255,255,.6); margin-top: 18px;
+    .luxury-quote span {
+      display: block; font-family: var(--font-sans);
+      font-size: .66rem; letter-spacing: .22em; text-transform: uppercase;
+      color: rgba(255,255,255,.52); margin-top: 16px;
     }
 
-    /* ─── SERVICES PREVIEW ───────────────────────────────── */
-    .services-preview { padding: 110px 0; background: var(--parchment); }
-    .services-header { text-align: center; margin-bottom: 64px; }
-    .services-header .section-title { margin-bottom: 16px; }
-    .services-header p { font-size: .95rem; color: var(--text-soft); max-width: 480px; margin: 0 auto; }
-    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .service-card {
-      background: var(--white); box-shadow: var(--shadow-card);
-      overflow: hidden; transition: transform .35s, box-shadow .35s; position: relative;
-    }
-    .service-card:hover { transform: translateY(-7px); box-shadow: 0 16px 50px rgba(100,65,30,.16); }
-    .service-card.featured { border: 1.5px solid var(--accent-light); }
-    .service-ribbon {
-      position: absolute; top: 18px; right: -32px;
-      background: var(--accent); color: var(--white);
-      font-size: .6rem; letter-spacing: .14em;
-      text-transform: uppercase; padding: 5px 48px;
-      transform: rotate(45deg); z-index: 5;
-    }
-    .service-img-wrap { width: 100%; aspect-ratio: 4/3.2; overflow: hidden; position: relative; }
-    .service-img-wrap img {
-      width: 100%; height: 100%;
-      object-fit: cover; display: block; transition: transform .5s ease;
-    }
-    .service-card:hover .service-img-wrap img { transform: scale(1.06); }
-    .service-body { padding: 30px 28px 34px; }
-    .service-icon {
-      width: 44px; height: 44px;
-      border: 1px solid var(--border); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
-    }
-    .service-icon svg { width: 18px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
-    .service-card h3 {
-      font-family: var(--font-serif); font-size: 1.5rem;
-      font-weight: 400; margin-bottom: 10px; color: var(--text);
-    }
-    .service-card p { font-size: .88rem; color: var(--text-soft); line-height: 1.8; margin-bottom: 24px; }
-
-    /* ─── WHY CHOOSE US ──────────────────────────────────── */
-    .why-us { padding: 110px 0; }
-    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: center; }
-    .why-image-wrap { position: relative; }
-    .why-img-main { width: 100%; aspect-ratio: 5/6; object-fit: cover; display: block; box-shadow: var(--shadow-warm); }
-    .why-img-accent {
-      position: absolute; top: -24px; right: -24px;
-      width: 46%; aspect-ratio: 1;
-      object-fit: cover; display: block;
-      box-shadow: var(--shadow-warm); border: 4px solid var(--white); z-index: 2;
-    }
-    .why-image-wrap::before {
-      content: ''; position: absolute;
-      bottom: -16px; left: -16px; right: 16px; top: 16px;
-      border: 1px solid var(--accent-light); z-index: -1;
-    }
-    .why-features { margin-top: 32px; display: flex; flex-direction: column; gap: 24px; }
-    .why-feature { display: flex; gap: 18px; align-items: flex-start; }
-    .why-feature-icon {
-      width: 48px; height: 48px; flex-shrink: 0;
-      background: var(--parchment); border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .why-feature-icon svg { width: 20px; stroke: var(--accent); fill: none; stroke-width: 1.3; }
-    .why-feature h4 { font-family: var(--font-serif); font-size: 1.15rem; font-weight: 500; margin-bottom: 4px; }
-    .why-feature p { font-size: .87rem; color: var(--text-soft); line-height: 1.7; }
-
-    /* ─── TESTIMONIALS ───────────────────────────────────── */
-    .testimonials { padding: 110px 0; background: var(--parchment); }
-    .testimonials-header { text-align: center; margin-bottom: 64px; }
-    .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
-    .testimonial-card {
-      background: var(--white); padding: 38px 32px 34px;
-      position: relative; box-shadow: var(--shadow-card); transition: transform .3s;
-    }
-    .testimonial-card:hover { transform: translateY(-4px); }
-    .t-quote-icon {
-      font-family: var(--font-serif); font-size: 5.5rem; line-height: .9;
-      color: var(--accent-light); opacity: .45;
-      position: absolute; top: 18px; left: 26px; pointer-events: none;
-    }
-    .stars { display: flex; gap: 3px; margin-bottom: 18px; }
-    .stars svg { width: 13px; fill: var(--accent-light); }
-    .testimonial-card blockquote {
-      font-family: var(--font-serif); font-size: 1.05rem;
-      font-style: italic; font-weight: 300; color: var(--text); line-height: 1.8; margin-bottom: 28px;
-    }
-    .testimonial-author { display: flex; align-items: center; gap: 14px; }
-    .t-avatar {
-      width: 52px; height: 52px; border-radius: 50%;
-      object-fit: cover; flex-shrink: 0;
-      border: 3px solid var(--parchment); box-shadow: 0 2px 10px rgba(100,60,20,.12);
-    }
-    .t-author-info strong { display: block; font-size: .88rem; font-weight: 500; color: var(--text); }
-    .t-author-info span  { font-size: .78rem; color: var(--text-soft); }
-
-    /* ─── INSTAGRAM GRID ─────────────────────────────────── */
-    .instagram { padding: 100px 0; }
-    .instagram-header { text-align: center; margin-bottom: 44px; }
-    .instagram-header .section-title { margin-bottom: 8px; }
-    .instagram-header a {
-      font-size: .82rem; color: var(--accent); text-decoration: none;
-      letter-spacing: .08em; border-bottom: 1px solid var(--accent-light); padding-bottom: 1px;
-    }
-    .insta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
-    .insta-cell { aspect-ratio: 1; overflow: hidden; position: relative; cursor: pointer; }
-    .insta-cell img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
-    .insta-cell:hover img { transform: scale(1.08); }
-    .insta-cell::after { content: ''; position: absolute; inset: 0; background: rgba(155,115,85,0); transition: background .35s; }
-    .insta-cell:hover::after { background: rgba(155,115,85,.24); }
-
-    /* ─── FINAL CTA ──────────────────────────────────────── */
-    .final-cta { position: relative; overflow: hidden; }
-    .final-cta-img {
-      width: 100%; height: 520px;
-      object-fit: cover; object-position: center 30%;
-      display: block; filter: brightness(.55) saturate(.9);
-    }
-    .final-cta-overlay {
-      position: absolute; inset: 0;
-      display: flex; align-items: center; justify-content: center;
-      flex-direction: column; text-align: center; padding: 40px;
-    }
-    .final-cta-overlay .section-label { color: rgba(255,255,255,.55); }
-    .final-cta-overlay h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 400; color: var(--white);
-      line-height: 1.12; margin-bottom: 20px; max-width: 640px;
-    }
-    .final-cta-overlay h2 em { font-style: italic; font-weight: 300; }
-    .final-cta-overlay p { font-size: .95rem; color: rgba(255,255,255,.72); max-width: 420px; margin-bottom: 36px; line-height: 1.85; }
-
-    /* ─── FOOTER ─────────────────────────────────────────── */
-    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
-    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
-    .footer-brand .logo span { color: var(--accent-light); }
-    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
-    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
-    .footer-socials a {
-      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.5); text-decoration: none;
-      font-size: .75rem; transition: border-color .2s, color .2s;
-    }
-    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
-    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 11px; }
-    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--accent-light); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
-      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: .79rem;
-    }
-    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
-    .footer-bottom a:hover { color: var(--accent-light); }
-    .footer-bottom-links { display: flex; gap: 24px; }
-
-    /* ─── RESPONSIVE ─────────────────────────────────────── */
+    /* ── RESPONSIVE ─────────────────────────────────────────── */
     @media (max-width: 1024px) {
-      .hero-left { padding: 60px 40px 60px 32px; }
+      .hero-left { padding: 60px 44px 60px 32px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
-      nav, header .btn { display: none; }
-      .hamburger { display: flex; }
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 60px 32px; text-align: center; align-items: center; }
       .hero-eyebrow::before { display: none; }
-      .hero-sub { margin: 0 auto 36px; }
-      .hero-right { height: 65vw; min-height: 380px; }
-      .hero-badge { left: 20px; bottom: 24px; }
-      .about-grid { grid-template-columns: 1fr; gap: 60px; }
+      .hero-sub { margin: 0 auto 32px; }
+      .hero-right { height: 65vw; min-height: 340px; }
+      .hero-badge { left: 16px; bottom: 18px; }
+      .hero-stats { gap: 22px; }
+      .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .about-image-stack::before { display: none; }
-      .about-img-secondary { right: 10px; }
-      .why-grid { grid-template-columns: 1fr; gap: 56px; }
-      .why-image-wrap::before { display: none; }
-      .why-img-accent { top: -12px; right: -8px; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
+      .about-img-secondary { right: 8px; }
       .testimonials-grid { grid-template-columns: 1fr 1fr; }
-      .insta-grid { grid-template-columns: repeat(3,1fr); }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .insta-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 600px) {
-      .container { padding: 0 20px; }
-      .services-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+      .services-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
+      .why-grid { grid-template-columns: 1fr; }
       .testimonials-grid { grid-template-columns: 1fr; }
-      .insta-grid { grid-template-columns: repeat(2,1fr); }
-      .trust-item { padding: 18px 20px; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-      .final-cta-img { height: 420px; }
-      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .insta-grid { grid-template-columns: repeat(2, 1fr); }
       .luxury-strip { height: 300px; }
+      .hero-stats { gap: 18px; flex-wrap: wrap; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══════════════ HERO ══════════════ -->
-<section class="hero" aria-label="Hero section">
-
+<!-- ══ HERO ══════════════════════════════════════════════════ -->
+<section class="hero" aria-label="Hero">
   <div class="hero-left">
-    <span class="hero-eyebrow">Spiritual Guidance &amp; Soul Readings</span>
-    <h1>
-      "Clarity.<br>
-      <em>Alignment.</em><br>
-      Transformation."
-    </h1>
-    <p class="hero-sub">
-      Spiritual guidance for those seeking real answers — not illusions.
-      Your highest self is waiting to be heard.
-    </p>
+    <span class="hero-eyebrow">Personalised Wellness Guidance</span>
+    <h1>Mindfulness.<br><em>Clarity.</em><br>Intentional Living.</h1>
+    <p class="hero-sub">Personalised wellness-focused experiences designed to support mindfulness, self-reflection, and personal clarity through thoughtful, grounded guidance.</p>
     <div class="hero-btns">
-      <a href="booking.html" class="btn btn-filled">Book a Reading</a>
+      <a href="booking.html" class="btn btn-filled">Reserve Your Session</a>
       <a href="services.html" class="btn btn-ghost">Explore Services</a>
     </div>
+    <div class="hero-insta">
+      <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+      Follow us on Instagram
+      <a href="https://www.instagram.com/infinite.soulawakening" target="_blank" rel="noopener noreferrer">@infinite.soulawakening</a>
+    </div>
     <div class="hero-stats">
-      <div class="hero-stat">
-        <strong>500+</strong>
-        <span>Soul Sessions</span>
-      </div>
-      <div class="hero-stat">
-        <strong>12+</strong>
-        <span>Years Practice</span>
-      </div>
-      <div class="hero-stat">
-        <strong>98%</strong>
-        <span>Client Clarity</span>
-      </div>
+      <div class="hero-stat"><strong>12+</strong><span>Years of Practice</span></div>
+      <div class="hero-stat"><strong>5,000+</strong><span>Sessions</span></div>
+      <div class="hero-stat"><strong>15+</strong><span>Countries</span></div>
     </div>
   </div>
-
   <div class="hero-right">
-    <img
-      src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=1200&q=85&auto=format&fit=crop&crop=focalpoint&fp-x=0.5&fp-y=0.25"
-      alt="Woman in serene spiritual meditation in golden afternoon light"
-      fetchpriority="high"
-    />
-    <div class="hero-badge">
-      <strong>&#9733; 5.0</strong>
-      <span>Verified Reviews</span>
-    </div>
+    <img src="assets/images/hero-spiritual-woman.png"
+      alt="Woman in serene mindful meditation in golden light"
+      fetchpriority="high" width="700" height="900"/>
   </div>
-
 </section>
 
-<!-- ══════════════ TRUST BAR ══════════════ -->
+<!-- ══ TRUST BAR ═════════════════════════════════════════════ -->
 <div class="trust-bar" role="list" aria-label="Trust signals">
   <div class="trust-inner">
     <div class="trust-item" role="listitem">
-      <div class="trust-icon">
-        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-      </div>
-      <span class="trust-label">Trusted Advisor</span>
+      <div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+      <span class="trust-label">12+ Years of Practice</span>
     </div>
     <div class="trust-item" role="listitem">
-      <div class="trust-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      </div>
-      <span class="trust-label">Expert Insights</span>
+      <div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+      <span class="trust-label">Personalised Online Sessions</span>
     </div>
     <div class="trust-item" role="listitem">
-      <div class="trust-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
-      </div>
-      <span class="trust-label">Healing Energy</span>
+      <div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <span class="trust-label">Private &amp; Confidential</span>
     </div>
     <div class="trust-item" role="listitem">
-      <div class="trust-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <span class="trust-label">500+ Soul Sessions</span>
+      <div class="trust-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+      <span class="trust-label">Clients Across 15+ Countries</span>
     </div>
   </div>
 </div>
 
-<!-- ══════════════ ABOUT PREVIEW ══════════════ -->
-<section class="about-preview" aria-labelledby="about-heading">
+<!-- ══ ABOUT PREVIEW ═════════════════════════════════════════ -->
+<section class="about-preview" aria-labelledby="about-title">
   <div class="container">
     <div class="about-grid">
-
       <div class="about-image-stack fade-up">
         <img class="about-img-main"
-          src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80"
-          alt="Beeswax pillar candles with dried roses and healing crystals on linen"
-          loading="lazy"/>
+          src="assets/images/spiritual-guide.jpeg"
+          alt="Spiritual guide in peaceful reflection"
+          loading="lazy" width="600" height="800"/>
         <img class="about-img-secondary"
-          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80"
-          alt="Rose quartz and amethyst healing crystals"
-          loading="lazy"/>
+          src="assets/images/insta-spiritual-workspace.jpeg"
+          alt="Wellness workspace with crystals and candles"
+          loading="lazy" width="280" height="280"/>
       </div>
-
-      <div class="about-text fade-up" style="transition-delay:.18s">
-        <span class="section-label">Who We Are</span>
-        <h2 class="section-title" id="about-heading">
-          A sanctuary for<br><em>your inner journey</em>
-        </h2>
-        <p>
-          At Infinite Soul Awakening, we believe every soul carries its own map —
-          sometimes we simply need a trusted guide to help us read it. With deep roots
-          in intuitive tarot, astrology, and energy healing, our practice is built on
-          compassion, clarity, and authenticity.
-        </p>
-        <p>
-          We do not offer false hope or scripted answers. Every session is a genuine,
-          heartfelt conversation between your energy and the wisdom of the cosmos.
-          You leave with clarity, not confusion.
-        </p>
-        <a href="about.html" class="text-link">Discover Our Story &rarr;</a>
+      <div class="fade-up" style="transition-delay:.16s">
+        <span class="section-label">About Infinite Soul Awakening Wellness</span>
+        <h2 class="section-title about-text" id="about-title">A practice shaped through<br><em>reflection and purpose</em></h2>
+        <p class="about-text" style="margin-top:20px;font-size:.93rem;color:var(--text-soft);line-height:1.9;">Infinite Soul Awakening Wellness was created from years of personal reflection, symbolic study, and mindful exploration. What began as a personal journey gradually evolved into a thoughtful and wellness-focused practice centred on clarity, reflection, and meaningful guidance.</p>
+        <p style="font-size:.93rem;color:var(--text-soft);line-height:1.9;margin-bottom:30px;">All sessions are offered online and are designed to encourage mindfulness, self-reflection, and personal clarity in a respectful and professional environment. No guaranteed outcomes are promised.</p>
+        <a href="about.html" class="text-link">Know More About Us &rarr;</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ LUXURY INTERLUDE ══════════════ -->
-<div class="luxury-strip" role="img" aria-label="Luxury spiritual still life with candles, flowers and crystals">
-  <img
-    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1600&q=80"
-    alt="Warm candles, dried roses, silk cloth and crystals on a marble surface"
-    loading="lazy"
-  />
-  <div class="luxury-strip-overlay">
-    <div class="luxury-strip-text fade-up">
-      <p>"The soul always knows what to do to heal itself.<br>The challenge is silencing the mind."</p>
-      <span>— Caroline Myss</span>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════ SERVICES PREVIEW ══════════════ -->
-<section class="services-preview" aria-labelledby="services-heading">
+<!-- ══ SERVICES PREVIEW ══════════════════════════════════════ -->
+<section class="services-preview" aria-labelledby="services-title">
   <div class="container">
     <div class="services-header fade-up">
       <span class="section-label">What We Offer</span>
-      <h2 class="section-title" id="services-heading">Pathways to<br><em>your awakening</em></h2>
-      <p>Each service is a sacred, personalised experience crafted to help you move forward with confidence.</p>
+      <h2 class="section-title" id="services-title">Personalised wellness<br><em>experiences online</em></h2>
+      <p>Four thoughtfully designed wellness services, each adapted to your chosen area of focus and personal intentions.</p>
     </div>
     <div class="services-grid">
 
-      <article class="service-card fade-up" style="transition-delay:.08s">
-        <div class="service-img-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=800&q=80"
-            alt="Tarot cards spread on marble with dried rose petals"
-            loading="lazy"/>
+      <article class="svc-card featured fade-up" style="transition-delay:.06s">
+        <div class="svc-img-wrap">
+          <img src="assets/images/tarot-reading-flatlay.jpeg"
+            alt="Tarot cards arranged on a warm-lit surface" loading="lazy" width="600" height="600"/>
         </div>
-        <div class="service-body">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="11" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="18" width="7" height="3" rx="1"/></svg>
-          </div>
-          <h3>Intuitive Tarot<br>Readings</h3>
-          <p>Unlock the symbolic language of the cards to illuminate your path, relationships, and hidden potential.</p>
-          <a href="booking.html" class="btn btn-filled" style="font-size:.7rem;padding:11px 22px;">Book a Reading</a>
+        <div class="svc-body">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="11" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="18" width="7" height="3" rx="1"/></svg></div>
+          <h3>Intuitive Guidance</h3>
+          <div class="svc-tags"><span class="svc-tag">Love</span><span class="svc-tag">Career</span><span class="svc-tag">Life Path</span></div>
+          <p>Thoughtfully guided tarot sessions designed to support mindfulness, self-reflection, and personal clarity through symbolic interpretation and reflective guidance practices.</p>
+          <a href="booking.html" class="btn btn-filled btn-sm">Reserve Your Session</a>
         </div>
       </article>
 
-      <article class="service-card featured fade-up" style="transition-delay:.18s">
-        <span class="service-ribbon">Most Popular</span>
-        <div class="service-img-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
-            alt="Astrology natal chart on marble with moonstone"
-            loading="lazy"/>
+      <article class="svc-card fade-up" style="transition-delay:.14s">
+        <div class="svc-img-wrap">
+          <img src="assets/images/energy-healing-hands.jpeg"
+            alt="Wellness session with warm candle and crystal setting" loading="lazy" width="600" height="600"/>
         </div>
-        <div class="service-body">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-          </div>
-          <h3>Soul Path<br>Astrology</h3>
-          <p>Decode your natal chart to understand your life purpose, karmic patterns, and cosmic blueprint.</p>
-          <a href="services.html" class="btn btn-filled" style="font-size:.7rem;padding:11px 22px;">Explore Services</a>
+        <div class="svc-body">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+          <h3>Energy Wellness</h3>
+          <div class="svc-tags"><span class="svc-tag">Mindfulness</span><span class="svc-tag">Balance</span><span class="svc-tag">Relaxation</span></div>
+          <p>Designed to support mindfulness, relaxation, and personal balance, these personalised online sessions incorporate crystal and candle wellness practices within a calm and reflective setting.</p>
+          <a href="booking.html" class="btn btn-filled btn-sm">Reserve Your Session</a>
         </div>
       </article>
 
-      <article class="service-card fade-up" style="transition-delay:.28s">
-        <div class="service-img-wrap">
-          <img
-            src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=800&q=80"
-            alt="Hands held open in energy healing with warm glowing light"
-            loading="lazy"/>
+      <article class="svc-card fade-up" style="transition-delay:.22s">
+        <div class="svc-img-wrap">
+          <img src="assets/images/insta-crystal-candle.jpeg"
+            alt="Sacred wellness space with candles and crystals" loading="lazy" width="600" height="600"/>
         </div>
-        <div class="service-body">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
-          </div>
-          <h3>Energy<br>Healing</h3>
-          <p>Release blockages and restore energetic balance through personalised chakra-aligned healing sessions.</p>
-          <a href="booking.html" class="btn btn-ghost" style="font-size:.7rem;padding:11px 22px;">Energy Healing</a>
+        <div class="svc-body">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <h3>Sacred Wellness Practices</h3>
+          <div class="svc-tags"><span class="svc-tag">Reflection</span><span class="svc-tag">Intention</span><span class="svc-tag">Mindfulness</span></div>
+          <p>Personalised wellness-focused practices designed to support mindfulness, reflection, relaxation, and personal exploration through symbolic and wellness-inspired methods.</p>
+          <a href="booking.html" class="btn btn-filled btn-sm">Reserve Your Session</a>
+        </div>
+      </article>
+
+      <article class="svc-card fade-up" style="transition-delay:.30s">
+        <div class="svc-img-wrap">
+          <img src="assets/images/insta-spiritual-workspace.jpeg"
+            alt="Crystal wellness products and lifestyle items" loading="lazy" width="600" height="600"/>
+        </div>
+        <div class="svc-body">
+          <div class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <h3>Crystal Wellness Products</h3>
+          <div class="svc-tags"><span class="svc-tag">Crystals</span><span class="svc-tag">Wellness</span><span class="svc-tag">Lifestyle</span></div>
+          <p>Curated crystal wellness products, bracelets, and lifestyle items to support your personal wellness journey and mindful living practice.</p>
+          <a href="https://www.instagram.com/infinite.soulawakening" target="_blank" rel="noopener noreferrer" class="btn btn-insta btn-sm">Enquire on Instagram</a>
         </div>
       </article>
 
@@ -576,178 +420,135 @@
   </div>
 </section>
 
-<!-- ══════════════ WHY CHOOSE US ══════════════ -->
-<section class="why-us" aria-labelledby="why-heading">
+<!-- ══ LUXURY STRIP ══════════════════════════════════════════ -->
+<div class="luxury-strip" role="img" aria-label="Wellness candles and flowers in a peaceful setting">
+  <img src="assets/images/about-spiritual-flatlay.jpeg"
+    alt="Warm candles and flowers in a wellness space" loading="lazy" width="1800" height="440"/>
+  <div class="luxury-strip-overlay">
+    <div class="luxury-quote fade-up">
+      <p>"Mindfulness and self-reflection often create space for greater clarity, perspective, and personal understanding."</p>
+      <span>— Infinite Soul Awakening Wellness</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ WHY CHOOSE US ═════════════════════════════════════════ -->
+<section class="why-us" aria-labelledby="why-title">
   <div class="container">
+    <div class="why-header fade-up">
+      <span class="section-label">Why Choose Us</span>
+      <h2 class="section-title" id="why-title">A practice grounded in<br><em>integrity &amp; mindfulness</em></h2>
+      <p>We are committed to offering thoughtful, respectful, and wellness-focused experiences designed to support mindfulness, self-reflection, and personal clarity.</p>
+    </div>
     <div class="why-grid">
-
-      <div class="why-image-wrap fade-up">
-        <img class="why-img-main"
-          src="https://images.unsplash.com/photo-1519821172141-b5d8d7e0fa1b?auto=format&fit=crop&w=900&q=80"
-          alt="Hands gently reading tarot on a marble table with lavender sprigs"
-          loading="lazy"/>
-        <img class="why-img-accent"
-          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=500&q=80"
-          alt="Open spiritual journal with crystals and flowers"
-          loading="lazy"/>
+      <div class="why-card fade-up" style="transition-delay:.06s">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+        <h3>Thoughtful, Holistic &amp; Ethical Approach</h3>
+        <p>Every session is conducted with professionalism, care, and respect for individual perspectives, preferences, and personal boundaries.</p>
       </div>
-
-      <div class="fade-up" style="transition-delay:.15s">
-        <span class="section-label">Why Choose Us</span>
-        <h2 class="section-title" id="why-heading">
-          Rooted in wisdom.<br><em>Guided by soul.</em>
-        </h2>
-        <div class="why-features">
-          <div class="why-feature">
-            <div class="why-feature-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <h4>Highly Experienced Guide</h4>
-              <p>Over 12 years of dedicated practice in intuitive reading, astrology, and energy work with clients worldwide.</p>
-            </div>
-          </div>
-          <div class="why-feature">
-            <div class="why-feature-icon">
-              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <div>
-              <h4>Compassionate Approach</h4>
-              <p>Every session is held in a sacred space of non-judgement, warmth, and deep listening.</p>
-            </div>
-          </div>
-          <div class="why-feature">
-            <div class="why-feature-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            </div>
-            <div>
-              <h4>Authentic Insights</h4>
-              <p>We speak only what we genuinely receive — honest, precise, and always in service of your highest good.</p>
-            </div>
-          </div>
-        </div>
+      <div class="why-card fade-up" style="transition-delay:.14s">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Clear &amp; Honest Guidance</h3>
+        <p>We do not promise guaranteed outcomes or specific results. All guidance is shared thoughtfully and responsibly based on the selected service.</p>
+      </div>
+      <div class="why-card fade-up" style="transition-delay:.22s">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Respectful &amp; Supportive Experience</h3>
+        <p>Sessions are designed to encourage calm reflection, mindfulness, and personal exploration within a respectful and professional environment.</p>
+      </div>
+      <div class="why-card fade-up" style="transition-delay:.30s">
+        <div class="why-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Personalised Wellness Experiences</h3>
+        <p>Each session is thoughtfully adapted based on the selected service and the information voluntarily shared during the booking process.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ TESTIMONIALS ══════════════ -->
-<section class="testimonials" aria-labelledby="testimonials-heading">
+<!-- ══ TESTIMONIALS ══════════════════════════════════════════ -->
+<section class="testimonials" aria-labelledby="testimonials-title">
   <div class="container">
     <div class="testimonials-header fade-up">
-      <span class="section-label">Client Stories</span>
-      <h2 class="section-title" id="testimonials-heading">Words from<br><em>awakened souls</em></h2>
+      <span class="section-label">Client Feedback</span>
+      <h2 class="section-title" id="testimonials-title">Words from<br><em>our clients</em></h2>
     </div>
     <div class="testimonials-grid">
-
-      <article class="testimonial-card fade-up" style="transition-delay:.08s">
-        <div class="t-quote-icon">&ldquo;</div>
-        <div class="stars" aria-label="5 stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <blockquote>"My session was a profound turning point. She named things about my life that no one else could have known — it felt like speaking with my highest self."</blockquote>
-        <div class="testimonial-author">
-          <img class="t-avatar"
-            src="https://randomuser.me/api/portraits/women/44.jpg"
-            alt="Gianna Bilaman" loading="lazy"/>
-          <div class="t-author-info">
-            <strong>Gianna Bilaman</strong>
-            <span>Larchmont, NY</span>
-          </div>
+      <article class="t-card fade-up" style="transition-delay:.06s">
+        <div class="t-quote-mark" aria-hidden="true">&ldquo;</div>
+        <div class="t-stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <blockquote>"The session brought me a lot of clarity at a time when I was feeling quite lost. The guidance was thoughtful and the entire experience felt very respectful and personalised."</blockquote>
+        <div class="t-author">
+          <img class="t-avatar" src="assets/images/testimonial-candle-avatar.jpeg" alt="Priya S." loading="lazy" width="44" height="44"/>
+          <div class="t-info"><strong>Priya S.</strong><span>Mumbai, India</span></div>
         </div>
       </article>
-
-      <article class="testimonial-card fade-up" style="transition-delay:.18s">
-        <div class="t-quote-icon">&ldquo;</div>
-        <div class="stars" aria-label="5 stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <blockquote>"I was sceptical at first, but the energy healing session completely shifted something inside me. I left feeling lighter, clearer, and more aligned than ever before."</blockquote>
-        <div class="testimonial-author">
-          <img class="t-avatar"
-            src="https://randomuser.me/api/portraits/women/65.jpg"
-            alt="Mawa Diambra" loading="lazy"/>
-          <div class="t-author-info">
-            <strong>Mawa Diambra</strong>
-            <span>Daventre, CA</span>
-          </div>
+      <article class="t-card fade-up" style="transition-delay:.16s">
+        <div class="t-quote-mark" aria-hidden="true">&ldquo;</div>
+        <div class="t-stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <blockquote>"I appreciated how professional and calm the session was. There was no pressure at all. I left with a much clearer perspective and felt genuinely supported throughout."</blockquote>
+        <div class="t-author">
+          <img class="t-avatar" src="assets/images/testimonial-lotus-avatar.jpeg" alt="Ananya R." loading="lazy" width="44" height="44"/>
+          <div class="t-info"><strong>Ananya R.</strong><span>Bengaluru, India</span></div>
         </div>
       </article>
-
-      <article class="testimonial-card fade-up" style="transition-delay:.28s">
-        <div class="t-quote-icon">&ldquo;</div>
-        <div class="stars" aria-label="5 stars">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <blockquote>"My astrology reading was extraordinarily accurate. It helped me understand patterns I had been repeating for years. Truly a gift for anyone at a crossroads."</blockquote>
-        <div class="testimonial-author">
-          <img class="t-avatar"
-            src="https://randomuser.me/api/portraits/women/12.jpg"
-            alt="Siris Bilieron" loading="lazy"/>
-          <div class="t-author-info">
-            <strong>Siris Bilieron</strong>
-            <span>Laerfort</span>
-          </div>
+      <article class="t-card fade-up" style="transition-delay:.26s">
+        <div class="t-quote-mark" aria-hidden="true">&ldquo;</div>
+        <div class="t-stars" aria-label="5 stars"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <blockquote>"The wellness session was a genuinely peaceful experience. It gave me space to reflect and think through things I had been struggling with. Very thoughtful and private."</blockquote>
+        <div class="t-author">
+          <img class="t-avatar" src="assets/images/testimonial-crystal-avatar.jpeg" alt="Meera K." loading="lazy" width="44" height="44"/>
+          <div class="t-info"><strong>Meera K.</strong><span>Delhi, India</span></div>
         </div>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ══════════════ INSTAGRAM GRID ══════════════ -->
-<section class="instagram" aria-labelledby="instagram-heading">
+<!-- ══ INSTAGRAM SECTION ═════════════════════════════════════ -->
+<section class="instagram-section" aria-labelledby="instagram-title">
   <div class="container">
     <div class="instagram-header fade-up">
-      <span class="section-label">Follow the Journey</span>
-      <h2 class="section-title" id="instagram-heading">@InfiniteSoulAwakening</h2>
-      <a href="#">Daily wisdom, rituals &amp; behind-the-scenes</a>
+      <span class="section-label">Follow Our Journey</span>
+      <h2 class="section-title" id="instagram-title">Follow Us on<br><em>Instagram</em></h2>
+      <a href="https://www.instagram.com/infinite.soulawakening" target="_blank" rel="noopener noreferrer" class="insta-handle-link">@infinite.soulawakening</a>
     </div>
     <div class="insta-grid fade-up" style="transition-delay:.1s">
-      <div class="insta-cell"><img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=400&q=80" alt="Crystal grid" loading="lazy"/></div>
-      <div class="insta-cell"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=400&q=80" alt="Tarot spread" loading="lazy"/></div>
-      <div class="insta-cell"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="Candles and flowers" loading="lazy"/></div>
-      <div class="insta-cell"><img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=400&q=80" alt="Rose quartz" loading="lazy"/></div>
-      <div class="insta-cell"><img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=400&q=80" alt="Spiritual journal" loading="lazy"/></div>
-      <div class="insta-cell"><img src="https://images.unsplash.com/photo-1519821172141-b5d8d7e0fa1b?auto=format&fit=crop&w=400&q=80" alt="Meditation" loading="lazy"/></div>
+      <div class="insta-cell"><img src="assets/images/insta-rose-quartz.jpeg" alt="Crystals" loading="lazy" width="300" height="300"/></div>
+      <div class="insta-cell"><img src="assets/images/insta-affirmation-card.jpeg" alt="Guidance cards" loading="lazy" width="300" height="300"/></div>
+      <div class="insta-cell"><img src="assets/images/insta-hand-card.jpeg" alt="Wellness session" loading="lazy" width="300" height="300"/></div>
+      <div class="insta-cell"><img src="assets/images/insta-meditation-woman.jpeg" alt="Mindful practice" loading="lazy" width="300" height="300"/></div>
+      <div class="insta-cell"><img src="assets/images/insta-quote-flatlay.jpeg" alt="Wellness reflection" loading="lazy" width="300" height="300"/></div>
+      <div class="insta-cell"><img src="assets/images/insta-spiritual-journal.jpeg" alt="Mindfulness journal" loading="lazy" width="300" height="300"/></div>
+    </div>
+    <div class="instagram-cta fade-up" style="transition-delay:.2s;margin-top:32px;">
+      <a href="https://www.instagram.com/infinite.soulawakening" target="_blank" rel="noopener noreferrer" class="btn btn-insta">
+        <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+        Follow on Instagram
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ FINAL CTA ══════════════ -->
-<section class="final-cta" aria-labelledby="cta-heading">
-  <img
-    class="final-cta-img"
-    src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1600&q=80"
-    alt="Woman in peaceful candlelit meditation surrounded by warm golden light"
-    loading="lazy"
-  />
+<!-- ══ FINAL CTA ═════════════════════════════════════════════ -->
+<section class="final-cta" aria-labelledby="cta-title">
+  <img src="assets/images/insta-crystal-candle.jpeg"
+    class="final-cta-img" alt="Wellness candles and crystals in a peaceful setting" loading="lazy" width="1800" height="480"/>
   <div class="final-cta-overlay">
-    <span class="section-label fade-up">Begin Your Transformation</span>
-    <h2 id="cta-heading" class="fade-up" style="transition-delay:.1s">
-      Your journey to<br><em>clarity begins here</em>
+    <span class="section-label fade-up">Reserve Your Session</span>
+    <h2 id="cta-title" class="fade-up" style="transition-delay:.1s">
+      Your Wellness Journey<br><em>Begins Here</em>
     </h2>
-    <p class="fade-up" style="transition-delay:.2s">
-      Take the first step toward the life you are meant to live.<br>A reading awaits you.
-    </p>
-    <a href="booking.html" class="btn btn-white fade-up" style="transition-delay:.3s;">Book a Reading</a>
+    <p class="fade-up" style="transition-delay:.2s">Take the first step toward greater clarity, mindfulness, and intentional living through a personalised wellness-focused session.</p>
+    <div class="cta-btn-group fade-up" style="transition-delay:.3s">
+      <a href="booking.html" class="btn btn-white">Reserve Your Session</a>
+      <a href="https://wa.me/918451856536" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+        <svg viewBox="0 0 24 24" width="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M11.5 2C6.253 2 2 6.253 2 11.5c0 1.82.487 3.53 1.338 5.004L2 22l5.61-1.323A9.454 9.454 0 0 0 11.5 21C16.747 21 21 16.747 21 11.5S16.747 2 11.5 2z"/></svg>
+        WhatsApp Us
+      </a>
+    </div>
   </div>
 </section>
 
-  <!-- Shared header, footer, nav, observers -->
-  <script src="js/components.js"></script>
-
+<script src="assets/js/components.js"></script>
 </body>
 </html>

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Infinite Soul Awakening — spiritual guidance through tarot, astrology, energy healing and ritual work. Based in Mumbai, serving clients worldwide."/>
-  <title>About — Infinite Soul Awakening</title>
-
-  <!-- Shared stylesheet -->
-  <link rel="stylesheet" href="css/global.css"/>
-
-  <!-- Page-specific styles -->
+  <meta name="description" content="Infinite Soul Awakening Wellness — personalised guidance and wellness-focused experiences designed to support mindfulness, self-reflection, and personal clarity."/>
+  <title>About — Infinite Soul Awakening Wellness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="assets/css/global.css"/>
   <style>
 /* ─── PAGE HERO (SMALL) ──────────────────────────────── */
     .page-hero {
@@ -116,10 +114,7 @@
       align-items: center;
     }
 
-    /* Image stack with decorative frame */
-    .story-image-wrap {
-      position: relative;
-    }
+    .story-image-wrap { position: relative; }
     .story-img-main {
       width: 100%;
       aspect-ratio: 3/4;
@@ -141,7 +136,6 @@
       box-shadow: 0 12px 36px rgba(100,60,20,.18);
       z-index: 3;
     }
-    /* decorative border frame */
     .story-image-wrap::before {
       content: '';
       position: absolute;
@@ -150,7 +144,6 @@
       border: 1px solid var(--accent-light);
       z-index: 0;
     }
-    /* gold dot accent */
     .story-image-wrap::after {
       content: '';
       position: absolute;
@@ -161,7 +154,6 @@
       opacity: .15;
       z-index: 0;
     }
-    /* floating quote card */
     .story-quote-float {
       position: absolute;
       top: 40px;
@@ -198,7 +190,6 @@
       line-height: 1.9;
       margin-bottom: 20px;
     }
-    /* pull quote inside text */
     .story-pull-quote {
       border-left: 3px solid var(--accent-light);
       margin: 32px 0;
@@ -221,13 +212,6 @@
       grid-template-columns: 1.1fr 1fr;
       gap: 88px;
       align-items: center;
-    }
-    .story-img-wide {
-      width: 100%;
-      aspect-ratio: 4/3;
-      object-fit: cover;
-      display: block;
-      box-shadow: var(--shadow-warm);
     }
     .story-img-pair {
       display: grid;
@@ -273,7 +257,6 @@
       overflow: hidden;
     }
     .phil-card:hover { transform: translateY(-6px); box-shadow: 0 14px 46px rgba(100,65,30,.14); }
-    /* top accent bar */
     .phil-card::before {
       content: '';
       position: absolute;
@@ -331,7 +314,6 @@
       display: block;
       box-shadow: var(--shadow-warm);
     }
-    /* small floating badge */
     .exp-badge {
       position: absolute;
       bottom: -20px; left: -20px;
@@ -365,7 +347,6 @@
       z-index: -1;
     }
 
-    .experience-content { }
     .experience-content .section-title { margin-bottom: 24px; }
     .experience-content > p {
       font-size: .96rem;
@@ -510,34 +491,6 @@
     }
     .cta-btn-group { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
 
-    /* ─── FOOTER ─────────────────────────────────────────── */
-    footer { background: #1c0f06; color: rgba(255,255,255,.55); padding: 80px 0 36px; }
-    .footer-grid { display: grid; grid-template-columns: 1.9fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 60px; }
-    .footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 16px; }
-    .footer-brand .logo span { color: var(--accent-light); }
-    .footer-brand p { font-size: .86rem; line-height: 1.85; max-width: 240px; }
-    .footer-socials { display: flex; gap: 12px; margin-top: 24px; }
-    .footer-socials a {
-      width: 36px; height: 36px; border: 1px solid rgba(255,255,255,.16);
-      display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.5); text-decoration: none;
-      font-size: .75rem; transition: border-color .2s, color .2s;
-    }
-    .footer-socials a:hover { border-color: var(--accent-light); color: var(--accent-light); }
-    .footer-col h4 { font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 20px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 11px; }
-    .footer-col ul li a { font-size: .86rem; color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
-    .footer-col ul li a:hover { color: var(--accent-light); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.07); padding-top: 28px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px; font-size: .79rem;
-    }
-    .footer-bottom a { color: rgba(255,255,255,.4); text-decoration: none; transition: color .2s; }
-    .footer-bottom a:hover { color: var(--accent-light); }
-    .footer-bottom-links { display: flex; gap: 24px; }
-
     /* ─── RESPONSIVE ─────────────────────────────────────── */
     @media (max-width: 1024px) {
       .story-quote-float { right: -20px; }
@@ -553,7 +506,6 @@
       .philosophy-grid { grid-template-columns: 1fr 1fr; }
       .experience-image-wrap::after { display: none; }
       .exp-badge { left: 10px; bottom: -14px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
       .intro-stat { padding: 12px 36px; }
     }
     @media (max-width: 620px) {
@@ -562,8 +514,6 @@
       .page-hero-content { padding-bottom: 44px; }
       .philosophy-grid { grid-template-columns: 1fr; }
       .stats-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
       .intro-strip-inner { flex-direction: column; }
       .intro-stat { border-right: none; border-bottom: 1px solid var(--border); width: 100%; padding: 20px 0; }
       .intro-stat:last-child { border-bottom: none; }
@@ -579,8 +529,8 @@
 <section class="page-hero" aria-labelledby="page-title">
   <img
     class="page-hero-img"
-    src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&w=1800&q=85"
-    alt="Woman in soft golden light holding a crystal, eyes closed in peaceful meditation"
+    src="assets/images/about-page-hero.jpeg"
+    alt="Peaceful wellness setting in soft golden light"
     fetchpriority="high"
   />
   <div class="container">
@@ -593,7 +543,7 @@
       <h1 id="page-title">
         My Journey,<br><em>My Calling</em>
       </h1>
-      <p>A story of awakening, purpose, and an unwavering commitment to guiding souls toward clarity.</p>
+      <p>A path shaped through years of spiritual practice, symbolic study, and personalised guidance — supporting individuals through reflection, mindfulness, clarity, and intentional living.</p>
     </div>
   </div>
 </section>
@@ -606,21 +556,21 @@
       <span>Years of Practice</span>
     </div>
     <div class="intro-stat">
-      <strong>500+</strong>
-      <span>Souls Guided</span>
+      <strong>5,000+</strong>
+      <span>Client Sessions</span>
     </div>
     <div class="intro-stat">
-      <strong>3</strong>
-      <span>Healing Modalities</span>
+      <strong>20+</strong>
+      <span>Guidance &amp; Wellness Modalities</span>
     </div>
     <div class="intro-stat">
       <strong>98%</strong>
-      <span>Client Clarity Rate</span>
+      <span>Client Satisfaction Feedback</span>
     </div>
   </div>
 </div>
 
-<!-- ══════════════ STORY — BLOCK 1 ══════════════ -->
+<!-- ══════════════ STORY — BLOCK 1 (OUR STORY) ══════════════ -->
 <section class="story" aria-labelledby="story-heading">
   <div class="container">
     <div class="story-grid">
@@ -629,57 +579,47 @@
       <div class="story-image-wrap fade-up">
         <img
           class="story-img-main"
-          src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=85"
-          alt="Serene spiritual woman holding rose quartz crystal in warm candlelight"
+          src="assets/images/energy-healing-hands.jpeg"
+          alt="Wellness session with crystals and candles"
           loading="lazy"
         />
         <img
           class="story-img-inset"
-          src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=500&q=80"
-          alt="Crystals and candles arranged on a white marble surface"
+          src="assets/images/insta-spiritual-workspace.jpeg"
+          alt="Mindful workspace with crystals arranged on a surface"
           loading="lazy"
         />
-        <!-- floating quote card -->
         <div class="story-quote-float" aria-hidden="true">
-          <p>"Healing begins when we stop running from ourselves."</p>
-          <span>— My guiding truth</span>
+          <p>"Mindfulness and self-reflection often create space for greater clarity."</p>
+          <span>— A guiding principle</span>
         </div>
       </div>
 
       <!-- Text -->
       <div class="story-text fade-up" style="transition-delay:.16s">
-        <span class="section-label">The Beginning</span>
+        <span class="section-label">Our Story</span>
         <h2 class="section-title" id="story-heading">
-          Born from darkness,<br><em>into the light</em>
+          A Practice Shaped Through<br><em>Reflection &amp; Personal Exploration</em>
         </h2>
         <p>
-          My path into spiritual guidance did not begin in a classroom or a course — it began
-          in my own unravelling. At 24, I found myself at a crossroads so overwhelming that
-          logic alone could not lead me out. It was in that sacred stillness — a friend's tarot
-          deck, a quiet room, a question I could barely speak — that the first thread of clarity
-          appeared.
+          Infinite Soul Awakening Wellness was created from years of personal reflection, symbolic study, and mindful exploration. What began as a deeply personal journey gradually evolved into a thoughtful and wellness-focused practice centred on clarity, reflection, and meaningful guidance.
         </p>
         <div class="story-pull-quote">
-          <p>"I did not choose this work. It chose me — and when it did, everything changed."</p>
+          <p>"Mindfulness and self-reflection often create space for greater clarity, perspective, and personal understanding."</p>
         </div>
         <p>
-          What followed was a decade of deep study: tarot symbolism under a Jungian psychologist,
-          Vedic astrology with a lineage keeper in Jaipur, and Reiki energy healing through three
-          years of devoted practice. Each modality revealed a new language for the same ancient
-          truth — that every soul already holds its own answers.
+          Over time, a range of symbolic and reflective traditions were explored including tarot symbolism, rune studies, mindfulness practices, and guided methods of personal exploration. These experiences helped shape a grounded and personalised approach focused on thoughtful communication, professionalism, and respectful guidance.
         </p>
         <p>
-          In 2013, I welcomed my first client. By 2016, Infinite Soul Awakening was born — not
-          as a brand, but as a promise: that every person who came to me would leave with more
-          clarity than they arrived with, regardless of what the cards showed.
+          Today, Infinite Soul Awakening Wellness offers personalised sessions and wellness-focused experiences designed to support mindfulness, self-reflection, and personal clarity. Every interaction is approached with care, discretion, and respect for individual perspectives, preferences, and personal boundaries.
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ STORY — BLOCK 2 (reversed) ══════════════ -->
-<section class="story-alt" aria-label="Continued story">
+<!-- ══════════════ STORY — BLOCK 2 (THE PRACTICE) ══════════════ -->
+<section class="story-alt" aria-label="The Practice">
   <div class="container">
     <div class="story-grid-alt">
 
@@ -687,38 +627,30 @@
       <div class="story-text-side fade-up">
         <span class="section-label">The Practice</span>
         <h2 class="section-title">
-          Where tradition meets<br><em>intuition</em>
+          Where Reflection Meets<br><em>Personal Insight</em>
         </h2>
         <p>
-          Every session I offer draws from three distinct traditions — each one a gift
-          passed down through unbroken lineages of wisdom keepers. Tarot illuminates
-          the narrative arc of your life. Astrology reveals the cosmic architecture
-          you were born within. Energy healing clears the static so your own voice can
-          finally be heard.
+          Every session is thoughtfully designed to support mindfulness, self-reflection, and personal clarity through a personalised and grounded approach. Drawing from symbolic traditions, reflective practices, and wellness-focused guidance methods, each experience is adapted to the individual and their chosen area of focus.
         </p>
         <p>
-          My approach is never prescriptive. I am not here to tell you what to do — I am
-          here to help you hear what you already know. The clearer your inner signal,
-          the more decisively you can move through the world.
+          The approach is thoughtful, non-prescriptive, and centred on respectful communication. Sessions are intended to encourage reflection, perspective, and mindful exploration rather than provide directives, guaranteed outcomes, or professional advice.
         </p>
         <p>
-          Sessions are held in strict confidence, and I work with a deeply diverse community
-          of clients — entrepreneurs and artists, mothers and seekers, sceptics and believers.
-          What unites them is simple: they want truth, not comfort. And I am here to provide it.
+          All communication is handled respectfully and privately in accordance with applicable privacy practices and the Digital Personal Data Protection (DPDP) Act, 2023. Sessions are designed for individuals seeking a calm, supportive, and wellness-focused experience rooted in professionalism, mindfulness, and personal reflection.
         </p>
-        <a href="booking.html" class="btn btn-filled" style="margin-top:10px;">Book Your Session</a>
+        <a href="booking.html" class="btn btn-filled" style="margin-top:10px;">Reserve Your Session</a>
       </div>
 
       <!-- Image pair -->
       <div class="story-img-pair fade-up" style="transition-delay:.16s">
         <img
-          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80"
-          alt="Tarot cards being read in warm candlelight"
+          src="assets/images/tarot-reading-flatlay.jpeg"
+          alt="Guidance session with symbolic cards on a warm surface"
           loading="lazy"
         />
         <img
-          src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=600&q=80"
-          alt="Close-up of hands in a healing energy session"
+          src="assets/images/energy-healing-hands.jpeg"
+          alt="Wellness practice in a calm and peaceful setting"
           loading="lazy"
         />
       </div>
@@ -732,54 +664,45 @@
   <div class="container">
 
     <div class="philosophy-header fade-up">
-      <span class="section-label">How I Work</span>
+      <span class="section-label">Our Approach</span>
       <h2 class="section-title" id="philosophy-heading">
-        A practice built on<br><em>sacred commitments</em>
+        A Practice Built on<br><em>Integrity &amp; Mindfulness</em>
       </h2>
-      <p>These are not marketing promises — they are the foundations every session is built upon, without exception.</p>
+      <p>Our sessions are guided by professionalism, thoughtful communication, and a commitment to respectful and wellness-focused experiences.</p>
     </div>
 
     <div class="philosophy-grid">
 
-      <!-- Card 1 -->
       <div class="phil-card fade-up" style="transition-delay:.08s">
         <span class="phil-number">01</span>
         <div class="phil-icon">
           <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
         </div>
-        <h3>No False<br>Promises</h3>
+        <h3>Clear &amp; Honest<br>Guidance</h3>
         <p>
-          I do not tell you what you wish to hear. I reflect what is present in your energy,
-          your chart, and your spread — with compassion and complete honesty. Real guidance
-          sometimes challenges us before it liberates us.
+          We do not promise guaranteed outcomes or specific results. Guidance is shared thoughtfully and responsibly based on the selected service and individual area of focus.
         </p>
       </div>
 
-      <!-- Card 2 -->
       <div class="phil-card fade-up" style="transition-delay:.18s">
         <span class="phil-number">02</span>
         <div class="phil-icon">
           <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </div>
-        <h3>Personalised<br>Guidance</h3>
+        <h3>Personalised<br>Experiences</h3>
         <p>
-          There are no scripts here. Every session is tailored entirely to you — your question,
-          your current energy, your life's unique timing. The reading you receive will never
-          be the same as anyone else's.
+          Each session is thoughtfully adapted based on the selected service and the information voluntarily shared during the booking process.
         </p>
       </div>
 
-      <!-- Card 3 -->
       <div class="phil-card fade-up" style="transition-delay:.28s">
         <span class="phil-number">03</span>
         <div class="phil-icon">
           <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
-        <h3>Confidential<br>Sessions</h3>
+        <h3>Respectful &amp;<br>Private Sessions</h3>
         <p>
-          Everything shared within our session remains entirely private. Sacred space
-          requires absolute trust, and that trust is something I guard with the deepest
-          professional and personal commitment.
+          Information voluntarily shared during sessions and communication is handled respectfully and privately in accordance with applicable privacy practices and the Digital Personal Data Protection (DPDP) Act, 2023.
         </p>
       </div>
 
@@ -787,7 +710,7 @@
   </div>
 </section>
 
-<!-- ══════════════ EXPERIENCE & CREDENTIALS ══════════════ -->
+<!-- ══════════════ EXPERIENCE & APPROACH ══════════════ -->
 <section class="experience" aria-labelledby="exp-heading">
   <div class="container">
     <div class="experience-grid">
@@ -796,74 +719,72 @@
       <div class="experience-image-wrap fade-up">
         <img
           class="exp-img-main"
-          src="https://images.unsplash.com/photo-1519821172141-b5d8d7e0fa1b?auto=format&fit=crop&w=900&q=80"
-          alt="Spiritual reading session — tarot cards and crystals on a warm-lit table"
+          src="assets/images/about-spiritual-flatlay.jpeg"
+          alt="Wellness session space with candles and crystals on a warm-lit surface"
           loading="lazy"
         />
         <div class="exp-badge">
           <strong>12+</strong>
-          <span>Years<br>Practice</span>
+          <span>Years<br>of Practice</span>
         </div>
       </div>
 
       <!-- Stats + Credentials -->
       <div class="fade-up" style="transition-delay:.16s">
-        <span class="section-label">Experience &amp; Training</span>
+        <span class="section-label">Experience &amp; Approach</span>
         <h2 class="section-title" id="exp-heading">
-          Depth you can<br><em>feel and trust</em>
+          Experience You<br><em>Can Trust</em>
         </h2>
         <p style="font-size:.96rem;color:var(--text-soft);line-height:1.9;margin-bottom:40px;">
-          My work is grounded in years of formal training, thousands of real client sessions,
-          and a commitment to continuous learning. The numbers below are not achievements —
-          they are evidence of trust placed in me, and honoured.
+          This practice is shaped through years of continued study, personal exploration, and experience working with individuals seeking mindfulness, self-reflection, and personal clarity. Every session is approached with professionalism, thoughtful communication, and a commitment to respectful and wellness-focused experiences.
         </p>
 
         <div class="stats-grid">
           <div class="stat-box">
-            <strong>500+</strong>
-            <p>Clients Served</p>
+            <strong>5,000+</strong>
+            <p>Sessions Conducted</p>
           </div>
           <div class="stat-box">
-            <strong>3,200+</strong>
-            <p>Sessions Completed</p>
-          </div>
-          <div class="stat-box">
-            <strong>18+</strong>
+            <strong>15+</strong>
             <p>Countries Reached</p>
           </div>
           <div class="stat-box">
+            <strong>20+</strong>
+            <p>Guidance &amp; Wellness Modalities</p>
+          </div>
+          <div class="stat-box">
             <strong>98%</strong>
-            <p>Clarity Satisfaction</p>
+            <p>Client Satisfaction Feedback</p>
           </div>
         </div>
 
-        <div class="credentials" role="list" aria-label="Training credentials">
+        <div class="credentials" role="list" aria-label="Areas of study and practice">
           <div class="credential" role="listitem">
             <div class="credential-dot"></div>
             <div>
               <strong>Tarot Symbolism</strong>
-              <span> — Studied under Jungian psychologist, 3-year intensive</span>
+              <span> — Reflective and symbolic interpretation for personal clarity</span>
             </div>
           </div>
           <div class="credential" role="listitem">
             <div class="credential-dot"></div>
             <div>
-              <strong>Vedic Astrology</strong>
-              <span> — Lineage training, Jaipur Institute of Astrology</span>
+              <strong>Rune Traditions</strong>
+              <span> — Symbolic guidance through traditional rune study and reflection</span>
             </div>
           </div>
           <div class="credential" role="listitem">
             <div class="credential-dot"></div>
             <div>
-              <strong>Reiki Master Teacher</strong>
-              <span> — Usui Shiki Ryoho tradition, Level III certified</span>
+              <strong>Mindfulness Practices</strong>
+              <span> — Wellness-focused techniques supporting calm and intentional living</span>
             </div>
           </div>
           <div class="credential" role="listitem">
             <div class="credential-dot"></div>
             <div>
-              <strong>Energy Psychology</strong>
-              <span> — Continuing education, Association of Energy Healers</span>
+              <strong>Wellness-Focused Practices</strong>
+              <span> — Personalised reflective guidance and energy wellness sessions</span>
             </div>
           </div>
         </div>
@@ -877,12 +798,11 @@
 <div class="signature-strip fade-up">
   <div class="container">
     <div class="signature-inner">
-      <p>"I do not have all the answers. But I hold a light steady enough for you to find yours."</p>
+      <p>"Mindfulness, reflection, and thoughtful guidance can create space for greater personal clarity and understanding."</p>
       <div class="signature-divider">
         <svg viewBox="0 0 24 24"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
       </div>
-      <span class="signature-name">Aria Soleil</span>
-      <span class="signature-title">Founder, Infinite Soul Awakening</span>
+      <span class="signature-title">Infinite Soul Awakening Wellness</span>
     </div>
   </div>
 </div>
@@ -891,8 +811,8 @@
 <section class="final-cta" aria-labelledby="cta-heading">
   <img
     class="final-cta-img"
-    src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1800&q=80"
-    alt="Candles and crystals in warm golden light — an invitation to begin"
+    src="assets/images/about-spiritual-flatlay.jpeg"
+    alt="Candles and crystals in warm golden light"
     loading="lazy"
   />
   <div class="final-cta-overlay">
@@ -901,28 +821,15 @@
       Ready to begin<br><em>your journey?</em>
     </h2>
     <p class="fade-up" style="transition-delay:.2s">
-      Book a session and take the first step toward the clarity, alignment,
-      and transformation you deserve.
+      Reserve a session and take the first step toward greater clarity, mindfulness, and intentional living.
     </p>
     <div class="cta-btn-group fade-up" style="transition-delay:.3s">
-      <a href="booking.html" class="btn btn-white">Book a Reading</a>
+      <a href="booking.html" class="btn btn-white">Reserve Your Session</a>
       <a href="services.html" class="btn btn-outline-white" style="background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);">View Services</a>
     </div>
   </div>
 </section>
 
-  <!-- Shared header, footer, nav, observers -->
-  <script src="js/components.js"></script>
-
-  <!-- Page-specific JS -->
-  <script>
-/* Header scroll shadow */
-
-  /* Mobile nav */
-
-  /* Fade-up on scroll */
-    });
-  </script>
-
+  <script src="assets/js/components.js"></script>
 </body>
 </html>
