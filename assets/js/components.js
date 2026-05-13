@@ -35,6 +35,10 @@
   const HEADER_HTML = `
 <div id="mobile-nav" role="dialog" aria-modal="true" aria-label="Site navigation">
   <button class="mobile-close" id="mobileClose" aria-label="Close menu">&times;</button>
+  <a href="index.html" class="logo logo-img-wrap" style="margin-bottom:12px;">
+    <img src="assets/images/logo.png" alt="Infinite Soul Awakening Wellness" class="logo-img" width="65" height="65" style="filter:none;"/>
+    <span class="logo-text-wrap"><span class="logo-text-main">Infinite Soul</span><span class="logo-text-sub">Awakening Wellness</span></span>
+  </a>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
@@ -47,8 +51,9 @@
 <header id="site-header" role="banner">
   <div class="container">
     <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Infinite Soul Awakening Wellness — Home">
-        Infinite Soul<span>Awakening Wellness</span>
+      <a href="index.html" class="logo logo-img-wrap" aria-label="Infinite Soul Awakening Wellness — Home">
+        <img src="assets/images/logo.png" alt="Infinite Soul Awakening Wellness" class="logo-img" width="65" height="65"/>
+        <span class="logo-text-wrap"><span class="logo-text-main">Infinite Soul</span><span class="logo-text-sub">Awakening Wellness</span></span>
       </a>
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
@@ -73,7 +78,10 @@
     <div class="footer-grid">
 
       <div class="footer-brand">
-        <a href="index.html" class="logo">Infinite Soul<span>Awakening Wellness</span></a>
+        <a href="index.html" class="logo logo-img-wrap footer-logo-wrap" aria-label="Infinite Soul Awakening Wellness — Home">
+          <img src="assets/images/logo.png" alt="Infinite Soul Awakening Wellness" class="logo-img footer-logo-img" width="65" height="65"/>
+          <span class="logo-text-wrap footer-logo-text"><span class="logo-text-main">Infinite Soul</span><span class="logo-text-sub">Awakening Wellness</span></span>
+        </a>
         <p>Personalised guidance and wellness-focused experiences designed to support mindfulness, self-reflection, personal clarity, and intentional living.</p>
         <div class="footer-contact">
           <a href="${CONFIG.whatsappURL}" target="_blank" rel="noopener noreferrer">
@@ -172,7 +180,9 @@
       </div>
     </div>
     <div style="text-align:center;padding:14px 0 8px;font-size:.72rem;color:rgba(255,255,255,.3);border-top:1px solid rgba(255,255,255,.06);margin-top:8px;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;">
-      <span>Registration Number: ${CONFIG.gstin} | Infinite Soul Awakening Wellness</span>
+      <span>Palghar, Maharashtra, India</span>
+      <span>Registration Number: ${CONFIG.gstin}</span>
+      <span>Trade Name: Infinite Soul Awakening Wellness</span>
     </div>
   </div>
 </footer>`;
