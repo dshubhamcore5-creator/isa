@@ -133,6 +133,42 @@ body {
 }
 .logo span { display: block; font-weight: 300; font-size: .9rem; color: var(--accent); }
 
+/* ── Image logo + brand name ── */
+.logo-img-wrap {
+  display: flex; align-items: center; gap: 10px;
+  text-decoration: none; flex-shrink: 0;
+}
+.logo-img {
+  height: 85px; width: auto;
+  object-fit: contain; display: block; flex-shrink: 0;
+  transition: opacity .2s, transform .3s;
+}
+.logo-img-wrap:hover .logo-img { opacity: .88; transform: scale(1.02); }
+
+/* Brand name text next to logo */
+.logo-text-wrap {
+  display: flex; flex-direction: column; line-height: 1.2;
+}
+.logo-text-main {
+  font-family: var(--font-serif);
+  font-size: 1.1rem; font-weight: 500;
+  color: var(--text); letter-spacing: .02em;
+}
+.logo-text-sub {
+  font-size: .78rem; font-weight: 300;
+  color: var(--accent); letter-spacing: .04em;
+}
+
+/* Footer logo — icon inverted to white, text in accent-light */
+.footer-logo-img {
+  height: 85px; width: auto;
+  filter: brightness(0) invert(1);
+  opacity: .92; flex-shrink: 0;
+}
+.footer-logo-wrap:hover .footer-logo-img { opacity: 1; }
+.footer-logo-text .logo-text-main { color: var(--white); }
+.footer-logo-text .logo-text-sub  { color: var(--accent-light); }
+
 .site-nav { display: flex; align-items: center; gap: 28px; }
 .site-nav a {
   font-size: .74rem; letter-spacing: .11em; text-transform: uppercase;
@@ -278,7 +314,7 @@ body {
   display: grid; grid-template-columns: 1.7fr 1fr 1fr 1fr;
   gap: 48px; margin-bottom: 56px;
 }
-.footer-brand .logo { color: var(--white); display: inline-block; margin-bottom: 14px; }
+.footer-brand .logo { display: inline-block; margin-bottom: 14px; }
 .footer-brand .logo span { color: var(--accent-light); }
 .footer-brand p { font-size: .84rem; line-height: 1.88; max-width: 240px; margin-bottom: 16px; }
 .footer-contact { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
