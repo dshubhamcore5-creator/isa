@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Reserve a personalised wellness and guidance session with Infinite Soul Awakening Wellness. Online sessions available. Responses within 24-48 hours."/>
-  <title>Reserve Your Session — Infinite Soul Awakening Wellness</title>
+  <meta name="description" content="Book a personalised online wellness session — Infinite Soul Awakening Wellness by Aditi [Surname], Mumbai. Tarot, rune &amp; energy. India &amp; worldwide. 24–48 hr reply."/>
+  <title>Book a Session | Infinite Soul Awakening Wellness | Mumbai</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link rel="stylesheet" href="assets/css/global.css"/>
@@ -204,6 +204,79 @@
       .how-grid { grid-template-columns: 1fr; }
     }
   </style>
+  <!-- GEO Phase 1: Global WellnessCenter Schema (all pages) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WellnessCenter",
+    "@id": "https://www.infinitesoulawakeningwellness.com/#business",
+    "name": "Infinite Soul Awakening Wellness",
+    "alternateName": "ISA Wellness",
+    "url": "https://www.infinitesoulawakeningwellness.com",
+    "description": "Infinite Soul Awakening Wellness is a Mumbai-based online spiritual wellness practice founded by Aditi [Surname], offering personalised tarot guidance, rune symbol readings, energy wellness sessions, soul alignment practices, and sacred ritual experiences to clients across India and worldwide.",
+    "founder": {
+      "@type": "Person",
+      "@id": "https://www.infinitesoulawakeningwellness.com/#practitioner",
+      "name": "Aditi [Surname]",
+      "jobTitle": "Spiritual Wellness Practitioner"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mumbai",
+      "addressRegion": "Maharashtra",
+      "addressCountry": "IN"
+    },
+    "areaServed": "Worldwide",
+    "knowsAbout": [
+      "Online tarot reading","Rune symbol guidance","Elder Futhark runes",
+      "Energy healing","Crystal wellness","Manifestation coaching",
+      "Sacred rituals","Lunar wellness practices","New Moon intention setting",
+      "Full Moon renewal","Spiritual lifestyle mentoring","Soul alignment",
+      "Self-love coaching","Relationship reflection","Personalised ritual design"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "5000",
+      "bestRating": "5"
+    },
+    "sameAs": ["https://www.instagram.com/infinite.soulawakening"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Support and Booking",
+      "availableLanguage": ["English"],
+      "email": "infinitesoulawakening@gmail.com",
+      "telephone": "+918451856536"
+    }
+  }
+  </script>
+  <!-- GEO Phase 1: Booking Page Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "ReserveAction",
+        "name": "Reserve a Wellness Session — Infinite Soul Awakening Wellness",
+        "description": "Book a personalised online wellness session with Aditi [Surname] at Infinite Soul Awakening Wellness. Tarot, rune, energy wellness, rituals and soul alignment. Available in India and worldwide. Response within 24-48 hours.",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.infinitesoulawakeningwellness.com/booking.html",
+          "actionPlatform": ["http://schema.org/DesktopWebPlatform","http://schema.org/MobileWebPlatform"]
+        },
+        "agent": {"@type":"WellnessCenter","@id":"https://www.infinitesoulawakeningwellness.com/#business","name":"Infinite Soul Awakening Wellness"},
+        "object": {"@type":"Service","name":"Personalised Online Wellness Sessions","provider":{"@type":"Person","@id":"https://www.infinitesoulawakeningwellness.com/#practitioner","name":"Aditi [Surname]"}}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://www.infinitesoulawakeningwellness.com"},
+          {"@type":"ListItem","position":2,"name":"Reserve Your Session","item":"https://www.infinitesoulawakeningwellness.com/booking.html"}
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -276,7 +349,7 @@
           <p>Prefer to reach out directly?</p>
 
           <div class="alt-cta-btns">
-            <a href="https://wa.me/918451856536?text=Hi%21%20I%20would%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+            <a href="https://wa.me/918668974489?text=Hi%21%20I%20would%20like%20to%20book%20a%20session." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
               <svg viewBox="0 0 24 24" width="15" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/><path d="M11.5 2C6.253 2 2 6.253 2 11.5c0 1.82.487 3.53 1.338 5.004L2 22l5.61-1.323A9.454 9.454 0 0 0 11.5 21C16.747 21 21 16.747 21 11.5S16.747 2 11.5 2z"/></svg>
               WhatsApp Us
             </a>
@@ -347,11 +420,21 @@
                 <div class="select-wrap">
                   <select id="service" name="service">
                     <option value="" disabled selected>Choose a service…</option>
-                    <option value="tarot">Intuitive Guidance</option>
-                    <option value="energy">Energy Wellness</option>
-                    <option value="ritual">Sacred Wellness Practices</option>
-                    <option value="crystals">Crystal Wellness Products</option>
-                    <option value="unsure">Not sure — help me choose</option>
+                    <option value="intuitive-tarot-guidance">Intuitive Tarot Guidance</option>
+                    <option value="rune-symbol-guidance">Rune Symbol Guidance</option>
+                    <option value="energy-wellness-session">Energy Wellness Session</option>
+                    <option value="intention-wellness-practices">Intention &amp; Wellness Practices</option>
+                    <option value="intuitive-guidance-session">Intuitive Guidance Session</option>
+                    <option value="manifestation-intention-coaching">Manifestation &amp; Intention Coaching</option>
+                    <option value="sacred-salt-bath-ritual">Sacred Salt Bath Ritual Experience</option>
+                    <option value="relationship-reflection-session">Relationship Reflection Session</option>
+                    <option value="self-love-confidence-journey">Self-Love &amp; Confidence Journey</option>
+                    <option value="spiritual-lifestyle-mentoring">Spiritual Lifestyle Mentoring</option>
+                    <option value="personalised-ritual-design">Personalised Ritual Design</option>
+                    <option value="tarot-insight-session">Tarot Insight Session</option>
+                    <option value="energy-alignment-session">Energy Alignment Session</option>
+                    <option value="crystal-wellness-lifestyle">Crystal Wellness &amp; Lifestyle (Product Enquiry)</option>
+                    <option value="not-sure">Not sure — help me choose</option>
                   </select>
                 </div>
                 <span class="field-err" id="serviceErr">Please select a service.</span>
@@ -417,7 +500,7 @@
             You will be contacted within 24–48 hours.
           </div>
           <div class="success-alt-btns">
-            <a href="https://wa.me/918451856536" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">WhatsApp Us</a>
+            <a href="https://wa.me/918668974489" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">WhatsApp Us</a>
             <a href="https://www.instagram.com/infinitesoulawakening" target="_blank" rel="noopener noreferrer" class="btn btn-insta btn-sm">Instagram DM</a>
             <a href="mailto:help@infinitesoulawakeningwellness.com" class="btn btn-ghost btn-sm">Email Us</a>
           </div>
@@ -509,7 +592,7 @@
   });
 
   /* ── Submit ── */
-  const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby9rBsFSQfN-KIAQqwA2oQ0YLe5Z8cfINFEvS8l7RCX7DS-5nTkuXuByeF9h6IauLx_RA/exec';
+  const SCRIPT_URL = 'YOUR_GOOGLE_SCRIPT_URL';
 
   document.getElementById('bookingForm').addEventListener('submit', async function(e) {
     e.preventDefault();
@@ -544,7 +627,7 @@
         mode: 'no-cors',
       });
     } catch(err) {
-      if (SCRIPT_URL === 'https://script.google.com/macros/s/AKfycby9rBsFSQfN-KIAQqwA2oQ0YLe5Z8cfINFEvS8l7RCX7DS-5nTkuXuByeF9h6IauLx_RA/exec') {
+      if (SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL') {
         console.warn('[ISA] Script URL not configured — showing success in demo mode.');
       } else {
         btn.classList.remove('loading'); btn.disabled = false;
