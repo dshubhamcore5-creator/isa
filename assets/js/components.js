@@ -28,6 +28,7 @@
     'index.html': 'index.html', '': 'index.html',
     'about.html': 'about.html', 'services.html': 'services.html',
     'booking.html': 'booking.html', 'policy.html': 'policy.html',
+    'blog.html': 'blog.html',
   };
   const activePage = PAGE_MAP[filename] || filename;
 
@@ -41,6 +42,7 @@
   </a>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
   <a href="services.html">Services</a>
   <a href="policy.html">Policies</a>
   <a href="booking.html">Reserve Your Session</a>
@@ -59,6 +61,7 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="blog.html">Blog</a>
         <a href="policy.html">Policies</a>
         <a href="${CONFIG.instaURL}" class="nav-insta" target="_blank" rel="noopener noreferrer" aria-label="Instagram">${CONFIG.instaHandle}</a>
       </nav>
@@ -120,6 +123,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="booking.html">Reserve a Session</a></li>
           <li><a href="policy.html">Policies</a></li>
         </ul>
